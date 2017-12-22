@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>纸尿裤</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index/index-search.css" />
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/js.js"></script>
+	</head>
+	<body id="index-paper">
+		<header class="mui-bar mui-bar-nav clear">
+		        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		        <div class="search-yan">		       		
+					<input type="text" placeholder="纸尿裤" class="search-paper"/>
+					<strong>&#xe683;</strong>
+				</div>
+		</header>
+		<div class="mui-content">		    
+		    <div class="paper-head">
+		    	<ul>
+		    		<li class="cur">推荐</li>
+		    		<li>销售</li>
+		    		<li>价格</li>
+		    		<li>筛选</li>
+		    	</ul>
+		    </div>
+		    <div class="paper-pp">
+		    	<ul class="pp-head">
+		    		<li>品牌
+		    			<div>
+		    				<a href="" class="cur">安尔乐</a>
+		    				<a href="">帮宝适</a>
+		    				<a href="">花王</a>
+		    				<a href="">美素佳儿</a>
+		    				<a href="">好奇</a>
+		    				<a href="">家得宝</a>
+		    				<a href="">妈咪宝贝</a>
+		    				<a href="">贝因美</a>
+		    				<a href="">雀氏</a>
+		    				<a href="">希望宝宝</a>
+		    				<a href="">大王</a>
+		    				<a href="">巴布豆</a>
+		    			</div>
+		    		</li>
+		    		<li>规格</li>
+		    		<li>年龄</li>
+		    		<li>体重</li>
+		    	</ul>
+		    	<ul class="pp-con" id="xiangQing">
+		    		<li><a>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p>Merriea/花王  纸尿裤S54 （9-12KG）......</p>
+		    			<span>￥256</span><em>5.9折</em>
+		    		</a></li>
+		    		<li><a>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p>Merriea/花王  纸尿裤S54 （8-11KG）......</p>
+		    			<span>￥329</span><em>7.2折</em>
+		    		</a></li>
+		    		<li><a>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+		    			<span>￥59</span><em>5.9折</em>
+		    		</a></li>
+		    		<li><a>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p>Merriea/花王  纸尿裤S54 （7-10KG）......</p>
+		    			<span>￥128</span><em>8.5折</em>
+		    		</a></li>
+		    		<li><a>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+		    			<span>￥59</span><em>5.9折</em>
+		    		</a></li>
+		    		<li><a>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p>Merriea/花王  纸尿裤S54 （7-10KG）......</p>
+		    			<span>￥128</span><em>8.5折</em>
+		    		</a></li>
+		    	</ul>
+		    	<!--<div class="bg"></div>-->
+		    	<script type="text/javascript">
+		    		window.onload=function(){
+						var tuanBox=document.getElementById("xiangQing");
+						var ul=tuanBox.getElementsByTagName("li");
+//						var liA=ul.getElementsByTagName("li");
+						for(var b=0;b<ul.length;b++){
+							ul[b].addEventListener('tap',tap_right);
+							
+						}
+					}
+					function tap_right(){
+						mui.openWindow({
+							url:"shangPinXiangQing.html",
+							id:"SPXQ",
+									createNew:true, 
+							show:{
+								aniShow:"slide-in-right",
+								daration:200
+							},
+							waiting:{
+								title:"已注册请登录..."
+							}
+						});
+					}
+		    	</script>
+		    </div>
+		</div>
+	</body>
+</html>

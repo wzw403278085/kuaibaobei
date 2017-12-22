@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.clear:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				z-index: 1;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				height: 41px;
+				background-color: #fff;
+			}
+			.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+			    -webkit-justify-content: space-between;
+			    -moz-justify-content: space-between;
+			    -ms-justify-content: space-between;
+			    -o-justify-content: space-between;
+			    justify-content: space-between;
+			    padding: 0 15%;
+				width: 100%;
+			}
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				border-bottom: 2px solid #FF4498;
+				color: inherit;
+			}
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
+				border-bottom: 2px solid transparent;
+			}
+			.mui-table-view{
+				padding: 0 5%;
+				top: 1px;
+			}
+			.mui-table-view li{
+				padding: 4% 0;
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+			    -webkit-justify-content: space-between;
+			    -moz-justify-content: space-between;
+			    -ms-justify-content: space-between;
+			    -o-justify-content: space-between;
+			    justify-content: space-between;
+			}
+			.mui-table-view li div:first-of-type{
+				width: 5rem;
+				height: 5rem;
+				border: 1px solid #dedede;
+			}
+			.mui-table-view li div:first-of-type img{
+				
+				width: 100%;
+				height: 100%;
+			}
+			.mui-table-view li div:nth-of-type(2){
+				padding-left: 1rem;
+				width: 70%;
+				height: 100%;
+				/*border: 1px solid black;*/
+			}
+			.mui-table-view li div:nth-of-type(2) h3{
+				font-size: .9rem;
+				line-height: 1.2rem;
+			}
+			.mui-table-view li div:nth-of-type(2) p{
+				float: left;
+			}
+			.mui-table-view li div:nth-of-type(2) p:first-of-type{
+				margin-right: .6rem;
+				color: #FF4498;
+				font-size: 1.1rem;
+			}
+			.mui-table-view li div:nth-of-type(2) p:nth-of-type(2){
+				text-decoration: line-through;
+			}
+			.mui-table-view li div:nth-of-type(3){
+				margin-top: 2rem;
+				width: 3.6rem;
+				font-family: icon;
+				color: #FF4498;
+				font-size: 1.6rem;
+				text-align: center;
+				line-height: 2rem;
+				border-radius: .4rem;
+				border: 1px solid #FF4498;
+			}
+			.mui-table-view li a{
+				font-family: icon;
+				color: #333333;
+				font-weight: 600;
+			}
+			.mui-table-view.pinPai3 li div:nth-of-type(2){
+				padding-left: 1rem;
+				width: 50%;
+				height: 100%;
+				/*border: 1px solid black;*/
+			}
+			.mui-table-view li a span{
+				color: #FF4498;
+			}
+		</style>
+	</head>
+
+	<body id="shouCang2">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的收藏</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">商品</a>
+						<a class="mui-control-item" href="#item2mobile">品牌</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view" id="shouCangMy">
+									<li>
+										<div><img src="img/fenLei/icon2.jpg" alt="" /></div>
+										<div class="clear">
+											<h3>红色小象 婴儿洗发沐浴露99ml+爽身粉120g</h3>
+											<p>￥<span>129</span></p>
+											<p>￥<span>168</span></p>
+										</div>
+										<div>&#xe6b9;</div>
+									</li>
+									<li>
+										<div><img src="img/fenLei/icon2.jpg" alt="" /></div>
+										<div class="clear">
+											<h3>红色小象 婴儿洗发沐浴露99ml+爽身粉120g</h3>
+											<p>￥<span>129</span></p>
+											<p>￥<span>168</span></p>
+										</div>
+										<div>&#xe6b9;</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view pinPai3">
+									<li>
+										<div><img src="img/My/xiaoXiang.jpg" alt="" /></div>
+										<div class="clear">
+											<h3>红色小象</h3>
+										</div>
+										<a><span>55</span>件商品 &#xe6d7;</a>
+									</li>
+									<li>
+										<div><img src="img/My/xiaoXiang.jpg" alt="" /></div>
+										<div class="clear">
+											<h3>红色小象</h3>
+										</div>
+										<a><span>55</span>件商品 &#xe6d7;</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+		<script>
+			mui.init();
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+			})(mui);
+//			console.log(document.getElementById("shouCangMy").innerHTML);
+			
+			//	//以下是循环进入详情页js
+//			window.onload=function(){
+//				var shouCangMy=document.getElementById("shouCang-my");
+//				var Li=shouCangMy.getElementsByTagName("li");
+//				alert(Li.length); 
+////				for(var i=1;i<Li.length;i++){
+////					var liA=Li[i].getElementsByTagName("div");
+////					liA[2].addEventListener('tap',tap_right);
+////				}
+//			}
+//			function tap_right(){
+//				mui.openWindow({
+//					url:"GouWuChe.html.html",
+//					id:"GouWuChe5",
+//							createNew:true, 
+//					show:{
+//						aniShow:"slide-in-right",
+//						daration:200
+//					},
+//					waiting:{
+//						title:"已注册请登录..."
+//					}
+//				});
+//			}
+			
+		</script>
+	</body>
+
+</html>

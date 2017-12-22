@@ -1,0 +1,34 @@
+.mui-bar{background-color: white;}
+.mui-bar .header_button{position: absolute;right: 15px;width: 7%;margin: 0;padding-top: 0.5rem;}
+.mui-bar .header_button img{width: 100%;}
+.xlms_time{display: none;}
+.xlms_time.cur{display: block;}
+.xlms_time{width: 100%;background-color: white;display: flex;justify-content: space-around;} 
+.xlms_time a{display: block;width: 20%;background-color: #FF4949;}
+.xlms_time a h2{font-size: 1rem;color: white;text-align: center;padding-top: 0.5rem;}
+.xlms_time a p{font-size: 0.9rem;color: white;text-align: center;padding: 0.5rem 0;margin: 0;}
+.xlms_time a.cur{background: none;}
+.xlms_time a.cur h2,.xlms_time a.cur p{color: #FF4949;}
+.time_content{display: none;}
+.time_content.cur{display: block;}
+.time_content .content_box{display: flex;justify-content: space-around;background-color: white;border: none;}
+.time_content .content_box .box_list{display: block;width: 16.666%;font-size: 1rem;color: #333333;text-align: center;border: none;border-bottom: 2px solid white;padding: 0.5rem;}
+.time_content .content_box .box_list.cur{color: #FF4343;background: none;border-bottom: 2px solid #FF4343;}
+.nav_content{display: none;}
+.nav_content.cur{display: block;}
+.nav_content ul li {background-color: white;border-top: 1px solid #EEEEEE;padding: 1rem;}
+.nav_content ul li a{position: relative;display: block;}
+.nav_content ul li a .content_img{float:left;width: 40%;height: 8rme;overflow: hidden;}
+.nav_content ul li a .content_img img{width: 100%;}
+.nav_content ul li a p{float: left;width: 60%;margin: 0;padding: 0.5rem}
+.nav_content ul li a h2{float: left;width: 60%;font-size: 0.9rem;color: #333333;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding: 0.5rem;}
+.nav_content ul li a .content_title{font-size: 0.8rem;color: #FF5656;}
+.nav_content ul li a .content_price{font-size: 1rem;color: #FF5656;font-weight: bold;}
+.nav_content ul li a .content_price span{font-size: 0.9rem;color: #878787;text-decoration: line-through;font-weight: normal;margin-left: 0.5rem;}
+.nav_content ul li a .content_line{position: relative;float: left;width: 30%;height: 1rem;margin-left: 0.5rem;background-color: #FFA4A4;border-radius: 10px;margin-top: 0.5rem;}
+.nav_content ul li a .content_line p{position: absolute;top: 0;left: 0;width: 64%;background-color: #FF4949;border-radius: 10px;}
+.nav_content ul li a .content_line h2{ margin: 0; position: absolute;top: 0;left: 0;width: 100%;font-size: 0.8rem;line-height: 1.1rem;color: white;text-align: center;padding: 0;}
+.nav_content ul li a .content_num{position: absolute;top: 4rem;right: 0;font-size: 0.9rem;color: #FF4A4A;text-align: right;padding: 0;}
+.nav_content ul li a button{position: absolute;top: 6rem;right: 0;width: 20%;color: white;background-color: #FF4949;border: none;}
+.nav_content ul li:nth-child(2) a .content_line p{position: absolute;top: 0;left: 0;width: 28%;background-color: #FF4949;border-radius: 10px;}
+.nav_content ul li:nth-child(3) a .content_line p{position: absolute;top: 0;left: 0;width: 35%;background-color: #FF4949;border-radius: 10px;}

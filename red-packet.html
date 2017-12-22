@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="format-detection" content="telephone=no"/>
+	    <meta name="apple-mobile-web-app-status-bar-style" content="">
+	    <title>红包</title>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/gouWuChe/gwc.css" />
+	    <script src="js/mui.min.js"></script>
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <!--<script src="js/js.js"></script>-->
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body id="red">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="back()"></a>
+		    <h1 class="mui-title">红包</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="red-head">
+		    	<p>可用红包(0)</p>
+		    	<p class="cur">不可用红包(0)</p>
+		    </div>
+		    <div class="red-con" style="display: none;">
+		    	<img src="img/My/hongbao.png" alt="" />
+		    	<h4>可用红包</h4>
+		    </div>
+		    <div class="red-con">
+		    	<img src="img/My/hongbao.png" alt="" />
+		    	<h4>您还没有红包</h4>
+		    </div>
+		</div>
+		<script>
+
+				function back(){
+					window.history.back();
+				}
+				$(document).ready(function(){
+					$(".red-head p").click(function(){
+						$(this).addClass("cur").siblings().removeClass("cur");
+						var index=$(this).index();
+//					alert(index);
+						$(this).parent().siblings(".red-con").eq(index).css("display","block").siblings(".red-con").css("display","none");
+					})
+				})
+		</script>
+	</body>
+</html>

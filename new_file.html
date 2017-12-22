@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet"/>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+    	<script src="js/mui.min.js"></script>
+    	
+    	<script>
+    		mui.init();
+    	</script>
+    	<style>
+        body,ul{margin: 0;padding: 0}
+       @font-face {
+		    font-family: aa;
+		    src: url(../font/iconfont1.css),url(../font/iconfont1.woff),url(../font/iconfont1.eot),url(../font/iconfont1.svg),url(../font/iconfont1.ttf),url(../font/iconfont1.woff)
+		}
+		.clear:after{
+			display: block;
+			content: "";
+			clear: both;
+		}
+        .banner{ width: 100%; position: relative; overflow: hidden}
+        .banner ul{ list-style: none}
+        .banner ul li{ width: 100%; position: absolute; left:0;}
+        .banner ul li.cur{ display: block;}
+        .banner ul li img{ width: 100%; height: 550px;}
+
+        .banner .pagNav{position:relative;display: flex;justify-content: space-between;}
+        .banner .pagNav a{ display: block; width: 20%; height: 4rem;font-size: 2rem;color: #333; background-color: #fff;border-bottom: 1px solid #999;line-height: 4rem;text-align: center;}
+        /*.banner .pagNav a:hover{background-color: #efe96f;}*/
+        .banner .pagNav a.cur{ background-color: #4dad10;color: #fff;}
+
+        .banner .left,.banner .right{ position: absolute;z-index:2;font-family: icon; font-size: 50px; top:50%; margin-top: -25px; color: #fff; cursor: pointer; opacity: 1; transition: .5s;}
+        .banner .left{ left:20px;}
+        .banner .right{ right: 20px;}
+        .banner:hover .left,.banner:hover .right{opacity: 1;}
+        .div{ background-color: #ccc; height: 300px;}
+    </style>
+	</head>
+	<body id="list">
+		<div class="banner" id="banner">
+			<div class="pagNav" id="pagNav">
+		        <a class="cur" id="qb">全部</a>
+		        <a id="dfk">待付款</a>
+		        <a id="dfh">待发货</a>
+		        <a id="dsh">待收货</a>
+		        <a id="dpj">评价</a>
+		    </div>
+		    <ul id="ul">
+		        <li style="left:0">
+		        	<div class="list_con">
+		        		<div class="div">1</div>
+			        	<div class="div">2</div>
+			        	<div class="div">3</div>
+			        	<div class="div">4</div>
+			        	<div class="div">5</div>
+		        	</div>
+		        	
+		        </li>
+		        <li style="left:100%">
+		        	<div class="list_con">
+		        		<div class="div">11</div>
+			        	<div class="div">2</div>
+			        	<div class="div">3</div>
+			        	<div class="div">4</div>
+			        	<div class="div">5</div>
+		        	</div>
+		        </li>
+		        <li style="left:100%">
+		        	<div class="list_con">
+		        		<div class="div">111</div>
+			        	<div class="div">2</div>
+			        	<div class="div">3</div>
+			        	<div class="div">4</div>
+			        	<div class="div">5</div>
+		        	</div>
+		        </li>
+		        <li style="left:100%">
+		        	<div class="list_con">
+		        		<div class="div">1111</div>
+			        	<div class="div">2</div>
+			        	<div class="div">3</div>
+			        	<div class="div">4</div>
+			        	<div class="div">5</div>
+		        	</div>
+		        </li>
+		        <li style="left:100%">
+		        	<div class="list_con">
+		        		<div class="div">11111</div>
+			        	<div class="div">2</div>
+			        	<div class="div">3</div>
+			        	<div class="div">4</div>
+			        	<div class="div">5</div>
+		        	</div>
+		        </li>
+		    </ul>
+		
+		    
+		    <div class="left" id="left">&#xe69b;</div>
+		    <div class="right" id="right">&#xe69a;</div>
+		</div>
+		<script>
+		
+		    var banner=document.getElementById("banner");
+		    var Left=document.getElementById("left");
+		    var Right=document.getElementById("right");
+		    var Ul=document.getElementById("ul");
+		    var Li=Ul.getElementsByTagName("li");
+		    var pagNav=document.getElementById("pagNav");
+		    var n=0;
+		    var index=0;
+		    var v=0;
+		    var animated=false;
+			var list_con=document.getElementsByClassName("list_con");
+			
+		    var icon=pagNav.getElementsByTagName("a");
+		    for(var j=0;j<icon.length;j++){
+		        icon[j].index=j;
+		        icon[j].onclick=function(){
+		            if(animated){
+		                return
+		            }
+		            var y;
+		            y=(this.index-index)*(-100);
+		            n=this.index;
+		
+		            animate2(y);
+		            showBtn();
+		            console.log(index+","+n);
+		        }
+		
+		    }
+		
+		
+		    function showBtn(){
+		
+		        for(var x= 0;x<icon.length;x++){
+		            if(icon[x].getAttribute("class")=="cur"){
+		                icon[x].className="";
+		            }
+		        }
+		        icon[index].className="cur";
+		//        console.log(index);
+		    }
+		    Left.onclick=function(){
+		        if(animated){
+		            return
+		        }
+		        n--;
+		        if(n<0){
+		            n=Li.length-1;
+		        }
+		        Li[n].style.left="-100%";
+		
+		        animate(100);
+		        index=n;
+		        
+		        list_con[n].style.height=document.getElementsByClassName("list_con")[n].clientHeight+"px";
+//				list_con[n].style.height=1500+"px";
+				Li[n].style.height=list_con[n].style.height;
+				banner.style.height=list_con[n].style.height;
+		        showBtn();
+		    };
+		    Right.onclick=function(){
+		        if(animated){
+		            return
+		        }
+		        n++;
+		        if(n>Li.length-1){
+		            n=0;
+		        }
+		        Li[n].style.left="100%";
+		        animate(-100);
+		        index=n;
+		        console.log(n);
+		       	list_con[n].style.height=document.getElementsByClassName("list_con")[n].clientHeight+"px";
+//				list_con[n].style.height=1500+"px";
+				Li[n].style.height=list_con[n].style.height;
+				banner.style.height=list_con[n].style.height;
+		        console.log(list_con[n].style.height);
+		        showBtn();
+		
+		    };
+		    function animate(offset){
+		    
+				
+		    	
+		        animated=true;
+		        var offset2=offset;
+		
+		        if(offset2>0){
+		            offset2=100;
+		        }
+		        if(offset2<0){
+		            offset2=-100;
+		        }
+		
+		        var speed=offset2/20;
+		
+		        var go=function(){
+		//            alert(n);
+		            if(speed<0&&parseInt(Li[n].style.left)>0||speed>0&&parseInt(Li[n].style.left)<0){
+		                Li[n].style.left=parseInt(Li[n].style.left)+speed+"%";
+		                if(speed<0&&n!=0){
+		                    Li[n-1].style.left=parseInt(Li[n-1].style.left)+speed+"%";
+		                }else if(speed<0&&n==0){
+		                    Li[Li.length-1].style.left=parseInt(Li[Li.length-1].style.left)+speed+"%";
+		                }else if(speed>0&&n==Li.length-1){
+		                    Li[0].style.left=parseInt(Li[0].style.left)+speed+"%";
+		                }else if(speed>0&&n!=Li.length-1){
+		                    Li[n+1].style.left=parseInt(Li[n+1].style.left)+speed+"%";
+		                }
+		                setTimeout(go,25);
+		            }else{
+		                if(index<n){
+		                    for(var w=0;w<n;w++){
+		                        Li[w].style.left="-100%";
+		                    }
+		                }
+		                if(index>n){
+		                    for(var w=index;w>n;w--){
+		                        Li[w].style.left="100%";
+		                    }
+		                }
+		                Li[n].style.left="0%";
+		                animated=false;
+		            }
+		        };
+		        go();
+		        
+		    }
+		    function animate2(offset){
+		        animated=true;
+		        var offset2=offset;
+		        if(offset2>0){
+		            offset2=100;
+		        }
+		        if(offset2<0){
+		            offset2=-100;
+		        }
+		        var speed=offset2/20;
+		        var go=function(){
+		            console.log(index);
+		            if(speed<0&&parseInt(Li[n].style.left)>0||speed>0&&parseInt(Li[n].style.left)<0){
+		                Li[n].style.left=parseInt(Li[n].style.left)+speed+"%";
+		                Li[index].style.left=parseInt(Li[index].style.left)+speed+"%";
+		
+		                setTimeout(go,25);
+		            }else{
+		
+		                if(index<n){
+		                    for(var w=0;w<n;w++){
+		                        Li[w].style.left="-100%";
+		                    }
+		                }
+		                if(index>n){
+		                    for(var w=index;w>n;w--){
+		                        Li[w].style.left="100%";
+		                    }
+		                }
+		
+		
+		                Li[n].style.left="0%";
+		                animated=false;
+		
+		                index=n;
+		                showBtn();
+		
+		            }
+		        };
+		        go();
+		    }
+		
+		    window.addEventListener("load",load);
+		    function load(e) {
+		        var a,b,c;
+		        e.preventDefault();
+		        banner.addEventListener("touchstart",touch1);
+		        banner.addEventListener("touchmove",touch1);
+		        banner.addEventListener("touchend",touch1);
+//		        Left.addEventListener("touchend",touch2);
+//		        Right.addEventListener("touchend",touch3);
+		        for(var p=0;p<5;p++){
+		            icon[p].addEventListener("touchstart",touch_page);
+		        }
+		        function touch_page(){
+		            event=event||window.event;
+		            var con=document.getElementById("con");
+		            switch (event.type) {
+		                case "touchstart":
+		                    if (animated) {
+		                        return
+		                    }
+		                    var y;
+		                    y = (this.index - index) * (-100);
+		                    n = this.index;
+		
+		                    animate2(y);
+		
+		                    break;
+		            }
+		//            alert(this.index);
+		
+		        }
+		
+//		        function touch3() {
+//		            Right.onclick();
+//		        }
+//		        function touch2() {
+//		            Left.onclick();
+//		        }
+		        function touch1(event){
+		            event=event||window.event;
+		            var con=document.getElementById("con");
+		            switch (event.type){
+		                case "touchstart":
+		                    event.preventDefault();
+		                    event.stopPropagation();
+		                    a=Math.round(event.touches[0].pageX);
+		//                         con.innerHTML="开始的坐标为:"+event.touches[0].clientX+","+event.touches[0];
+		                    break;
+		//                case "touchmove":
+		
+		//                    con.innerHTML="移动的坐标为:"+event.touches[0].clientX+","+event.touches[0];
+		//                    break;
+		                case "touchend":
+		                    event.preventDefault();
+		                    event.stopPropagation();
+		
+		                    b=Math.round(event.changedTouches[0].pageX);
+		//                    con.innerHTML="离开的坐标为:"+event.changedTouches[0].clientX+","+event.changedTouches[0].clientY;
+		                    //                    con.innerHTML=c;
+		                    c=a-b;
+		                    if (c<-20){
+		                        Left.onclick();
+		
+		                    }
+		                    if (c>20){
+		                        Right.onclick();
+		                    }
+		
+		            }
+		        }
+		    }
+		    
+		    document.addEventListener('goAll',function () {
+			    var qb = document.getElementById("qb");
+			    //模拟首页点击
+			    mui.trigger(qb,'tap');
+			    //切换选项卡高亮
+			    var current = document.querySelector(".banner>.pagNav>.cur");
+			    if(qb!==current){
+			        current.classList.remove('cur');
+			        qb.classList.add('cur');
+			    }
+			    n=0;
+			    list_con[n].style.height=document.getElementsByClassName("list_con")[n].clientHeight+"px";
+//				list_con[n].style.height=1500+"px";
+				Li[n].style.height=list_con[n].style.height;
+				banner.style.height=list_con[n].style.height;
+		        console.log(list_con[n].style.height);
+			});
+			
+			 document.addEventListener('goPay',function () {
+			 	console.log("123");
+			    var dfk = document.getElementById("dfk");
+			    //模拟首页点击
+			    mui.trigger(dfk,'tap');
+			    //切换选项卡高亮
+			    var current = document.querySelector(".banner>.pagNav>.cur");
+			    if(dfk!==current){
+			        current.classList.remove('cur');
+			        dfk.classList.add('cur');
+			    }
+			    n=0;
+			    Right.onclick();
+			    
+			});
+			
+			document.addEventListener('goDfh',function () {
+			 	console.log("123");
+			    var dfh = document.getElementById("dfh");
+			    //模拟首页点击
+			    mui.trigger(dfh,'tap');
+			    //切换选项卡高亮
+			    var current = document.querySelector(".banner>.pagNav>.cur");
+			    if(dfh!==current){
+			        current.classList.remove('cur');
+			        dfh.classList.add('cur');
+			    }
+			    n=1;
+			    Right.onclick();
+			    
+			});
+			
+			document.addEventListener('goDsh',function () {
+			 	console.log("123");
+			    var dsh = document.getElementById("dfh");
+			    //模拟首页点击
+			    mui.trigger(dsh,'tap');
+			    //切换选项卡高亮
+			    var current = document.querySelector(".banner>.pagNav>.cur");
+			    if(dsh!==current){
+			        current.classList.remove('cur');
+			        dsh.classList.add('cur');
+			    }
+			    n=2;
+			    Right.onclick();
+			    
+			});
+			document.addEventListener('goDpj',function () {
+			 	console.log("123");
+			    var dpj = document.getElementById("dpj");
+			    //模拟首页点击
+			    mui.trigger(dpj,'tap');
+			    //切换选项卡高亮
+			    var current = document.querySelector(".banner>.pagNav>.cur");
+			    if(dpj!==current){
+			        current.classList.remove('cur');
+			        dpj.classList.add('cur');
+			    }
+			    n=3;
+			    Right.onclick();
+			    
+			});
+			
+		
+		</script>
+	</body>
+</html>

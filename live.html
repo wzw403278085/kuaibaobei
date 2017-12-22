@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+	    <script type="text/javascript" src="js/vue.js"></script>
+	    <script type="text/javascript" src="js/vue-resource.js"></script>
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/index/live.css" />
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body id="live">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <div class="live_tab clear"><a class="cur" href="">直播</a><a href="">视频</a></div>
+		</header>
+		<div class="mui-content live cur">
+		    <header class="content_header">
+		    	<h2>直播预告</h2>
+		    	<a href="" class="header_content clear">
+		    		<div class="live_user"><img src="img/index/live/header_user.png" alt="" /></div>
+		    		<h3 class="live_title">最FASHION的直播内容</h3>
+		    		<p class="live_content">最呆萌的萌大大在直播平台等你来哦！</p>
+		    	</a>
+		    	<p class="live_time">18:00</p>
+		    </header>
+		    <div id="pullrefresh" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!--数据列表-->
+					<ul class="mui-table-view mui-table-view-chevron">
+						<!--<li class="mui-table-view-cell">
+							<a class="clear" href="">
+					    		<div class="live_photo"><img src="img/index/live/live_user1.png" alt="" /></div>
+					    		<h2>秋季品质新款现场直播销售中</h2>
+					    		<p>我是安妮姐姐</p>
+					    		<p class="clear"><span><img src="img/index/live/live_user1_shop1.png" alt="" /></span><span><img src="img/index/live/live_user1_shop2.png" alt="" /></span><span class="shop_num"><i>37</i>件<br>直播购</span></p>
+					    	</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="clear" href="">
+					    		<div class="live_photo"><img src="img/index/live/live_user2.png" alt="" /></div>
+					    		<h2>新款超美亲子穿搭到货啦</h2>
+					    		<p>模特李乐章</p>
+					    		<p class="clear"><span><img src="img/index/live/live_user1_shop1.png" alt="" /></span><span><img src="img/index/live/live_user1_shop2.png" alt="" /></span><span class="shop_num"><i>20</i>件<br>直播购</span></p>
+					    	</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="clear" href="">
+					    		<div class="live_photo"><img src="img/index/live/live_user3.png" alt="" /></div>
+					    		<h2>最后一波美裝快来围观</h2>
+					    		<p>美妈露露</p>
+					    		<p class="clear"><span><img src="img/index/live/live_user1_shop1.png" alt="" /></span><span><img src="img/index/live/live_user1_shop2.png" alt="" /></span><span class="shop_num"><i>16</i>件<br>直播购</span></p>
+					    	</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="clear" href="">
+				    		<div class="live_photo"><img src="img/index/live/live_user4.png" alt="" /></div>
+				    		<h2>秋季品质新款现场…</h2>
+				    		<p>我是安妮姐姐</p>
+				    		<p class="clear"><span><img src="img/index/live/live_user1_shop1.png" alt="" /></span><span><img src="img/index/live/live_user1_shop2.png" alt="" /></span><span class="shop_num"><i>32</i>件<br>直播购</span></p>
+				    	</a>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mui-content video">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							全部视屏
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							辣妈
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							亲子
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							穿搭
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							美妆
+						</a>
+						<a class="mui-control-item" href="#item6mobile">
+							视频
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>美妆达人教学……</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>亲子穿搭潮流…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item6mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show1.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show2.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show3.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="img/index/live/video_show4.png" alt="" />
+											<h3>秋季品质新款现场…</h3>
+											<p>我是安妮姐姐</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="live_shadow cur">
+			<div class="shadow_color">
+				<button class="close_shadow">&#xe6a6;</button>
+				<p class="shadow_tv"><img src="img/index/live/shadow_tv.png"/></p>
+				<p class="shadow_title">稍等一下，主播马上出来哦~</p>
+				<p class="shadow_footer">酷爱宝贝直播</p>
+			</div>
+		</div>
+		<script>
+			(function(){
+				mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			//加载更多
+			var dataNum;//获取数据总数
+			var pageSize=4;//每页显示条数
+			var counter=0;//计数器
+			var pageStart=0;//开始数据条数
+			
+			data(pageStart,4);
+			
+			function data(pageStart,pageSize){
+//				console.log("123"+pageSize);
+//				console.log(pageStart);
+				var c=parseInt(pageStart+pageSize);
+				console.log(c);
+				//业务
+				
+				$.ajax({
+					type: 'post',
+					url: 'message.json',
+					async: false,
+					dataType: "json",
+					data: {"page": counter},
+					success: function (data){
+						
+						Flag=data==null||data==undefined||data=='';
+						//判断是否有返回值，当没有返回值的时候就为空，则代表没有更多数据
+						console.log(Flag);
+//						if(Flag==false){
+//							counter++;
+//						}
+						var toLoadPageList=eval(data);
+						dataNum=toLoadPageList.length;
+						var result="";
+						for (var i=pageStart;i<c;i++){
+							console.log(pageStart);
+							result+='<li class="mui-table-view-cell">'+
+							'<a class="clear" href="javascript:;">'+
+							'<div class="live_photo">'+
+							'<img src="'+toLoadPageList[i].userImage+'"/>'+
+							'</div>'+
+							'<h2>'+toLoadPageList[i].userTitle+'</h2>'+
+							'<p>'+toLoadPageList[i].userName+'</p>'+
+							'<p class="clear"><span><img src="img/index/live/live_user1_shop1.png" alt="" /></span><span><img src="img/index/live/live_user1_shop2.png" alt="" /></span><span class="shop_num"><i>32</i>件<br>直播购</span></p>'+
+							'</a>'+
+							'</li>'
+						};
+						console.log(result);
+						jQuery(result).appendTo('#pullrefresh .mui-scroll .mui-table-view');
+					}
+				});
+			}
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+//				alert("1");
+				setTimeout(function() {
+//					alert("2");
+					var flag=counter++<(dataNum/pageSize-1);
+					console.log(dataNum/pageSize);
+					console.log(counter);
+					if (flag){
+						console.log(counter);
+						pageStart=counter*pageSize;
+						data(pageStart,4);
+						console.log(pageStart);
+					}
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((!flag));
+				}, 1500);
+			}
+//			if (mui.os.plus) {
+//				mui.plusReady(function() {
+//					setTimeout(function() {
+//						mui('#pullrefresh').pullRefresh().pullupLoading();
+//					}, 10);
+//
+//				});
+//			} else {
+//				mui.ready(function() {
+//					mui('#pullrefresh').pullRefresh().pullupLoading();
+//				});
+//			}
+		})();
+			$(document).ready(function () {
+				$(".mui-bar .live_tab a").click(function(e){
+					var index=$(this).index();
+					e.preventDefault();
+					$(this).addClass("cur").siblings().removeClass("cur");
+					$(this).parents(".mui-bar").siblings(".mui-content").eq(index).addClass("cur").siblings(".mui-content").removeClass("cur");
+				});
+				$(".mui-content ul li a").click(function(e){
+					e.preventDefault();
+					$(this).parents(".mui-content").siblings(".live_shadow").removeClass("cur");
+				});
+				$(".live_shadow .close_shadow").click(function(){
+					$(this).parents(".live_shadow").addClass("cur");
+				});
+			});
+		</script>
+	</body>
+</html>

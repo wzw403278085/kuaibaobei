@@ -1,0 +1,152 @@
+p,button{margin: 0;}
+.mui-bar-nav{background-color: white;}
+.mui-bar-nav button{position: absolute;top: 0.3rem;right: 1rem;font-size: 1.5rem;color: #888888;font-family: icon;border: none;padding: 0;}
+.content_things{background-color: white;padding: 2rem 1rem 1rem 1rem;}
+.content_things .thing_img{float: left;width: 8rem;height: 8rem;overflow: hidden;}
+.content_things .thing_img img{width: 100%;}
+.content_things h2{float: left;width: 60%;font-size: 1rem;line-height: 1.5rem;}
+.content_things .price{float: left;width: 60%;margin-top: 1rem;}
+.content_things .price h3{float: left;font-size: 1rem;color: #FF4498;}
+.content_things .price p{float: left;font-size: 0.9rem;line-height: 1rem;text-decoration: line-through;margin-left: 0.5rem;}
+.content_things .person{float: left;width: 60%;margin-top: 0.5rem;}
+.content_things .person h3{float: left;font-size: 1rem;color: #888888;font-weight: normal;line-height: 1.5rem;border-right: 1px solid #888888;padding-right: 0.6rem;}
+.content_things .person p{float: left;font-size: 1rem;line-height: 1.5rem;padding-left: 0.5rem;}
+.thing_baozheng{position: relative;padding: 1rem;background-color: white;margin-top: 2px;}
+.thing_baozheng p{float: left;font-size: 0.8rem;margin-right: 0.5rem;}
+.thing_baozheng p img{float: left;width: 20%;margin: 0.1rem 0.3rem;}
+.thing_baozheng button{position: absolute;top: 0.5rem;right: 1rem;font-size: 1.5rem;font-family: icon;border: none;padding: 0;}
+.kaituan{background-color: white;padding: 2rem 1rem 1rem 1rem;margin-top: 2px;}
+.kaituan h2{width: 32%;font-size: 1.2rem;text-align: center;margin: 0 auto;}
+.kaituan h2 img{float: left;width: 15%;margin-right: 0.2rem;}
+.kaituan .users{width: 40%;margin: 0 auto;margin-top: 1rem;}
+.kaituan .users p img{width: 100%;}
+.kaituan .users p:first-child{position: relative;float: left;width: 45%;}
+.kaituan .users p:first-child:before{position: absolute;z-index: 2;bottom: 0;right: 0;content: "团长";font-size: 0.8rem;color: white;background-color: #FF4397;padding: 0 0.3rem;}
+.kaituan .users p:last-child{float: right;width: 45%;}
+.kaituan a{
+	display: block;
+	width: 80%;
+	height: 2rem;
+	font-size: 1rem;
+	color: #FF4498;
+	text-align: center;
+	line-height: 2rem;
+	border: 1px solid #FF4498;
+	border-radius: 1rem;
+	margin: 3rem auto 1rem;
+}
+
+.kaituan a.cur{
+	color: #fff;
+	background-color: #FF4397;
+}
+.kaituan a:nth-of-type(2){
+	margin-top: 0;
+}
+.kaituan .another_tuan{font-size: 0.9rem;color: black;text-align: center;}
+.cantuan{background-color: white;padding: 1rem;margin-top: 10px;}
+.cantuan .cantuan_user{float: left;width: 20%;margin-right: 0.5rem;}
+.cantuan .cantuan_user img{width: 100%;}
+.cantuan h2{float: left;font-size: 1.1rem;line-height: 1.8rem;padding-top: 0.5rem;font-weight: normal;margin-right: 1.5rem;}
+.cantuan h2 span{font-size: 1rem;color: #888888;}
+.cantuan p{float: left;font-size: 0.8rem;line-height: 1.8rem;padding-top: 0.5rem;}
+.cantuan button{float: right;width: 4rem;height: 2rem;color: #ff4498;border-color: #FF4498;border-radius: 10px;margin-top: 1.2rem;padding: 0;}
+.cantuan_rule{background-color: white;padding: 1rem;margin-top: 2px;}
+.cantuan_rule h2{float:left;font-size: 1.1rem;font-weight: normal;}
+.cantuan_rule h2 span{display: block;float: right;width: 1.1rem;height: 1.1rem;font-size: 0.9rem;color: #888888;text-align: center;line-height: 1.1rem;margin-left: 0.5rem;border-radius: 50%;border: 1px solid #888888;}
+.cantuan_rule p{float: right;font-size: 0.9rem;}
+.cantuan_rule p span{padding: 0 0.2rem;}
+/*以下是推荐样式*/
+.tuiJian{
+	width: 100%;
+}
+.tuiJian p.tuJian-tit{
+	margin-bottom: 0;
+	width: 100%;
+	font-size: 1rem;
+	color: #000000;
+	text-align: center;
+	line-height: 3rem;
+}
+.tuiJian ul{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap:wrap;
+    -webkit-box-lines:multiple;
+    -moz-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 3.6rem;
+}
+.tuiJian ul li{
+	padding: 2% 5%;
+	margin-bottom: .8%;
+	width: 49.6%;
+	background: #fff;
+}
+.tuiJian ul li img{
+	width: 100%;
+}
+.tuiJian ul li p.shangPin-tit{
+	margin-bottom: 1.4rem;
+	color: #000000;
+}
+.tuiJian ul li div{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+.tuiJian ul li div p:first-of-type{
+	font-size: 1.2rem;
+	color: #ff4498;
+}
+.tuiJian ul li div p:nth-of-type(2){
+	font-size: .8rem;
+	color: #888888;
+}
+
+.pintuan_rule{display: none;position: fixed;top: 0;left: 0;z-index: 100;width: 100%;height: 100%;background-color: rgba(0,0,0,.7);}
+.pintuan_rule.cur{display: block;}
+.pintuan_rule .shadow_rule{position: absolute;bottom: 0;left: 0;background-color: white;padding: 2rem 0 0 0;}
+.pintuan_rule .shadow_rule h2{font-size: 1.2rem;text-align: center;font-weight: normal;}
+.pintuan_rule .shadow_rule .rule_liucheng{font-size: 1rem;color: #FF4397;text-align: center;font-weight: normal;margin-top: 2rem;}
+.pintuan_rule .shadow_rule .rule_liucheng span{font-size: 0.8rem;font-family: icon;color: black;padding: 0 0.2rem;}
+.pintuan_rule .shadow_rule p{font-size: 1rem;line-height: 1.5rem;color: black;text-align: left;margin-top: 1rem;padding: 0 1rem;}
+.pintuan_rule .shadow_rule .btn_sure{width: 100%;height: 3rem;font-size: 1.2rem;color: white;background-color: #FF4397;border: none;border-radius: 0;}
+.pintuan_rule .shadow_rule .btn_close{position: absolute;top: 0.5rem;right: 1rem;font-size: 1.5rem;font-family: icon;color: #888888;border: none;}
+
+
+.share{background: #fff;padding: 2rem 0 1rem 0;display: none;position: fixed;bottom: 0;width: 100%;}
+.share h3{font-size: 1.2rem;color: #5D5D5D;float: left;font-weight: lighter;}
+.share h3:before{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float: left;margin: .5rem .6rem 1rem 5rem;}
+.share h3:after{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float:right;margin: .5rem .6rem 2rem .8rem;}
+.share ul{width: 100%;list-style: none;padding:2rem 0 3rem 0;}
+.share ul li{width: 25%;float: left;}
+.share ul li div{font-family: icon;font-size: 3rem;margin: 0 auto;text-align: center;}
+.share ul li p{color: #797979;text-align: center;margin-top: 1rem;}
+.share ul li:first-child div{color: #A6CA66;}
+.share ul li:nth-child(2) div{color: #35DA35;}
+.share ul li:nth-child(3) div{color: #58B7E3;}
+.share ul li:nth-child(4) div{color: #F5503C;}
+.share ul li:nth-child(5) div{color: #ccc;margin-top: 1rem;}
+.share .cancle{width: 80%;height: 3rem;line-height: 3rem;text-align: center;color: #fff;background: #E3E3E3;margin: 0 auto;border-radius: 1rem;font-size: 1.2rem;}
+.share-bj{height: 100%;width: 100%;z-index: 99;background:rgba(0,0,0,0.5);position: fixed;top: 0;display: none;}

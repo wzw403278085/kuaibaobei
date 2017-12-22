@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>去开团</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index/index-group.css" />
+		<link rel="stylesheet" href="css/shangPinXiangQing.css" />
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+      		mui.init();
+    	</script>
+    	<style type="text/css">
+    		.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 60;
+				background-color: rgba(0,0,0,.8);
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+				height: 44px;
+				top: 0;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 6rem;
+				font-size: 1rem;
+				color: #fff;
+				text-align: center;
+				/*margin: 15px auto 4;*/
+				width: 70px;
+				/*background-color: rgba(0, 0, 0, 0.4);*/
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+    		.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+    	</style>
+	</head>
+	<body id="SPXQ">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">商品详情</h1>
+		    <div class="dian">...</div>
+		    <div class="open-icon" id="open-icon">&#xe673;</div>	
+		    <ul class="nav_list">
+		    	<li><a href="">&#xe6aa;<span>分享</span></a></li>
+		    	<li><a href="">&#xe622;<span>消息</span></a></li>
+		    	<li><a href="">&#xe625;<span>首页</span></a></li>
+		    	<li><a href="">&#xe6c9;<span>足迹</span></a></li>
+		    </ul>
+		</header>
+		<div class="mui-content SPXQ">
+		    <div id="slider" class="mui-slider" >
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a>
+							<img src="img/index/xiangQingYe/open-banner.png"  data-preview-src="" data-preview-group="1" >
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a>
+							<img src="img/index/xiangQingYe/2rentuan-banner.png"  data-preview-src="" data-preview-group="1" >
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a>
+							<img src="img/index/xiangQingYe/open-banner.png"  data-preview-src="" data-preview-group="1" >
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a>
+							<img src="img/index/xiangQingYe/2rentuan-banner.png"  data-preview-src="" data-preview-group="1" >
+						</a>
+					</div>
+					<!-- 第四张 -->
+					<div class="mui-slider-item">
+						<a>
+							<img src="img/index/xiangQingYe/open-banner.png"  data-preview-src="" data-preview-group="1" >
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a>
+							<img src="img/index/xiangQingYe/2rentuan-banner.png"  data-preview-src="" data-preview-group="1" >
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<div class="open-tejia">
+				<img src="img/index/xiangQingYe/tejia.png" alt="" />
+			</div>
+			<div class="open-con">
+				<div class="open-head open-head2">
+					<strong>￥15</strong>
+					<em>￥18</em>
+					<a>评团价</a>
+					<small>包邮</small>
+					<span>107025人已团</span>
+				</div>
+				<div class="open-center clear">
+					<div class="open-left ">
+						<h2>小麦秸秆卡通米奇碗盘套装</h2>
+						<span>酷爱宝贝自营</span>
+					</div>
+					<div class="open-right"></div>
+				</div>
+				<p class="content">米奇小麦碗采用食用麦秸秆+环保pp塑料制作而成！环保，无毒，无刺激，易清洗，防摔耐高温是我们产品受广大消费者青睐的主要原因！</p>
+				<ul class="SPXQ-shui">
+					<li><span></span></li>
+					<li>
+						<p>日本直采  两天内宁波保税局发货</p>
+						<p>进口税：¥<span>40.35</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="SPXQ-canTu">
+				<h3>有宝妈正在发起团购</h3>
+				<ul>
+					<li><img src="img/index/live/header_user.png" alt="" /></li>
+					<li>
+						<strong>人生如梦</strong>
+						<span>来自湛江</span>
+					</li>
+					<li>
+						<p>仅差<span>1</span>人拼团</p>
+						<p>剩余：20:53:46</p>
+					</li>
+					<li id="cantuan">去参团</li>
+				</ul>
+				<a class="bom cantuan_rule">开团后邀请好友参团，人数不足自动退款<span>&#xe6d7;</span></a>
+			</div>
+			<a class="SPXQ-baoZhang clear">
+				<ul>
+					<li><span>&#xe6a7;</span>正品保证</li>
+					<li><span>&#xe6a7;</span>全场包邮</li>
+					<li><span>&#xe6a7;</span>7天包退</li>
+					<li><span>&#xe6a7;</span>售后补贴</li>
+				</ul>
+				<div>&#xe6d7;</div>
+			</a>
+			<a class="SPXQ-guiGe clear">
+				<strong>请选择颜色和规格</strong>
+				<span>&#xe6d7;</span>
+			</a>
+			<div class="SPXQ-pingJia">
+				<div class="tit clear">
+					<p>宝贝口碑(<span>5.4</span>万)</p>
+					<p>好评率<span>97%</span></p>
+				</div>
+				<div class="xiaoKuai">
+					<a>晒图（<span>1936</span>）</a>
+					<a>实惠（<span>2236</span>）</a>
+					<a>正品（<span>3236</span>）</a>
+					<a>不红屁股*（<span>3936</span>）</a>
+					<a>合算（<span>2245</span>）</a>
+					<a>喜欢（<span>3230</span>）</a>
+				</div>
+				<div class="pingJia-xiangQing clear">
+					<div><img src="img/index/live/live_user1.png" alt="" /></div>
+					<div>
+						<h3>青青子衿悠悠我心</h3>
+						<p>贝贝网买东西还是挺放心的，反正我是一直相信貝貝網的都是正品，宝宝的所以辅食,纸尿裤，吃的，用的，穿的，都这里买啊！还有贝贝网连续签到5天7天有优惠券送也是挺好的，就是抢优惠券还得眼明手快，能抢到真的很合算。贝贝的拼团也很不错，想买什么就买什么，不需要凑！但愿贝贝网一直不会让我失望！家中两个宝贝的了，开销挺大的！会常来！</p>
+					</div>
+				</div>
+				<button id="quanBuPingJia">查看全部评价</button>
+			</div>
+			<div class="Wen" id="wen">
+				<h3>问大家（<span>520</span>）</h3>
+				<div class="clear"><img src="img/SPXQ-icon1.png" alt="" /><strong>我的纸尿裤从浙江宁波发的，大家的都是从...</strong><a><span>24</span>个回答</a></div>
+				<div class="clear"><img src="img/SPXQ-icon1.png" alt="" /><strong>付款还要身份证?</strong><a><span>15</span>个回答</a></div>
+			</div>
+			<div class="dianPu">
+				<div class="tit clear" id="shangDian"><img src="img/yindaoye/logo.png" alt="" /><strong>酷爱宝贝全球购自营专营店</strong></div>
+				<div class="bom clear">
+					<ul>
+						<li>
+							<a><strong>1391</strong>件</a>
+							<a>全部商品</a>
+						</li>
+						<li>
+							<a><strong>151.7</strong>万</a>
+							<a>购买人数</a>
+						</li>
+						<li>
+							<a><strong>306.4</strong>万</a>
+							<a>收藏人数</a>
+						</li>
+					</ul>
+					<ul>
+						<li><p>宝贝评级</p><span>4.9</span><span>高</span></li>
+						<li><p>发货速度</p><span>4.9</span><span>高</span></li>
+						<li><p>物流速度</p><span>4.9</span><span>高</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="daJiaMai" id="daJiaMai">
+				<h3 class="tit">大家还买了</h3>
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				    <div class="mui-scroll">
+				        <a class="mui-control-item">
+				        	<div><img src="img/gouWuChe/shangPin1.jpg" alt="" /></div>
+				        	<h3>纸尿裤</h3>
+				        	<p>￥98</p>
+				        </a>
+				         <a class="mui-control-item">
+				        	<div><img src="img/gouWuChe/shangPin2.jpg" alt="" /></div>
+				        	<h3>纸尿裤</h3>
+				        	<p>￥65</p>
+				        </a>
+				         <a class="mui-control-item">
+				        	<div><img src="img/gouWuChe/shangPin1.jpg" alt="" /></div>
+				        	<h3>纸尿裤</h3>
+				        	<p>￥98</p>
+				        </a>
+				         <a class="mui-control-item">
+				        	<div><img src="img/gouWuChe/shangPin2.jpg" alt="" /></div>
+				        	<h3>纸尿裤</h3>
+				        	<p>￥98</p>
+				        </a>
+				         <a class="mui-control-item">
+				        	<div><img src="img/gouWuChe/shangPin1.jpg" alt="" /></div>
+				        	<h3>纸尿裤</h3>
+				        	<p>￥84</p>
+				        </a>
+				         <a class="mui-control-item">
+				        	<div><img src="img/gouWuChe/shangPin2.jpg" alt="" /></div>
+				        	<h3>纸尿裤</h3>
+				        	<p>￥98</p>
+				        </a>
+				    </div>
+				</div>
+			</div>
+			<div class="xiangQing">
+				<div class="xiangQing-tit">
+					<span class="cur">图文详情</span>
+					<span>商品参数</span>
+					<span>问题咨询</span>
+				</div>
+				<ul>
+					<li>
+						<h3><span>酷爱宝贝人工质检</span><span>好商品品质有保障</span></h3>
+						<section>
+							<a><span>正</span>正品保证</a>
+							<a><span>邮</span>全场包邮</a>
+							<a><span>外</span>海外直采</a>
+						</section>
+						<img src="img/tuWenXiangQing1.jpg" alt="" />
+					</li>
+					<li>
+						<div><p class="clear"><img src="img/TWXQicon1.png" alt="" /><span>产品信息</span></p></div>
+						<h3><span>日本原装进口</span><span>花王妙而舒纸尿裤M64片</span></h3>
+						<section class="clear">
+							<a>
+								<span>宝贝型号</span>
+								<strong>M64片，64片/件</strong>
+								<span>宝贝特质</span>
+								<strong>轻薄、三倍透气、超强吸水</strong>
+								<span>适用范围</span>
+								<strong>通用</strong>
+								<span>适用体重</span>
+								<strong>6-11kg</strong>
+							</a>
+							<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+						</section>
+					</li>
+					<li>
+						<div><p class="clear"><img src="img/TWXQicon1.png" alt="" /><span>新旧包装</span></p></div>
+						<p class="tit3">国外经常更换产品包装，新旧包装略有差异，随机发货不影响使用，妈妈们请放心购买</p>
+						<section>
+							<a>
+								<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+								<span>新包装</span>
+							</a>
+							<a>
+								<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+								<span>旧包装</span>
+							</a>
+						</section>
+					</li>
+					<li>
+						<div><p class="clear"><img src="img/TWXQicon1.png" alt="" /><span>产品特点</span></p></div>
+						<img src="img/tuWenXiangQing2.jpg" alt="" class="teDian"/>
+					</li>
+					<li>
+						<div><p class="clear"><img src="img/TWXQicon1.png" alt="" /><span>尺码选择</span></p></div>
+						<img src="img/tuWenXiangQing3.jpg" alt="" class="chiMa" />
+					</li>
+					<li>
+						<div><p class="clear"><img src="img/TWXQicon1.png" alt="" /><span>常见问题</span></p></div>
+						<section>
+							<a>
+								<div class="top clear"><img src="img/TWXQicon2.png" alt="" /><p>因为清洁不及时或不彻底导致宝宝屁股周围的皮肤念球菌感染、湿疹、红疹，严重的甚至成为接触性皮炎。</p></div>
+								<p class="conter">未及时更换，特别是夜间长时间不换尿布，小屁屁长期浸渍在湿尿片里，增加刺激物穿透皮肤的能力及感染皮肤的机会，正常纸尿裤更换时间为2-3小时；未及时清洗宝宝的屁屁，正常情况下，宝宝便便之后，如果没有及时的清洗干净更容易引起红屁屁；皮肤的反复摩擦，使用不合身的尿裤，皮肤与尿裤不停地摩擦，造成角质层保护结构破坏，需要根据宝宝实际体重选择正确的纸尿裤。</p>
+							</a>
+							<a>
+								<div class="top clear"><img src="img/TWXQicon2.png" alt="" /><p>因为清洁不及时或不彻底导致宝宝屁股周围的皮肤念球菌感染、湿疹、红疹，严重的甚至成为接触性皮炎。</p></div>
+								<p class="conter">未及时更换，特别是夜间长时间不换尿布，小屁屁长期浸渍在湿尿片里，增加刺激物穿透皮肤的能力及感染皮肤的机会，正常纸尿裤更换时间为2-3小时；未及时清洗宝宝的屁屁，正常情况下，宝宝便便之后，如果没有及时的清洗干净更容易引起红屁屁；皮肤的反复摩擦，使用不合身的尿裤，皮肤与尿裤不停地摩擦，造成角质层保护结构破坏，需要根据宝宝实际体重选择正确的纸尿裤。</p>
+							</a>
+						</section>
+					</li>
+				</ul>
+				<ul>
+					<li><span>品牌</span><span>Merries花王</span></li>
+					<li><span>产地</span><span>日本</span></li>
+					<li><span>货源地</span><span>日本</span></li>
+					<li><span>货号</span><span>4H0005</span></li>
+					<li><span>适用性别</span><span>通用</span></li>
+					<li><span>适用年龄</span><span>0-1岁</span></li>
+					<li><span>保质期</span><span>3年</span></li>
+					<li><span>片数</span><span>64</span></li>
+					<li><span>毛重</span><span>8.24kg</span></li>
+					<li><span>包数</span><span>4</span></li>
+					<li><span>第一单位</span><span>件</span></li>
+					<li><span>计价单位</span><span>件</span></li>
+					<li><span>体重</span><span>6kg-114kg</span></li>
+					<li><span>默认快递</span><span>申通，圆通</span></li>
+					<li><span>服务信息</span><span>本商品由酷爱宝贝自营，并由酷爱宝贝提供售后</span></li>
+				</ul>
+				<ul>
+					<li><p>本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</p></li>
+					<li>
+						<h3>1.拼团有效期</h3>
+						<p>拼团有效期是自开团时刻起的24小时内，如果距离商品失效时间小于24小时，则以商品的结束时间为准。</p>
+					</li>
+					<li>
+						<h3>2.拼团失败</h3>
+						<p>超过成团有效期24小时，未达成相应参团人数的团，则该团失败。</p>
+						<p>在团有效期24小时内，商品已提前售罄，若还未拼团成功，则该团失败。</p>
+						<p>高峰期间，同时支付的人过多，团人数有限制，酷爱宝贝以接收第三方支付信息时间先后为准，超出该团人数限制的部分用户则会拼团失败。</p>
+						<p>拼团成功后，团里出现大量取消订单/退款情况，该团视为拼团失败。使用团长免单券的商品，若参团用户中出现取消订单/退款情况，则团长订单连带取消，将不再享受免单资格。</p>
+						<p>拼团失败的订单，系统会在1-2个工作日内处理退款，系统处理后1-10个工作日内原路退回至原支付账户中,如使用余额支付则立即退回至酷爱宝贝余额中。（所使用的现金券/酷币会一并退回）</p>
+					</li>
+					<li>酷爱宝贝平台客服</li>
+					<li>购买前如有问题，请向贝贝客服咨询</li>
+				</ul>
+			</div>
+			<div class="tuiJian" id="tuiJian">
+		    	<p class="tuJian-tit">猜你喜欢</p>
+		    	<ul>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+		    			<div>
+		    				<p>￥<span>329</span></p>
+		    				<p><span>1.0万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<strong>59</strong></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+		    			<div>
+		    				<p>￥<span>329</span></p>
+		    				<p><span>1.0万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<span>59</span></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    	</ul>
+		    </div>
+		</div>
+		<div class="open-footer">
+			<div class="open-kf" id="keFu2">
+				<div class="kf-icon">&#xe6d0;</div>客服
+			</div>
+			<div class="open-gwc" id="JRGWC"><div class="gwc-iocn">&#xe673;</div>加购物车</div>
+			<div class="open-four" id="pinMai">￥89<br>4人团</div>
+			<div class="open-dd" id="danMAI">￥1<br>单独购买</div>
+		</div>
+		<div class="pintuan_rule">
+			<div class="shadow_rule">
+				<h2>拼团规则</h2>
+				<h2 class="rule_liucheng">①<span>支付开团/参团&#xe6a1;</span>②<span>邀请拼团&#xe6a1;</span>③<span>人满成团/不满退款</span></h2>
+				<p class="rule_sm">本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</p>
+				<p class="rule_content1">1. 拼团有效期<br>拼团有效期是自开团时刻起的24小时内，如果距离商品失效时间小于24小时，则以商品的结束时间为准。</p>
+				<p class="rule_content2">2. 拼团失败<br>超过成团有效期24小时，未达成相应参团人数的团，则该团失败。<br>在团有效期24小时内，商品已提前售罄，若还未拼团成功，则该团失败。</p>
+				<button class="btn_sure">确定</button>
+				<button class="btn_close">&#xe6a6;</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/castapp.js"></script>
+	<script src="js/mui.zoom.js"></script>
+	<script src="js/mui.previewimage.js"></script>
+	<script>
+		mui.previewImage();
+	</script>
+	<script>
+		var slider = mui("#slider");
+					slider.slider({
+						interval: 3000
+					});
+		document.getElementById("JRGWC").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"index.html",
+				id:"index",
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		});	
+		document.getElementById("keFu2").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"liaotian.html",
+				id:"lianXi2", 
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		}); 
+		
+		document.getElementById("danMAI").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"balance.html",
+				id:"balance",
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		});		
+		document.getElementById("pinMai").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"pintuan_xiangqing.html",
+				id: "pingtuan_xiangqing",
+				createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					duration:300
+				}
+			});
+		});
+		document.getElementById("cantuan").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"pintuan_xiangqing.html",
+				id:"pingtuan_xiangqing",
+				createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					duration:300
+				}
+			});
+		});
+		document.getElementById("open-icon").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"index.html",
+				id:"index",
+				createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					duration:300
+				}
+			});
+		});	
+			
+		document.getElementById("shangDian").addEventListener("tap",function(){
+			mui.openWindow({ 
+				url:"shop.html",
+				id:"shangDian2",
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		});
+		document.getElementById("quanBuPingJia").addEventListener("tap",function(){
+			mui.openWindow({ 
+				url:"baby-koubei.html",
+				id:"baby-koubei2",
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		});
+		document.getElementById("wen").addEventListener("tap",function(){
+			mui.openWindow({ 
+				url:"ask-everyone.html",
+				id:"ask",
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		});
+		$(document).ready(function(){
+			$(".xiangQing div span").click(function(){
+				$(this).addClass("cur").siblings("span").removeClass("cur");
+				var i=$(this).index();
+				$(this).parent().siblings("ul").eq(i).css("display","block").siblings("ul").css("display","none");
+			});
+			$(".cantuan_rule").click(function(){
+				$(this).parents(".mui-content").siblings(".pintuan_rule").addClass("cur");
+				$(".btn_sure").click(function(){
+					$(this).parents(".pintuan_rule").removeClass("cur");
+				});
+				$(".btn_close").click(function(){
+					$(this).parents(".pintuan_rule").removeClass("cur");
+				});
+			});
+			$(".open-right").click(function(){
+				$(this).toggleClass("cur");
+			});
+			
+			$(".dian").click(function(){
+				$(this).siblings(".nav_list").toggleClass("cur");
+			});
+		});
+		
+		
+		//	//以下是猜你喜欢循环进入详情页js
+		window.onload=function(){
+			var tuanBox=document.getElementById("tuiJian");
+			var ul=tuanBox.getElementsByTagName("ul")[0];
+			var liA=ul.getElementsByTagName("li");
+			for(var b=0;b<liA.length;b++){
+				liA[b].addEventListener('tap',tap_right);
+				
+			}
+			var daJiaMai=document.getElementById("daJiaMai");
+			var liA2=daJiaMai.getElementsByTagName("a");
+			for(var i=0;i<liA2.length;i++){
+				liA2[i].addEventListener('tap',tap_right);
+				
+			}
+		}
+		
+		function tap_right(){
+			mui.openWindow({
+				url:"shangPinXiangQing.html",
+				id:"SPXQ",
+						createNew:true, 
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"已注册请登录..."
+				}
+			});
+		}
+	</script>
+</html>

@@ -1,0 +1,55 @@
+p{margin: 0;}
+.mui-content{background-color: white;}
+.mui-bar-nav{background-color: white;}
+.mui-bar-nav button{position: absolute;top: 0.35rem;right: 1rem;font-size: 1.5rem;color: #888888;font-family: icon;border: none;padding: 0;margin: 0;}
+.banner p{ padding: 0 5%; display: flex;justify-content: space-between;}
+.banner p span{display: block;width: 25%;font-size: 0.8rem;margin: 0.5rem 0;}
+.banner p span img{ margin-top: .1rem; float: left;width: 20%;margin-right: 0.2rem;}
+.banner a{display: block;width: 100%;}
+.banner a img{width: 100%;}
+.content ul li{ padding: 0.8rem 4%;/*height: 8.6rem;*/border-bottom: 1px solid #EEEEEE;}
+.content ul li .list_img{ margin-right: .6rem; float: left;width: 34%;height: 100%;overflow: hidden;}
+.content ul li .list_img img{width: 100%;}
+.content ul li .list_content{float: left;width: 60%;}
+.content ul li .list_content h2{ font-size: 1rem;color: black;font-weight: normal;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding-top: 1rem;}
+.content ul li .list_content .list_qiang{ font-size: .7rem;color: #FF4397;}
+.content ul li .list_content .list_line{position: relative;width: 50%;height: .8rem;background-color: #FFA1CB;border-radius: 10px;/*margin-top: 0.5rem;*/}
+.content ul li .list_content .list_line p{position: absolute;top: 0;left: 0;height: 100%;background-color: #FF4397;border-radius: 10px;}
+.content ul li .list_content .list_price{position: relative;width: 100%;height: 2rem;text-align: center;}
+.content ul li .list_content .list_price h2{ margin: 0.3rem 0 0 0; padding: 0; float: left;width: 20%;font-size: 1rem;color: #FF4397;text-align: right;line-height: 1.6rem;}
+.content ul li .list_content .list_price p{ margin: 0.3rem 0 0 0; padding: 0; float: right;width: 54%;font-size: 0.9rem;color: #888888;text-align: left;line-height: 1.6rem;text-decoration: line-through;}
+
+.content ul li .list_content .list_price strong{
+	margin-top: .6rem;
+	display: block;
+	width: 2.8rem;
+	height: 1rem;
+	line-height: .9rem;
+	/*font-weight: 500;*/
+	float: left;
+	font-size: .6rem;
+	color: #FF4498;
+	border: 1px solid #FF4498;
+}
+
+.content ul li .list_content .list_price button{position: absolute;top: 0.2rem;right: 0;width: 4rem;height: 1.8rem;color: white;background-color: #FF4397;border: none;}
+.content ul li:first-child .list_content .list_line p{width: 64%;}
+.content ul li:nth-child(2) .list_content .list_line p{width: 26%;}
+.content ul li:nth-child(3) .list_content .list_line p{width: 18%;}
+.content ul li:nth-child(4) .list_content .list_line p{width: 64%;}
+
+.share{background: #fff;padding: 2rem 0 1rem 0;display: none;position: fixed;bottom: 0;width: 100%;}
+.share h3{font-size: 1.2rem;color: #5D5D5D;float: left;font-weight: lighter;}
+.share h3:before{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float: left;margin: .5rem .6rem 1rem 5rem;}
+.share h3:after{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float:right;margin: .5rem .6rem 2rem .8rem;}
+.share ul{width: 100%;list-style: none;padding:2rem 0 3rem 0;}
+.share ul li{width: 25%;float: left;}
+.share ul li div{font-family: icon;font-size: 3rem;margin: 0 auto;text-align: center;}
+.share ul li p{color: #797979;text-align: center;margin-top: 1rem;}
+.share ul li:first-child div{color: #A6CA66;}
+.share ul li:nth-child(2) div{color: #35DA35;}
+.share ul li:nth-child(3) div{color: #58B7E3;}
+.share ul li:nth-child(4) div{color: #F5503C;}
+.share ul li:nth-child(5) div{color: #ccc;margin-top: 1rem;}
+.share .cancle{width: 80%;height: 3rem;line-height: 3rem;text-align: center;color: #fff;background: #E3E3E3;margin: 0 auto;border-radius: 1rem;font-size: 1.2rem;}
+.share-bj{height: 100%;width: 100%;z-index: 99;background:rgba(0,0,0,0.5);position: fixed;top: 0;display: none;}

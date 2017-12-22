@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <!--<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>-->
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/index/vipUse.css"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body id="vipUse">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">0.01元试用会员卡</h1>
+		    <button>&#xe6aa;</button>
+		</header>
+		<div class="mui-content">
+		    <div class="banner">
+		    	<a href=""><img src="img/index/vipUse.png" alt="" /></a>
+		    </div>
+		    <div class="pay">
+		    	<p class="pay_title">支付方式</p>
+		    	<a class="clear" href="">
+		    		<h2 class="pay_logo">&#xe71f;</h2>
+		    		<h3>支付宝</h3>
+		    		<p>安全快捷，可支持银行卡支付</p>
+		    		<button>&#xe6d7;</button>
+		    	</a>
+		    </div>
+		    <div class="open">
+		    	<h2>开通说明</h2>
+		    	<p>开通使用时需要您同时开通自动续费功能能够，使用到期后将自动开通金卡，您可以随时在我的会员卡中关闭自动续费。开通使用时需要您同时开通自动续费功能能够，使用到期后将自动开通金卡，您可以随时在我的会员卡中关闭自动续费。开通使用时需要您同时开通自动续费功能能够，使用到期后将自动开通金卡，您可以随时在我的会员卡中关闭自动续费。</p>
+		    </div>
+		    <div class="xieyi">
+		    	<input id="check" type="checkbox" hidden=""/>
+		    	<label class="check cur" for="check"></label>
+		    	<p>我已阅读并同意<a>《酷爱宝贝试用及代扣服务协议》</a></p>
+		    </div>
+		    <button class="button">开通自动续费并试用</button>
+		</div>
+		<div class="share-bj">
+				<div class="share">
+			    	<h3>分享</h3>
+				    <ul class="clear">
+				    	<li>
+				    		<div>&#xe693;</div>
+				    		<p>朋友圈</p>
+				    	</li>
+				    	<li>
+				    		<div>&#xe694;</div>
+				    		<p>微信</p>
+				    	</li>
+				    	<li>
+				    		<div>&#xe67b;</div>
+				    		<p>QQ</p>
+				    	</li>
+				    	<li>
+				    		<div>&#xe6da;</div>
+				    		<p>微博</p>
+				    	</li>
+				    	<li>
+				    		<div>&#xe6d8;</div>
+				    		<p>人人网</p>
+				    	</li>
+				    </ul>
+				    <div class="cancle">取消</div>
+			    </div>
+			</div>   
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("header button").click(function(){
+//					alert("123");
+					$(".share-bj").css("display","block");
+					$(".share").css("display","block");
+				});
+				$(".cancle").click(function(){
+					$(".share-bj").css("display","none");
+					$(".share").css("display","none");
+				});
+			})
+		</script>
+	</body>
+</html>

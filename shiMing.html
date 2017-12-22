@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<style>
+			@font-face {
+			    font-family: aa;
+			    src: url(../font/iconfont1.css),url(../font/iconfont1.woff),url(../font/iconfont1.eot),url(../font/iconfont1.svg),url(../font/iconfont1.ttf),url(../font/iconfont1.woff)
+			}
+			.ui-page-login,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			.mui-content{height: 100%;}
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group label {
+				width: 24%;
+			}
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				width: 78%;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			header.mui-bar a#jiantou{
+				display: block;
+				height: 3.6rem;
+				line-height: 2.6rem;
+				color: #BBBBBB;
+			}
+			header.mui-bar h1{
+				height: 3.6rem;
+				line-height: 3.6rem;
+			}
+			header.mui-bar{
+				border: none;
+    			box-shadow: none;
+    			height: 3.4rem;
+			}
+			form#login-form .mui-input-row{height: 3.6rem;}
+			form#login-form .mui-input-row label img{width: 2rem;}
+			form#login-form .mui-input-row:first-of-type{
+				border-bottom: 1px solid #EEEEEE;
+			}
+			form#login-form .mui-input-row:after{display: none;}
+			form#login-form:before,.mui-input-group:after{display: none;}
+			.mui-input-row label~input{
+				float: left;
+				padding: 0;
+				width: 70%;
+				font-size: 1rem;
+    			height: 100%;
+			}
+			.mui-input-group label{
+				padding: 0 5%;
+				width: 25%;
+				line-height: 3.6rem;
+			}
+			.link-area{
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+			    -webkit-justify-content: space-between;
+			    -moz-justify-content: space-between;
+			    -ms-justify-content: space-between;
+			    -o-justify-content: space-between;
+			    justify-content: space-between;
+				text-align: left;
+				margin-bottom: 8%;
+			}
+			.link-area a{
+				font-size: .8rem;
+				color: #888888;
+			}
+			.mui-content-padded button{
+				margin: 0 auto;
+				width: 80%;
+				height: 3.2rem;
+				border-radius: 1rem;
+				border: none;
+				background: #FF4498;
+			}
+			.tiaoLi{
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    /*-webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;*/
+			    -webkit-justify-content: flex-start;
+			    -moz-justify-content: flex-start;
+			    -ms-justify-content: flex-start;
+			    -o-justify-content: flex-start;
+			    justify-content: flex-start;
+			    margin-top: 3%;
+			    padding: 0 14%;
+			}
+			.tiaoLi span{ color: #FF4498;}
+			.tiaoLi p{
+				color: #FF4498;
+				line-height: 1.4rem;
+			}
+			.tiaoLi p a{ color: #000000;}
+			.tiaoLi span.cur:after{
+			    font-family: icon;
+			    content: "\e6a7";
+			    display: block;
+			    color: white;
+			    font-size: 1rem;
+			    text-align: center;
+			    line-height: 1.4rem;
+			}
+			.mui-input-row span{
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+			}
+				#shiMing p{
+				padding-left: 5%;
+				margin-bottom: 0;
+				line-height: 2rem;
+			}
+			#shiMing .row.mui-input-row{
+				background: #fff;
+			}
+			#shiMing .row.mui-input-row div{
+				height: 3.2rem;
+				border: 1px solid #EEEEEE;
+			}
+			#shiMing .row.mui-input-row div label{
+				padding-top: 18px;
+			}
+			#shiMing .row.mui-input-row div input{
+				padding-top: 22px;
+			}
+			#shiMing .mui-content-padded{
+				margin: 4px 0 0 0;
+			}
+			#shiMing ul{
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+			    -webkit-justify-content: space-between;
+			    -moz-justify-content: space-between;
+			    -ms-justify-content: space-between;
+			    -o-justify-content: space-between;
+			    justify-content: space-between;
+			    padding: .8rem 5%;
+			    margin-top: 0;
+				list-style: none;
+				background: #fff;
+			}
+			#shiMing ul li{
+				width: 45%;
+				text-align: center;
+			}
+			#shiMing ul li img{
+				display: block;
+				margin: 0 auto;
+				width: 74%;
+			}
+			#shiMing ul li div{
+				width: 94%;
+				height: 5rem;
+				border-radius: .5rem;
+				border: 1px dashed #bbbbbb;
+			}
+			#shiMing ul li div h3{
+				font-size: 1rem;
+				color: #333333;
+			}
+			#shiMing ul li div span{
+				margin: 1rem 0 .8rem 0;
+				display: block;
+				font-size: 3rem;
+				color: #BBBBBB;
+			}
+			#shiMing section{
+				
+				padding: 0 5%;
+			}
+			#shiMing section h3{
+				text-align: center;
+				font-size: 1rem;
+				color: #545454;
+			}
+			#shiMing section div{
+				font-size: .9rem;
+				color: #888888;
+			}
+		</style>
+
+	</head>
+
+	<body id="shiMing">
+		<header class="mui-bar mui-bar-nav">
+		    <button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>
+			</button>
+			<button id="submit2" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">保存</button>
+			<h1 class="mui-center mui-title">实名认证</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<p>身份信息（必填）</p>
+				<div class="row mui-input-row">
+					<div class="mui-input-row">
+						<label>真实姓名</label>
+						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请填写身份证上的真实姓名">
+					</div> 
+					<div class="mui-input-row">
+						<label>身份证号码</label>
+						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请填写身份证号（将加密处理）">
+					</div> 
+				</div>
+				<p>身份证正反面照片(选填，用于直邮商品清关使用)</p>
+				<div class="mui-input-row">
+					<ul>
+						<li>
+							<div>
+								<span id="head2">+</span>
+								<h3>上传正面</h3>
+							</div>
+							<p>示例</p>
+							<img src="img/My/shenFenZheng1.jpg" alt="" />
+						</li>
+						<li>
+							<div>
+								<span id="head3">+</span>
+								<h3>上传反面</h3>
+							</div>
+							<p>示例</p>
+							<img src="img/My/shenFenZheng2.jpg" alt="" />
+						</li>
+					</ul>
+					<section>
+						<h3>为什么需要实名认证？</h3>
+						<div>根据海关总署令第147号（《海关总署关于修改<中华人民共和国海关对进出境快件监管办法>》）第二十二条 个人物品类进出境快件报关时，运营人应当向海关提交《中华人民共和国海关进出物品申报单》、每一件出境快件的分运单、进境快件收件人或出境快件发件人身份和海关需要的其它单证。</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.enterfocus.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			document.getElementById("submit2").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"index.html",
+					id:"index",
+	//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			});
+//以下是实名认证拍照系统
+			/*点击头像触发*/
+			document.getElementById('head2').addEventListener('tap', function() {
+			    if(mui.os.plus) {
+			        var a = [{
+			            title: "拍照"
+			    }, {
+			        title: "从手机相册选择"
+			    }];
+			    plus.nativeUI.actionSheet({
+			        title: "上传身份证正面照",
+			        cancel: "取消",
+			        buttons: a
+			    }, function(b) { /*actionSheet 按钮点击事件*/
+			        switch(b.index) {
+			        case 0:
+			            break;
+			        case 1:
+            			getImage2(); /*拍照*/
+            			break;
+        			case 2:
+           				galleryImg2(); /*打开相册*/
+           				break;
+        			default:
+           				break;
+        			}
+    			})
+    		}
+		}, false);
+			document.getElementById('head3').addEventListener('tap', function() {
+			    if(mui.os.plus) {
+			        var a = [{
+			            title: "拍照"
+			    }, {
+			        title: "从手机相册选择"
+			    }];
+			    plus.nativeUI.actionSheet({
+			        title: "上传身份证正面照",
+			        cancel: "取消",
+			        buttons: a
+			    }, function(b) { /*actionSheet 按钮点击事件*/
+			        switch(b.index) {
+			        case 0:
+			            break;
+			        case 1:
+            			getImage2(); /*拍照*/
+            			break;
+        			case 2:
+           				galleryImg2(); /*打开相册*/
+           				break;
+        			default:
+           				break;
+        			}
+    			})
+    		}
+		}, false);
+		</script>
+	</body>
+
+</html>

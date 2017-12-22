@@ -1,0 +1,67 @@
+*,ul,li{margin: 0;padding: 0;box-sizing: border-box;}
+@font-face {
+    font-family: icon;
+    src: url("../fonts/iconfont.ttf"),url("../fonts/iconfont.woff"),url("../fonts/iconfont.svg"),url("../fonts/iconfont.eot");
+}
+body{background: #EEEEEE;}
+.mui-ba{background: #fff;}
+.clear:after{display: block;content: "";clear: both;}
+ul{list-style: none;}
+.mui-content{height: 2.2rem;}
+.search-yan{position: relative;width: 90%;height: 1.8rem;padding-left:5%;float: left; margin-top: .76rem;}
+.search-yan .parper{position: absolute; width: 82%;height: 1.8rem;display: block;padding-left: 2.6rem;line-height: 1.8rem;border-radius:2rem;font-size: .9rem;float: left;margin-bottom: 0;color: #fff;}
+.search-yan strong{font-family: icon;content: "\e683";color:#D1D1D1;font-size: 1.5rem;display: block;position: absolute;top: .4rem;left: 1.8rem;}
+.search-yan .search-ss{font-size: 1rem;color: #FD84B9;float: right;display: block;margin-top: .3rem;}
+.past-search{width: 100%;background: #fff;}
+.past-search .past-search-top{margin-bottom: 1rem;}
+.past-search small{float: left;margin: 2rem 0 0 1rem;color: #A4A4A4;font-size: 1rem;}
+.past-search span{float: right;margin: 2rem 1rem 0 0;color:#A4A4A4;font-family: icon;font-size: 1.3rem;}
+.past-search a{color: #5E5E5E;background: #F7F7F7;margin:1rem 0 0 1rem;border-radius: 1rem;padding: .4rem .4rem .3rem .3rem;font-size: .8rem;}
+.guess{width: 100%;background: #fff;padding-top: 2rem;}
+.guess h3{margin: 0 0 0 1rem;color: #A4A4A4;font-size: 1rem;font-weight: lighter;margin-bottom: 1rem;}
+.guess a{color: #5E5E5E;background: #F7F7F7;margin:1rem 0 0 1rem;border-radius: 1rem;  padding: .4rem .8rem;font-size: .8rem;}
+.guess a.cur{color: #FFE0EF;background: #FE68A8;}
+
+/*纸尿裤*/
+.search-yan .search-paper{position: absolute; width: 92%;height: 1.8rem;display: block;padding-left: 2.6rem;line-height: 1.8rem;border-radius:2rem;font-size: .9rem;float: left;margin-bottom: 0;color: #fff;}
+
+.paper-head{background: #fff;}
+.paper-head ul{display: flex;justify-content: space-around;align-content: center;width: 80%;margin: 0 auto;height: 2.4rem;}
+.paper-head ul li{color: #000;cursor: pointer; font-size: .9rem; line-height: 2.4rem;}
+.paper-head ul li.cur{color: #FF60A8;}
+
+/*品牌*/
+.paper-pp{width: 100%;margin-top: 1px;}
+.paper-pp .pp-head{background: #fff;display: flex;justify-content: space-around;align-content: center;width: 100%;padding: .5rem 0;position: relative;}
+.paper-pp .pp-head div{position: absolute;padding: 1rem 0;background: #fff;left: 0;top: 3rem;display: none;z-index: 2;}
+.paper-pp .bg{width: 100%;background:rgba(0,0,0,.8);position: absolute;top:10rem;left: 0;opacity: .5;display: none;}
+.paper-pp .pp-head div a{color: #767676;display: block;float: left;width: 50%;line-height: 2rem;padding-left: 2rem;}
+.paper-pp .pp-head div a.cur{color: #FF60A8;}
+.paper-pp .pp-head li{background: #E3E3E3; padding: .1rem .8rem;border-radius: 1rem;font-size: .8rem;color: #000;cursor: pointer;}
+.paper-pp .pp-head li:after{content: "\e6d6";font-family: icon;}
+.paper-pp .pp-head li.cur:after{content: "\e6d5";font-family: icon;}
+.paper-pp .pp-con{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	width: 100%;flex-wrap: wrap;padding-top: .2rem;}
+.paper-pp .pp-con li{background: #fff;margin-bottom: 4px;width: 49%;padding:1rem .5rem .5rem .5rem;}
+.paper-pp .pp-con li img{display: block;width: 80%;margin: 0 auto;}
+/*.paper-pp .pp-con li:nth-child(1) img{width: 53%;}
+.paper-pp .pp-con li:nth-child(4) img{width: 53%;}
+.paper-pp .pp-con li:nth-child(5) img{width: 53%;}*/
+.paper-pp .pp-con li p{color: #000;width: 100%;margin: 1rem 0;}
+.paper-pp .pp-con li span{color: #FF69AC;}
+.paper-pp .pp-con li em{float: right;font-style: normal;color: #919191;}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/index/qiandao.css"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body id="qiandao">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">签到</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="content_head clear">
+		    	<div class="user_logo"><img src="img/index/user_logo.png" alt="" /></div>
+		    	<p class="user_days">本周签到<span>0</span>天</p>
+		    	<a class="qiandao_rule">签到规则</a>
+		    	<p class="user_money">我的酷币:<span>0</span>个</p>
+		    	<div class="qiandao_alert">签到提醒
+		    		<div class="mui-switch mui-switch-mini mui-active ">
+						<div class="mui-switch-handle"></div>
+					</div>
+		    	</div>
+		    </div>
+		    <div class="qiandao">
+		    	<div class="qiandao_header clear">
+		    		<p class="line"></p><h2>天天领奖</h2><p class="line"></p>
+		    	</div>
+		    	<ul>
+		    		<li>
+		    			<h2><span>MON</span><br>周一</h2>
+		    			<p class="qiandao_kubi"><span>5</span>酷币</p>
+		    			<button>立即领取</button>
+		    			<p class="qiandao_lq">已领取</p>
+		    			<p class="qiandao_zbkl">暂不可领</p>
+		    		</li>
+		    		<li>
+		    			<h2><span>TUE</span><br>周二</h2>
+		    			<p class="qiandao_kubi cur"><span>5</span>酷币</p>
+		    			<button class="cur">立即领取</button>
+		    			<p class="qiandao_lq">已领取</p>
+		    			<p class="qiandao_zbkl cur">暂不可领</p>
+		    		</li>
+		    		<li>
+		    			<h2><span>WED</span><br>周三</h2>
+		    			<p class="qiandao_kubi"><span>10</span>酷币</p>
+		    			<button>立即领取</button>
+		    			<p class="qiandao_lq">已领取</p>
+		    			<p class="qiandao_zbkl">暂不可领</p>
+		    		</li>
+		    		<li>
+		    			<h2><span>THU</span><br>周四</h2>
+		    			<p class="qiandao_kubi"><span>10</span>酷币</p>
+		    			<button>立即领取</button>
+		    			<p class="qiandao_lq">已领取</p>
+		    			<p class="qiandao_zbkl">暂不可领</p>
+		    		</li>
+		    		<li>
+		    			<h2><span>FRI</span><br>周五</h2>
+		    			<p class="qiandao_kubi"><span>10</span>酷币</p>
+		    			<button>立即领取</button>
+		    			<p class="qiandao_lq">已领取</p>
+		    			<p class="qiandao_zbkl">暂不可领</p>
+		    		</li>
+		    		<li>
+		    			<h2><span>SAT</span><br>周六</h2>
+		    			<p class="qiandao_kubi"><span>20</span>酷币</p>
+		    			<button>立即领取</button>
+		    			<p class="qiandao_lq">已领取</p>
+		    			<p class="qiandao_zbkl">暂不可领</p>
+		    		</li>
+		    		<li>
+		    			<h2><span>SUN</span><br>周日</h2>
+		    			<p class="qiandao_kubi"><span>30</span>酷币</p>
+		    			<button>立即领取</button>
+		    			<p class="qiandao_lq">已领取</p>
+		    			<p class="qiandao_zbkl">暂不可领</p>
+		    		</li>
+		    		<li>
+		    			<img src="img/index/qiandao.png" alt="" />
+		    		</li>
+		    	</ul>
+		    </div>
+		</div>
+		<div class="close_shadow">
+			<div class="shadow_alert clear">
+				<h2>确认关闭签到提醒？</h2>
+				<p>真的要关闭我吗？<br>可能会错过签到好礼哦~</p>
+				<button class="close_true">确定关闭</button>
+				<button class="close_false">保持提醒</button>
+				<button class="close_close">&#xe6a6;</button>
+			</div>
+		</div>
+		<div class="qiandao_shadow">
+			<div class="cg_alert">
+				<img src="img/index/qiandao_cg.png" alt="" />
+				<p>连续签到七天可领取奖励<br>继续加油哦~</p>
+				<button class="cg_close">&#xe6a6;</button>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$(".qiandao_alert .mui-switch").click(function(){
+					$(this).parents(".mui-content").siblings(".close_shadow").addClass("cur");
+					$(".close_true").click(function(){
+						$(this).parents(".close_shadow").removeClass("cur");
+					});
+					$(".close_false").click(function(){
+						$(this).parents(".close_shadow").removeClass("cur");
+						$(this).parents(".close_shadow").siblings(".mui-content").find(".mui-switch").addClass("mui-active");
+						$(this).parents(".close_shadow").siblings(".mui-content").find(".mui-switch-handle").css("transform","translate(29px, 0)");
+					});
+					$(".close_close").click(function(){
+						$(this).parents(".close_shadow").removeClass("cur");
+						$(this).parents(".close_shadow").siblings(".mui-content").find(".mui-switch").addClass("mui-active");
+						$(this).parents(".close_shadow").siblings(".mui-content").find(".mui-switch-handle").css("transform","translate(29px, 0)");
+					});
+				});
+				$(".qiandao button").click(function(){
+					$(this).removeClass("cur");
+					$(this).siblings(".qiandao_lq").addClass("cur");
+					$(this).parents(".mui-content").siblings(".qiandao_shadow").addClass("cur");
+					$(".cg_close").click(function(){
+						$(this).parents(".qiandao_shadow").removeClass("cur");
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

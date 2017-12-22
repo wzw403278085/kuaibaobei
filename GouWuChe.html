@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link href="css/gouWuChe/gouWuChe.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/gouWuChe/gwc.css" />
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+	</head>
+	<body id="GouWuChe5">
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">购物车</h1>
+		    <a>编辑</a>
+		</header>
+		<div class="mui-content">
+			<div id="shangPingXinXi">
+				<ul class="GWC-shangPin">
+					<li class="GWC-shangPin-juTi clear">
+						<span class="xuanZe"></span>
+						<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+						<ul>
+							<li>纸尿裤 M64（6-11KG）【4包装】</li>
+							<li>
+								<div class="edit-total clear">
+			    					<div class="edit-left">-</div>
+			    					<input class="edit-center" value="1"/>
+			    					<div class="edit-right">+</div>
+			    				</div>
+							</li>
+							
+							<li>通用<span>L</span></li>
+							<li>
+								<div>￥<span>329</span></div>
+								<div>￥<span>360</span></div>
+								<div>&#xe6a6;<span>1</span></div>
+							</li>
+						</ul>
+					</li>
+					<p>小计：<a>￥<span class="xiaoJi">329.00</span></a></p>
+				</ul>
+				<ul class="GWC-shangPin">
+					<li class="GWC-shangPin-juTi clear">
+						<span class="xuanZe"></span>
+						<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+						<ul>
+							<li>纸尿裤 M64（6-11KG）【4包装】</li>
+							<li>
+								<div class="edit-total clear">
+			    					<div class="edit-left">-</div>
+			    					<input class="edit-center" value="1"/>
+			    					<div class="edit-right">+</div>
+			    				</div>
+							</li>
+							<li>通用<span>L</span></li>
+							<li>
+								<div>￥<span>329</span></div>
+								<div>￥<span>360</span></div>
+								<div>&#xe6a6;<span>1</span></div>
+							</li>
+						</ul>
+					</li>
+					<p>小计：<a>￥<span class="xiaoJi">329.00</span></a></p>
+				</ul>
+			</div>
+			<ul class="gouWuChe-bottom">
+				<li>
+					<span class="quanXuan"></span>
+					全选
+				</li>
+				<li>
+					<p>总计：￥<span class="jinGe">0.00</span></p>
+					<p>立减：￥<span>0.00</span></p>
+				</li>
+				<li id="jieSuan">结算</li>
+			</ul>
+			<div class="select">				
+				<div class="select-left clear">
+					<div class="checkbox"/></div>
+					<span>全选</span>
+				</div>
+				<div class="balance">删除</div>
+				<div class="count-edit count">
+					移出收藏夹
+				</div>				
+			</div>
+		    <div class="tuiJian" id="tuiJian">
+		    	<p class="tuJian-tit">大家还买了</p>
+		    	<ul>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+		    			<div>
+		    				<p>￥<span>329</span></p>
+		    				<p><span>1.0万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<strong>59</strong></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+		    			<div>
+		    				<p>￥<span>329</span></p>
+		    				<p><span>1.0万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<span>59</span></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    	</ul>
+		    </div>
+		</div>
+		<script type="text/javascript">
+			$(".edit-right").click(function(){
+				var Val=$(this).siblings("input").val();
+				Val++;
+				$(this).siblings("input").val(Val);
+			});
+			$(".edit-left").click(function(){
+				var Val=$(this).siblings("input").val();
+				Val--;
+				if(Val<0){
+					Val=0;	
+				}
+				$(this).siblings("input").val(Val);
+				var num=$(this).siblings("input").val();
+				
+			})
+			
+			
+			$(".gouWuChe-bottom li span.quanXuan").click(function(){
+				$(this).toggleClass("cur");
+				$(".checkbox").toggleClass("cur");
+				var i=$(this).attr('class');
+				if(i=="quanXuan cur"){
+					$(".xuanZe").addClass("cur");
+					var sum=0;
+					for(var b=0;b<$(".xiaoJi").length;b++){
+						var q=Number($(".xiaoJi").eq(b).text());
+						sum+=q;
+					}
+					$(this).parent().siblings().find(".jinGe").html(sum);
+				}else{
+					$(".xuanZe").removeClass("cur");
+					$(this).parent().siblings().find(".jinGe").html("0.00");
+				}
+			});
+			$(".checkbox").click(function(){
+				$(this).toggleClass("cur");
+				$(".gouWuChe-bottom li span.quanXuan").toggleClass("cur");
+				var i=$(this).attr('class');
+				if(i=="checkbox cur"){
+					$(".xuanZe").addClass("cur");
+					var sum=0;
+					for(var b=0;b<$(".xiaoJi").length;b++){
+						var q=Number($(".xiaoJi").eq(b).text());
+						sum+=q;
+					}
+					$(".jinGe").html(sum);
+				}else{
+					$(".xuanZe").removeClass("cur");
+					$(".jinGe").html("0.00");
+				}
+			});
+			$(".GWC-shangPin-juTi .xuanZe").click(function(){
+				$(this).toggleClass("cur");
+				var i=$(this).attr('class');
+//				console.log(i);
+				if(i=="xuanZe cur"){
+					var xiaoji=Number($(this).parent().siblings("p").find("span").text());
+//					alert(xiaoji);
+					var sum=xiaoji+Number($(".jinGe").text());
+					$(".jinGe").html(sum);
+					var sum2=0;
+					for(var b=0;b<$(".xiaoJi").length;b++){
+						var q=Number($(".xiaoJi").eq(b).text());
+						sum2+=q;
+					}
+					if(sum==sum2){
+						$(".gouWuChe-bottom li span.quanXuan").addClass("cur");
+						$(".checkbox").addClass("cur");
+					}else{
+						$(".gouWuChe-bottom li span.quanXuan").removeClass("cur");
+						$(".checkbox").removeClass("cur");
+					}
+				}else if(i!="xuanZe cur"){
+					var xiaoji=Number($(this).parent().siblings("p").find("span").text());
+//					alert(xiaoji);
+					var sum2=0;
+					for(var b=0;b<$(".xiaoJi").length;b++){
+						var q=Number($(".xiaoJi").eq(b).text());
+						sum2+=q;
+					}
+					var sum2=Number($(".jinGe").text());
+					var sum=sum2-xiaoji;
+					$(".jinGe").html(sum);
+					if(sum==sum2){
+						$(".gouWuChe-bottom li span.quanXuan").addClass("cur");
+						$(".checkbox").addClass("cur");
+					}else{
+						$(".gouWuChe-bottom li span.quanXuan").removeClass("cur");
+						$(".checkbox").removeClass("cur");
+					}
+				}
+			});
+			
+			
+			
+			document.getElementById("jieSuan").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"balance.html",
+					id:"balance",
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			});
+			
+			
+				//以下是猜你喜欢循环进入详情页js
+			window.onload=function(){
+				var tuanBox=document.getElementById("tuiJian");
+				var ul=tuanBox.getElementsByTagName("ul")[0];
+				var liA=ul.getElementsByTagName("li");
+				for(var b=0;b<liA.length;b++){
+					liA[b].addEventListener('tap',tap_right);
+					
+				}
+	
+				var shangPingXinXi=document.getElementById("shangPingXinXi");
+				var Img=shangPingXinXi.getElementsByTagName("img");
+				for(var i=0;i<Img.length;i++){
+					Img[i].addEventListener('tap',tap_right);
+					
+				}
+			}
+			function tap_right(){
+				mui.openWindow({
+					url:"shangPinXiangQing.html",
+					id:"SPXQ",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			}
+			
+			$("header a").click(function(){
+				var a=$(this).html();
+				if(a=="编辑"){
+					$(this).html("完成");
+					$(".GWC-shangPin-juTi ul li:nth-of-type(1)").css("display","none");
+					$(".GWC-shangPin-juTi ul li:nth-of-type(2)").css("display","block");
+					$(".GWC-shangPin-juTi ul li:nth-of-type(4)").css("opacity","0");
+					$(".select").css("display","block");
+					$(".gouWuChe-bottom").css("opacity","0");
+				}else if(a=="完成"){
+					$(this).html("编辑");
+					$(".GWC-shangPin-juTi ul li:nth-of-type(1)").css("display","block");
+					$(".GWC-shangPin-juTi ul li:nth-of-type(2)").css("display","none");
+					$(".GWC-shangPin-juTi ul li:nth-of-type(4)").css("opacity","1");
+					$(".select").css("display","none");
+					$(".gouWuChe-bottom").css("opacity","1");
+				}
+			});
+			$(".select-edit .checkbox").click(function(){
+				$(this).toggleClass("cur");
+			});
+		</script>
+	</body>
+</html>

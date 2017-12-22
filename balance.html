@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结算</title>
+		 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    	<meta name="format-detection" content="telephone=no"/>
+    	<meta name="apple-mobile-web-app-status-bar-style" content="">
+		<link rel="stylesheet" href="css/gouWuChe/gwc.css" />
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+	</head>
+	<body id="balance">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="back()"></a>
+		    <h1 class="mui-title">结算</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="balance-head" id="address">
+		    	<p>杨芸      137*****075</p>
+		    	<p>河北省邯郸市邯山区光明南大街199号</p>
+		    	<p>收货时间不限</p>
+		    </div>
+		    <div class="balance-con clear">
+		    	<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+		    	<div class="balance-con-right">
+		    		<div class="clear">
+		    			<h3>纸尿裤 M64（6-11KG)[4包装]</h3>
+		    			<h4 class="qian"><span>￥</span><small>349</small></h4>
+		    		</div>
+		    		<div class="clear">
+		    			<span>通用，L</span><input value="1" class="balance-number"/>
+		    		</div>
+		    		<div class="balance-bottom clear">
+		    			<div class="balance-min">-</div>
+		    			<input value="1" class="balance-num"/>
+		    			<div class="balance-add">+</div>
+		    		</div>
+		    	</div>
+		    </div>
+		    <ul class="balance-mian">
+		    	<li>
+		    		<span>总计:</span>
+		    		<a class="Zj"><em>￥</em> <span>349</span></a>
+		    		
+		    	</li>
+		    	<li>
+		    		<span>运费:</span>
+		    		<a href="">免运费</a>
+		    	</li>
+		    	<li>
+		    		<span>优惠券</span>
+		    		<a class="cur" id="YhQ">免优惠券&nbsp;></a>
+		    	</li>
+		    	<li>
+		    		<span>红包</span>
+		    		<a id="red">使用红包&nbsp;></a>
+		    	</li>
+		    	<li class="clear">
+		    		<span>买家留言</span>
+		    		<textarea>选填:对本次交易的说明（建议填写已和商家...</textarea>
+		    	</li>
+		    </ul>
+		    <p class="balance-footer">政策提醒:购买跨境商品，实名认证信息和支付人信息 需一致，否则将会影响通关</p>
+		    <div class="balance-Bottom">
+		    	<h3>应付金额:￥<span>349</span><em>.00</em></h3>
+		    	<div class="balance-submit" id="balance-submit">提交订单</div>
+		    </div>
+		</div>	
+		<script>
+			function back(){
+				window.history.back();
+			}
+			document.getElementById("red").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"red-packet.html",
+					id:"red",
+					createNew:true
+				});
+			});	
+			document.getElementById("YhQ").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"YouHuiQuan.html",
+					id:"YHQ",
+					createNew:true
+				});
+			});
+			document.getElementById("balance-submit").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"pay.html",
+					id:"pay",
+					createNew:true
+				});
+			});
+			document.getElementById("address").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"address.html",
+					id:"address",
+					createNew:true
+				});
+			});	
+		</script>
+	</body>
+</html>

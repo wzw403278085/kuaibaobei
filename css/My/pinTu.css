@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+ul{ list-style: none;}
+img{ display: block;}
+a{ text-decoration: none;}
+/*以下是标题样式*/
+.pinTu-tit{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	margin-bottom: .6rem;
+	background: #fff;
+}
+.pinTu-tit a{
+	display: block;
+	width: 20%;
+	font-size: 1rem;
+	line-height: 2.8rem;
+	text-align: center;
+	border-bottom: 2px solid transparent;
+}
+.pinTu-tit a.cur{
+	border-bottom: 2px solid #FF4498;
+}

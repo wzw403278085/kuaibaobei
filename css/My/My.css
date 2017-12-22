@@ -1,0 +1,240 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+ul{ list-style: none;}
+img{ display: block;}
+a{ text-decoration: none;}
+@font-face {
+    font-family: aa;
+    src: url(../font/iconfont1.css),url(../font/iconfont1.woff),url(../font/iconfont1.eot),url(../font/iconfont1.svg),url(../font/iconfont1.ttf),url(../font/iconfont1.woff)
+}
+/*以下是banner样式*/
+.My-bj{
+	padding-bottom: 4%;
+	width: 100%;
+	/*height: 12rem;*/
+	background: url(../../img/My/beiJing.jpg) no-repeat top/cover;
+}
+.My-bj .top{
+	
+	padding: 4% 5% 0;
+	font-size: 1.8rem;
+	line-height: 2rem;
+	color: #333333;
+}
+.My-bj .top span{font-family: icon;}
+.My-bj .top span:last-of-type{float: right;}
+.My-bj .My-logo{
+	margin: 0 auto;
+	width: 5rem;
+	height: 5rem;
+}
+.My-bj h3{
+	font-size: 1.4rem;
+	color: #FF4498;
+	text-align: center;
+	line-height: 2.8rem;
+}
+.My-bj .bom{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	padding: 0 20%;
+	margin-bottom: 2%;
+}
+.My-bj .bom strong{
+	display: block;
+	width: 5rem;
+	font-size: 1rem;
+	line-height: 2.2rem;
+	color: #FF4498;
+	text-align: center;
+	border-radius: 2rem;
+	border: 1px solid #ff4498;
+}
+.My-bj .bom strong.cur{
+	color: #fff;
+	background: #FF4498;
+}
+
+.dingDan{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 2%;
+	padding: 0 5%;
+	border-bottom: 1px solid #EEEEEE;
+	background: white;
+}
+.dingDan strong{
+	font-size: 1rem;
+	line-height: 3rem;
+	
+}
+.dingDan strong:last-of-type{
+	font-size: .8rem;
+	color: #888888;
+}
+.dingDan strong span{ font-family: icon;}
+.daiFu{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    padding: 3% 5%;
+    font-size: .8rem;
+    text-align: center;
+	background: white;
+}
+.daiFu img{
+	width: 3.6rem;
+}
+.zhangHu{
+	margin-top: 2%;
+	background: white;
+}
+.zhangHu h3{
+	padding: 0 5%;
+	font-size: 1rem;
+	line-height: 3rem;
+	border-bottom: 1px solid #EEEEEE;
+}
+.zhangHu ul{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap:wrap;
+    -webkit-box-lines:multiple;
+    -moz-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    padding:  2% 5%;
+}
+.zhangHu ul li{
+	margin: 1% 0;
+	text-align: center;
+	font-size: .96rem;
+	width: 25%;
+	line-height: 2.4rem;
+}
+.zhangHu ul li img{
+	width: 44%;
+	margin: 0 auto;
+}
+.reXiao h3{
+	text-align: center;
+	font-size: 1rem;
+	line-height: 3rem;
+}
+.reXiao{
+	width: 100%;
+}
+.reXiao ul{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap:wrap;
+    -webkit-box-lines:multiple;
+    -moz-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    /*margin-bottom: 3.6rem;*/
+}
+.reXiao ul li{
+	padding: 0 5%;
+	margin-bottom: .8%;
+	width: 49.6%;
+	background: #fff;
+}
+.reXiao ul li img{
+	width: 100%;
+}
+.reXiao ul li p.shangPin-tit{
+	margin-bottom: 1.4rem;
+	color: #000000;
+}
+.reXiao ul li div{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+.reXiao ul li div p:first-of-type{
+	font-size: 1.2rem;
+	color: #ff4498;
+}
+.reXiao ul li div p:nth-of-type(2){
+	font-size: .8rem;
+	color: #888888;
+}
+

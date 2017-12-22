@@ -1,0 +1,22 @@
+p{margin: 0;}
+.mui-bar-nav{background-color: white;}
+.mui-bar-nav .qqg_search{position: relative;width: 70%;height: 2rem;border-radius: 1rem;border: 1px solid #888888;margin: 0.6rem auto;padding: 0 4rem;}
+.mui-bar-nav .qqg_search .search_fdj{position: absolute;width: 10%;top: 0.4rem;left: 1rem;font-size: 1.5rem;color: #CCCCCC;font-family: icon;}
+.mui-bar-nav .qqg_search h2{ margin: 0; font-size: .9rem; width: 8rem; color: #888888;font-weight: normal;line-height: 1.8rem;letter-spacing: 1px;}
+.mui-bar-nav button{position: absolute;top: 0.3rem;right: 1rem;width: 8%;font-size: 1.5rem;line-height: 2rem;font-family: icon;text-align: center;border: none;padding: 0;}
+.mui-slider-indicator.mui-segmented-control{background-color: white;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item{color: black;border-bottom: 2px solid white;}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{color: #33CDFF;letter-spacing: 2px;border-bottom:2px solid #33CDFF;}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted ~ .mui-slider-group .mui-slider-item{border: none;}
+.mui-slider-group .mui-table-view{height: 100%;background-color: white;display: flex;justify-content: space-around;flex-wrap: wrap;}
+.mui-slider-group .content_list{width: 50%;border-top: 0.2rem solid #EEEEEE;}
+.mui-slider-group .content_list:nth-child(2n){border-right: 0.1rem solid #EEEEEE;}
+.mui-slider-group .content_list:nth-child(2n-1){border-left: 0.1rem solid #EEEEEE;}
+.mui-slider-group .content_list:first-child{width: 100%;font-size: 1rem;text-align: center;font-weight: normal;border: none;background-color: #EEEEEE;padding: 0.5rem;margin: 0;}
+.mui-slider-group .content_list .list_country{padding: 0.5rem;}
+.mui-slider-group .content_list .list_country img{float: left;width: 10%;}
+.mui-slider-group .content_list .list_country span{font-size: 0.9rem;color: #888888;line-height: 1.2rem;margin-left: 0.5rem;}
+.mui-slider-group .content_list h2{font-size: 0.9rem;color: black;font-weight: normal;line-height: 1.3rem;padding: 0 0.5rem;}
+.mui-slider-group .content_list .list_bottom{padding: 0.5rem 1rem 1rem 0;}
+.mui-slider-group .content_list .list_bottom h2{float: left;font-size: 1rem;color: #33CDFF;line-height: 1.3rem;}
+.mui-slider-group .content_list .list_bottom p{float: right;}

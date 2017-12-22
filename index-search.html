@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>纸尿裤</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index/index-search.css" />
+		<script src="js/mui.min.js"></script>
+		<style>
+			body{background: #fff;}
+		</style>
+	</head>
+
+	<body id="index-search">
+		<div class="mui-content clear">
+		    <header class="mui-bar mui-bar-nav clear">
+		        <span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+		        <div class="search-yan">		       		
+					<input type="text" placeholder="纸尿裤" class="parper"/>
+					<strong>&#xe683;</strong>
+					<span class="search-ss" id="Search">搜索</span>
+				</div>
+		    </header>
+		</div>
+		<div class="past-search">
+			<div class="past-search-top clear">
+				<small>最近搜索</small>
+				<span>&#xe6e2;</span>
+			</div>
+			<a id="index-paper">纸尿裤</a>
+			<a>宝宝洗澡盆</a>
+			<a>宝宝理发器</a>
+		</div>
+		<div class="guess">
+			<h3>猜你想搜</h3>
+			<a class="cur">时尚套装</a>
+			<a>过家家玩具</a>
+			<a>1元特权</a>
+		</div>
+	</body>
+	<script src="js/castapp.js"></script>
+	<script>
+		var Asearch=document.getElementsByTagName("a");
+//		alert(Asearch.length);
+		for(var b=0;b<Asearch.length;b++){
+			Asearch[b].addEventListener('tap',tap_right);
+		}
+			function tap_right(){
+				mui.openWindow({
+					url:"index-paper.html",
+					id:"index-paper",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			}
+		document.getElementById("Search").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"index-paper.html",
+					id:"index-paper",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:300
+					}
+				});
+			});	
+	</script>
+</html>

@@ -1,0 +1,34 @@
+p{margin: 0;}
+.mui-bar-nav{background-color: white;}
+.mui-bar-nav button{position: absolute;top: 0.35rem;right: 1rem;font-size: 1.5rem;color: #888888;font-family: icon;border: none;padding: 0;margin: 0;}
+.banner a img{width: 100%;}
+.pay{background-color: white;margin-top: 0.5rem;padding: 1rem;}
+.pay .pay_title{font-size: 0.9rem;}
+.pay a .pay_logo{float: left;width: 20%;font-size: 3rem;font-family: icon;color: #19A0E5;padding-top: 0.5rem;}
+.pay a h3{float: left;width: 70%;font-size: 1rem;color: #333333;padding-top: 0.8rem;}
+.pay a p{float: left;width: 70%;font-size: 0.9rem;color: #333333;padding-top: 0.3rem;}
+.pay a button{float: right;width: 10%;height: 2rem;font-size: 1.5rem;font-family: icon;color: #888888;line-height: 2.1rem;border: none;margin: -0.8rem 0 0 0;padding: 0;}
+.open{background-color: white;padding: 1rem 1.2rem;margin-top: 0.2rem;}
+.open h2{font-size: 1.1rem;color: #888888;font-weight: normal;letter-spacing: 1px;}
+.open p{font-size: 0.9rem;color: black;line-height: 1.5rem;margin-top: 1rem;text-align: justify;}
+.xieyi{width: 100%;height: 3.5rem;background-color: white;margin-top: 0.5rem;padding: 1rem;}
+.xieyi .check{position: relative;display: block;float: left;width: 1.5rem;height: 1.5rem;border-radius: 50%;background-color: #FF4498;margin-bottom: 7rem;}
+.xieyi .check.cur:before{position: absolute;top: 0.1rem;left: 0.1rem;content: "\e6a7";font-size: 1.3rem;color: white;font-family: icon;text-align: center;line-height: 1.5rem;}
+.xieyi p{padding-left: 2rem;font-size: 0.8rem;color: #888888;line-height: 1.5rem;}
+.xieyi p a{color: #FF4397;}
+.button{position: fixed;bottom: 0;display: block;width: 100%;height: 4rem;font-size: 1.3rem;color: white;background-color: #FF4397;border: none;margin: 3rem 0 0 0;}
+.share{background: #fff;padding: 2rem 0 1rem 0;display: none;position: fixed;bottom: 0;width: 100%;}
+.share h3{font-size: 1.2rem;color: #5D5D5D;float: left;font-weight: lighter;}
+.share h3:before{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float: left;margin: .5rem .6rem 1rem 5rem;}
+.share h3:after{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float:right;margin: .5rem .6rem 2rem .8rem;}
+.share ul{width: 100%;list-style: none;padding:2rem 0 3rem 0;}
+.share ul li{width: 25%;float: left;}
+.share ul li div{font-family: icon;font-size: 3rem;margin: 0 auto;text-align: center;}
+.share ul li p{color: #797979;text-align: center;margin-top: 1rem;}
+.share ul li:first-child div{color: #A6CA66;}
+.share ul li:nth-child(2) div{color: #35DA35;}
+.share ul li:nth-child(3) div{color: #58B7E3;}
+.share ul li:nth-child(4) div{color: #F5503C;}
+.share ul li:nth-child(5) div{color: #ccc;margin-top: 1rem;}
+.share .cancle{width: 80%;height: 3rem;line-height: 3rem;text-align: center;color: #fff;background: #E3E3E3;margin: 0 auto;border-radius: 1rem;font-size: 1.2rem;}
+.share-bj{height: 100%;width: 100%;z-index: 99;background:rgba(0,0,0,0.5);position: fixed;top: 0;display: none;}

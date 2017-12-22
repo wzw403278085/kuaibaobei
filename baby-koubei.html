@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>宝贝口碑</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/baby-koubei.css" />
+	    <script src="js/mui.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	   </script>
+	   <style type="text/css">
+			.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 20;
+				background-color: rgba(0,0,0,.8);
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 10;
+			}
+			.mui-preview-header {
+				height: 44px;
+				top: 0;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: center;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+				margin: 2rem 0 0 2rem;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			.mui-content-padded img {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body id="baby-koubei2">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">宝贝口碑(5.4万)</h1>
+		    <div class="dian">...</div>
+		    <div class="Open-icon" id="Open">&#xe673;</div>
+		</header>
+		<div class="mui-content">
+		    <div class="baby-head" id="ask">
+		    	<img src="img/index/live/live_user1.png" alt="" />
+		    	<p>我的纸尿裤从浙江宁波发的，大家的都是从...</p>
+		    	<span>></span>
+		    </div>
+		    <ul class="baby-header clear">
+		    	<li class="cur">全部</li>
+		    	<li>晒图(1562)</li>
+		    	<li>实惠(265)</li>
+		    	<li>不红屁股(6508)</li>
+		    	<li>合算(2245)</li>
+		    	<li>喜欢(1364)</li>
+		    </ul>
+		    <div class="baby-con">
+		    	<div class="clear">
+			    	<img src="img/index/live/live_user2.png" alt="" />
+			    	<h3>人生如梦ol</h3>
+		    	</div>
+		    	<span>颜色：通用 </span>
+		    	<span>规格：M</span>
+		    	<span>宝宝1岁2个月</span>
+		    	<p>贝贝网买东西还是挺放心的，反正我是一直相信貝貝網的都是正品，宝宝的所以辅食,纸尿裤，吃的，用的，穿的，都这里买啊！还有贝贝网连续签到5天7天有优惠券送也挺好的，就是抢优惠券还得眼疾手快，能抢到的真的很合算。贝贝的评团也很不错，想买什么就买什么，不需要凑，但愿贝贝网一直不要让我失望，家中两个宝贝，开销很大，会常来。</p>
+		    	<div class="mui-content-padded">
+		    		<img src="img/index/live/live_user2.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    		<img src="img/index/live/live_user3.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    		<img src="img/index/live/live_user2.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    		<img src="img/index/live/live_user3.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    	</div>
+		    	<div class="zan clear">
+		    		<strong>&#xe697;</strong>
+		    		<small>50</small>
+		    	</div>
+		    </div>
+		    <div class="baby-con">
+		    	<div class="clear">
+			    	<img src="img/index/live/live_user3.png" alt="" />
+			    	<h3>人生如梦ol</h3>
+		    	</div>
+		    	<span>颜色：通用 </span>
+		    	<span>规格：M</span>
+		    	<span>宝宝1岁2个月</span>
+		    	<p>贝贝网买东西还是挺放心的，反正我是一直相信貝貝網的都是正品，宝宝的所以辅食,纸尿裤，吃的，用的，穿的，都这里买啊！还有贝贝网连续签到5天7天有优惠券送也挺好的，就是抢优惠券还得眼疾手快，能抢到的真的很合算。贝贝的评团也很不错，想买什么就买什么，不需要凑，但愿贝贝网一直不要让我失望，家中两个宝贝，开销很大，会常来。</p>
+		    	<div class="mui-content-padded">
+		    		<img src="img/index/live/live_user2.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    		<img src="img/index/live/live_user3.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    		<img src="img/index/live/live_user2.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    		<img src="img/index/live/live_user3.png" alt="" data-preview-src="" data-preview-group="1"/>
+		    	</div>
+		    	<div class="zan clear">
+		    		<strong>&#xe697;</strong>
+		    		<small>50</small>
+		    	</div>
+		    </div>
+		</div>
+	    <script src="js/mui.zoom.js"></script>
+		<script src="js/mui.previewimage.js"></script>
+		<script type="text/javascript">
+			mui.previewImage();
+			$(document).ready(function(){
+				var count=50;
+				$(".zan strong").click(function(){
+					count++;
+					$(this).siblings("small").html(count);
+				});
+			})
+			
+			document.getElementById("ask").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"ask-everyone.html",
+					id:"ask",
+					createNew:true,
+				});
+			});
+			document.getElementById("Open").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"GouWuChe.html",
+					id:"GouWuChe5",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:300
+					}
+				});
+			});
+			
+		</script>
+	</body>
+</html>

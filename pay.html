@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta name="format-detection" content="telephone=no"/>
+	    <meta name="apple-mobile-web-app-status-bar-style" content="">
+	    <title>支付</title>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/gouWuChe/gwc.css" />
+	    <link href="css/passwordkeyboard.css" rel="stylesheet" type="text/css" />
+	    <script src="js/mui.min.js"></script>
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/js.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/fastclick.js"></script>
+		<script>
+		    function init(){
+		        var width=$(window).width();
+		        var height=$(window).height();
+		        $("body").css("height",height);
+		        $("body").css("width",width);
+		    }
+		    window.addEventListener('load', function() {
+		        FastClick.attach(document.body);
+		    }, false);
+		</script>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body id="pay">
+		<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="back()"></a>
+	    <h1 class="mui-title">支付</h1>
+	</header>
+	<div class="mui-content">
+	    <div class="pay-head">
+	    	<span>订单金额</span>
+	    	<small>￥349</small>
+	    </div>
+	    <div class="pay-con">
+	    	<h3>选择支付方式</h3>
+	    	<ul class="mui-table-view mui-table-view-radio">
+	    		<li class="clear mui-table-view-cell mui-selected">
+	    			<p class="mui-navigate-right">
+	    				支付宝
+	    			</p>
+	    			<div class="cur"></div>
+	    		</li>
+	    		<li class="clear mui-table-view-cell">
+	    			<p class="mui-navigate-right">
+	    				微信支付
+	    			</p>
+	    			<div></div>
+	    		</li>
+	    		<li class="clear mui-table-view-cell">
+	    			<p class="mui-navigate-right">
+	    				中国银行
+	    			</p>
+	    			<div></div>
+	    		</li>
+	    		<li class="clear">
+	    			<p>
+	    				货到付款
+	    			</p>
+	    		</li>
+	    	</ul>
+	    	<div class="mui-content-padded">
+				<p id="info"></p>
+			</div>
+	    </div>
+	
+	<p class="pay" id="PAY">支付</p>
+</div>
+		
+		
+		<div class="pay-bj">
+		<div>
+			去支付
+			<p>
+				<span></span>
+				<span class="cur"></span>
+				<span></span>
+			</p>
+		</div>
+	</div>
+	<div class="pay-confirm">
+		<div class="confirm-head clear">
+			<p>&#xe6a6;</p>
+			<div class="clear">
+				<h3>确认付款</h3>
+			</div>
+		</div>
+		<div class="confirm-con">
+			<h3>￥349</h3>
+			<ul>
+				<li>
+					<span>收款方</span>
+					<em>酷爱宝贝</em>
+				</li>
+				<li>
+					<span>订单信息</span>
+					<em>酷爱宝贝-购物车编号s10157776...</em>
+				</li>
+				<li id="pay-fs">
+					<span>付款方式</span>
+					<em>支付宝&nbsp;&nbsp;></em>
+				</li>
+			</ul>
+			<a id="payMima"><p class="pay">立即支付</p></a>
+		</div>		
+	</div>
+	<div class="lj-pay">
+		<div class="li-pay-head">
+			<p>&#xe6a6;</p>
+			选择付款方式
+		</div>
+		<ul>
+			<li class="yeb">余额宝</li>
+			<li>中国建设银行储蓄卡(5306)</li>
+			<li>中国农业银行储蓄卡(5307)</li>
+			<li>账户余额</li>
+		</ul>
+	</div>
+	<div class="select-pay">
+		<img src="images/gwc/data.png" alt="" />
+		<p>商品一眨眼可就没了 确定要放弃付款吗？</p>
+		<a href="balance.html"><span class="span1">去意已决</span></a>
+		<a href="pay.html"><span class="span2">我再想想</span></a>
+	</div>
+	<div class="password">
+		<div>
+		    <div style="text-align: center;padding-top: 10px;p">
+		        <span id="set_text" style="font-size: large;"></span>
+		    </div>
+		    <div style="padding-top: 20px;text-align: center;">
+		        <form id="password" >
+		            <input readonly class="pass" type="password"maxlength="1"value="">
+		            <input readonly class="pass" type="password"maxlength="1"value="">
+		            <input readonly class="pass" type="password"maxlength="1"value="">
+		            <input readonly class="pass" type="password"maxlength="1"value="">
+		            <input readonly class="pass" type="password"maxlength="1"value="">
+		            <input readonly class="pass pass_right" type="password"maxlength="1" value="">
+		        </form>
+		    </div>
+		</div>
+		<div id="keyboardDIV"></div>
+	</div>
+<script src="js/ladingPasswordConfirm.js"></script>
+	<script>
+		window.onload=function(){
+			mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		var info = document.getElementById("info");
+		document.querySelector('.mui-table-view.mui-table-view-radio').addEventListener('selected',function(e){
+			info.innerHTML = "当前选中的为："+e.detail.el.innerText;
+		});
+//			$("#PAY").click(function(){
+//				var Height=$(document).height()+'px';
+//				$(".pay-bj").css({"width":"100%","height":Height,"background":"rgba(0,0,0,.5)","position":"absolute","top":0});
+//				$(".pay-bj div").css("display","block");
+//				$(".pay-bj p").css("display","block");
+//			});
+//			$("#PAY").click(setTimeout(function(){
+//				$(".pay-bj div").css("display","none");
+//				$(".pay-bj p").css("display","none");
+//				$(".pay-confirm").css("display","block");
+//		},4000));
+		
+//		选择付款方式
+			$("#pay-fs").click(function(){
+				$(".pay-confirm").css("display","none");
+				$(".lj-pay").css("display","block");
+			});
+//		选择付款方式的退出键			
+			$(".li-pay-head p").click(function(){
+			$(".lj-pay").css("display","none");
+			$(".select-pay").css("display","block");
+			$(".pay-bj").css("display","none");
+			$(".select-pay").css("display","none");
+	});
+//		确认付款方式的退出键	
+			$(".confirm-head p").click(function(){
+			$(".pay-bj").css("display","none");
+			$(".pay-confirm").css("display","none");
+			$("pay-bj").css("display","none");
+	});
+			$(".yeb").click(function(){
+				$(".pay-confirm").css("display","block");
+				$(".lj-pay").css("display","none");
+			});
+		}
+		$("#payMima").click(function(){
+			$(this).parents(".pay-confirm").css("display","none");
+			$(this).parents(".pay-confirm").siblings(".pay-bj").css("display","none");
+			$(this).parents(".pay-confirm").siblings(".password").addClass("cur");
+		});
+	</script>
+	</body>
+</html>

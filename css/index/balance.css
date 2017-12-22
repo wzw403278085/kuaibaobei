@@ -1,0 +1,14 @@
+/*结算页*/
+.balance-head{width: 100%;background: #888888;padding: 1rem;}
+.balance-head p{color: #fff;}
+.balance-con{width: 100%;background: #fff;margin: 1rem 0;}
+.balance-con img{display: block;float: left;width: 25%;margin-top: 1rem;}
+.balance-con .balance-con-right{float: right;width: 75%;}
+.balance-con .balance-con-right h3{float: left; font-size: .9rem;font-weight: lighter;color: #666666;margin: 1.5rem 0 1rem 0;}
+.balance-con .balance-con-right h4{float: right;color: #626262;margin: 1.5rem .5rem 1rem 0;font-weight: lighter;font-size: .9rem;}
+.balance-con .balance-con-right span{color: #B8B8B8;margin-left: .5rem;font-size: .9rem;}
+.balance-con .balance-con-right strong{margin-left: 10rem;color: #B8B8B8;font-weight: lighter;}
+.balance-con .balance-con-right .balance-bottom{width: 40%;border: 1px solid #E0E0E0;margin: .6rem 0 1rem 0;}
+.balance-bottom .balance-min{width: 20%;float: left;text-align: center;}
+.balance-bottom .balance-num{width: 60%;border-right: 1px solid #E0E0E0;border-left: 1px solid #E0E0E0; border-top: none; border-bottom: none; text-align:center;display: block;float: left;}
+.balance-bottom .balance-add{width: 20%;float: left;text-align: center;}

@@ -1,0 +1,108 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*以下是主题样式*/
+.qianBao-top,.qianBao-center{
+	/*margin-top: .4rem;*/
+	padding: 2% 5%;
+	background: #fff;
+}
+.qianBao-center{
+	margin-top: .4rem;
+}
+.qianBao-top h3,.qianBao-center h3{
+	font-size: 1rem;
+}
+.qianBao-top h3 a,.qianBao-center h3 a{
+	float: right;
+	font-family: icon;
+	font-size: .9rem;
+}
+.qianBao-top div,.qianBao-center div{
+	text-align: center;
+	line-height: 6rem;
+	font-size: 2rem;
+	color: #FF4498;
+}
+.qianBao-top div span,.qianBao-center div span{
+	font-size: 3rem;
+}
+
+.qianBao-center p{
+	text-align: center;
+}
+ul{
+	padding: 1rem 5%;
+	margin-top: .1rem;
+	background: #fff;
+}
+ul li{
+	margin: 0 0 1.2rem;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+	-webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+ul li img{
+	width: 2.4rem;
+	height: 2.4rem;
+}
+ul li div{
+	width: 62%;
+}
+ul li div strong{
+	font-size: 1rem;
+	color: #333333;
+}
+ul li div span{
+	font-size:.9rem;
+	line-height: 2rem;
+	color: #888888
+}
+ul li div span{
+	display: block;
+}
+ul li div strong{
+	display: block;
+}
+ul li p{
+	margin-bottom: 0;
+	width: 18%;
+	font-size: 1rem;
+	color: #FF4498;
+}
+/*以下是历史提现页面样式*/
+.wuJiLu{
+	margin-top: .4rem;
+	padding-top: 1rem;
+}
+.wuJiLu img{
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+}
+.wuJiLu p{
+	text-align: center;
+	font-size: 1.1rem;
+	line-height: 3rem;
+	color: #333333;
+}

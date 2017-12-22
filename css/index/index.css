@@ -1,0 +1,587 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+@font-face {
+    font-family: aa;
+    src: url(../font/iconfont1.css),url(../font/iconfont1.woff),url(../font/iconfont1.eot),url(../font/iconfont1.svg),url(../font/iconfont1.ttf),url(../font/iconfont1.woff)
+}
+
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{color: #000;border-bottom: none;background:#fff;}
+/*以下是搜索框样式*/
+.sear-bj{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	width: 100%;
+	height: 3.4rem;
+	background: #ff8dc0;
+}
+.sear-bj .sear-kuang{
+	position: relative;
+	left: 5%;
+	width: 80%;
+	height: 2rem;
+	border-radius: 1.2rem;
+	background: rgba(255,255,255,.5);
+}
+.sear-bj .sear-kuang .sear{
+	padding: 0;
+	width: 70%;
+	height: 100%;
+	color: white;
+	font-size: .9rem;
+	border: none;
+	background: none;
+}
+.sear-bj .sear-kuang .tijiao{
+	font-family: icon;
+	background: none;
+	border: none;
+	font-size: 1.4rem;
+	padding: .1rem 0 0 .6rem;
+}
+.sear-bj .sear-kuang button{
+	position: absolute;
+    right: 5%;
+	padding: 0;
+	font-family: icon;
+	color: white;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	border: none;
+	background: none;
+}
+.sear-bj span{
+	position: relative;
+	right: 5%;
+	color: white;
+	font-size: 2rem;
+	font-family: icon;
+}
+#slider{
+	margin-top: 3.4rem;
+}
+.index-icon{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	padding: 0 5%;
+	width: 100%;
+	height: 8rem;
+	background: #fff;
+}
+.index-icon div{
+	width: 15%;
+	text-align: center;
+	color: #4c4c4c;
+	font-size: 1rem;
+}
+.index-icon div img{
+	width: 100%;
+}
+.index-XSMS{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	padding-top: .6rem;
+	width: 100%;
+	background: #eeeeee;
+}
+.index-XSMS .left{
+	display: block;
+	padding: 4% 0 0 5%;
+	width: 39.7%;
+	/*height: 1rem;*/
+	background: #fff;
+}
+.index-XSMS .left img{
+	width: 100%;
+}
+.index-XSMS .left h3{
+	font-size: 1.2rem;
+	color: #ff4a4a;
+}
+.index-XSMS .left p{
+	font-size: .9rem;
+	color: #8c8c8c;
+}
+.index-XSMS .left .time span{
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: #c4c4c4;
+	font-size: .9rem;
+	text-align: center;
+	line-height: 1.5rem;
+	border-radius: .4rem;
+	background: #444444;
+}
+.index-XSMS .right{
+	width: 59.7%;
+	/*height: 1rem;*/
+	background: #eeeeee;
+}
+.index-XSMS .right .rig-top{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	padding-right: 5%;
+	width: 100%;
+	height: 49%;
+	background: #fff;
+}
+.index-XSMS .right .rig-top .rig-top-left{
+	padding: 4% 0 0 5%;
+	width: 52%;
+}
+.index-XSMS .right .rig-top .rig-top-left h3{
+	font-size: 1.2rem;
+	color: #ffbe77;
+}
+.index-XSMS .right .rig-top .rig-top-left span{
+	/*padding: 0 .5rem;*/
+	display: block;
+	font-size: .8rem;
+	white-space:nowrap;
+	color: #FFBE77;
+	text-align: center;
+	line-height: 1.6rem;
+	border-radius: 1rem;
+	border: 1px solid #ffbe77;
+}
+.index-XSMS .right .rig-top .rig-top-left .xiaoYa{
+	display: block;
+	margin: .8rem auto;
+	width: 30%;
+}
+.index-XSMS .right .rig-top .rig-top-right{
+	width: 48%;
+}
+.index-XSMS .right .rig-top .rig-top-right img{
+	width: 100%;
+}
+.index-XSMS .right .rig-bom{
+	margin-top: .6%;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    height: 50%;
+}
+.index-XSMS .right .rig-bom a{
+	margin-top: .6%;
+	display: block;
+	width: 32.6%;
+	height: 100%;
+	background: #fff;
+}
+.index-XSMS .right .rig-bom a h3{
+	margin: 26% 0 0 8%;
+	font-size: 1.1rem;
+	white-space:nowrap;
+	
+}
+.index-XSMS .right .rig-bom a span{
+	margin-left: 8%;
+	font-size: .8rem;
+	color: #666666;
+}
+.index-XSMS .right .rig-bom a div{
+	margin: 16% auto 0;
+	width: 90%;
+	
+}
+.index-XSMS .right .rig-bom a div img{
+	width: 100%;
+}
+.index-XSMS .right .rig-bom a:first-of-type h3{ color: #33cdff;}
+.index-XSMS .right .rig-bom a:nth-of-type(2) h3{ color: #b597e6;}
+.index-XSMS .right .rig-bom a:nth-of-type(3) h3{ color: #ff4498;}
+.index-yhq{
+	width: 100%;
+	background: #ff6d82;
+}
+.index-yhq .index-xinRen{ 
+	display: block;
+	width: 100%;
+}
+.index-yhq .index-xinRen img{ width: 100%;}
+.index-yhq .index-yYx{
+	padding: .5rem 0;
+	width: 100%;
+	background: #ffd3d9;
+}
+.index-yhq .index-yYx a{
+	margin: 0 auto;
+	display: block;
+	width: 90%;
+	
+}
+.index-yhq .index-yYx a img{
+	width: 100%;
+}
+.index-yhq .index-LX{
+	width: 100%;
+	background: #ffb1c3;
+}
+.index-yhq .index-LX p{
+	text-align: center;
+	line-height: 3rem;
+	color: #f1e2e5;
+	font-size: 1rem;
+}
+.index-yhq .index-LX .LX-main{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    　	-webkit-flex-wrap:wrap;
+    -webkit-box-lines:multiple;
+    -moz-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 5%;
+	width: 100%;
+}
+.index-yhq .index-LX .LX-main a{
+	margin-bottom: 3%;
+	padding: 0 1.4%;
+	display: block;
+	width: 24%;
+	text-align: center;
+	border-radius: .4rem;
+	background: white;
+}
+.index-yhq .index-LX .LX-main a h3{
+	margin-top: 20%;
+	white-space:nowrap;
+	font-size: 1rem;
+	color: #f044ff;
+}
+.index-yhq .index-LX .LX-main a img{
+	width: 90%;
+}
+.index-yhq .index-LX .LX-main a span{
+	margin: -4% auto 14%;
+	display: block;
+	/*width: 90%;*/
+	white-space:nowrap;
+	font-size: .6rem;
+	color: #fff;
+	line-height: 1.2rem;
+	border-radius: 1rem;
+	background: #F044FF;
+}
+.index-yhq .index-LX .LX-bom{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    　	-webkit-flex-wrap:wrap;
+    -webkit-box-lines:multiple;
+    -moz-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    padding: 2% 6% 2% 5%;
+	width: 100%;
+	text-align: center;
+	background: #fdaef6;
+}
+.index-yhq .index-LX .LX-bom a{
+	padding: .4rem 0;
+	display: block;
+	border-radius: .3rem;
+	width: 31%;
+	background: #74bcf9;
+}
+.index-yhq .index-LX .LX-bom a img{
+	position: relative;
+	left: 8%;
+	width: 100%;
+}
+.index-yhq .index-LX .LX-bom a h3{
+	font-size: .9rem;
+	white-space:nowrap;
+	color: #fff;
+}
+.index-yhq .index-LX .LX-bom a span{
+	margin: 0 auto;
+	display: block;
+	/*padding: 0 2%;*/
+	font-size: .6rem;
+	color: #fff;
+	width: 90%;
+	white-space:nowrap;
+	line-height: 1.2rem;
+	border-radius: 1rem;
+	background: #0f90fd;
+}
+.index-xinXi{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	padding: 4% 5%;
+	margin: 3% 0;
+	width: 100%;
+	overflow: hidden;
+	background: url(../../img/index/baby_bj.png) no-repeat center/100% 100%;
+}
+.index-xinXi img{
+	display: block;
+	width: 20%;
+}
+.index-xinXi p{
+	white-space:nowrap;
+	margin: 5% 2%;
+	width: 15%;
+	font-size: .8rem;
+	color: #333333;
+}
+.index-xinXi h3{
+	font-size: 1.1rem;
+	white-space:nowrap;
+	color: #ff4498;
+}
+.index-xinXi h3 span{
+	margin-left: 2%;
+	font-family: icon;
+}
+.index_zhibo{margin-top: 1rem;}
+.index_zhibo .zhibo_box{height: 20rem;background-color: #9B73DD;}
+.index_zhibo .zhibo_box .zhibo_title{font-size: 1rem;color: white;text-align: center;font-weight: normal;padding: 1rem;}
+.index_zhibo .zhibo_box .mui-slider-indicator.mui-segmented-control{height: 12rem;}
+.index_zhibo .zhibo_box .mui-segmented-control.mui-scroll-wrapper .mui-scroll{height: 100%;}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item{width: 8rem;height: 100%;background-color: white;border-radius: 5px;padding: 0;margin-left: 15px;}
+.index_zhibo .zhibo_box .mui-control-item div{width: 100%;height: 8rem;overflow: hidden;}
+.index_zhibo .zhibo_box .mui-control-item div img{width: 100%;}
+.index_zhibo .zhibo_box .mui-control-item h2{font-size: .9rem;font-weight: normal;text-align: left; padding: .4rem 1rem .2rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.index_zhibo .zhibo_box .mui-control-item p{height: 1.5rem;text-align: center;padding: 0 1rem;margin: 0;}
+.index_zhibo .zhibo_box .mui-control-item p img{float: left;width: 23%;}
+.index_zhibo .zhibo_box .mui-control-item p span{display:block;float: left;font-size: 0.8rem;color: #888888;line-height: 1.5rem;margin-left: 0.3rem;}
+.index_zhibo .zhibo_box .mui-slider-indicator.mui-segmented-control.zhibo_ask{height: 1.5rem;margin-top: 1.5rem;}
+.index_zhibo .zhibo_box .zhibo_ask .mui-control-item{width: auto;font-size: 0.8rem;color: white;line-height: 1.5rem;background-color: #8568DB;border-radius: 1rem;padding: 0 0.5rem;}
+.indexDp1{
+	margin: 3% 0;
+	width: 100%;
+	background: #fff;
+}
+.indexDp1 .index-tit{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	width: 100%;
+	padding: 3% 5%;
+}
+.indexDp1 .index-tit img{
+	width: 15%;
+}
+.indexDp1 .index-tit h3{
+	font-size: 1.2rem;
+	color: #222222;
+	width: 80%;
+}
+.indexDp1 .index-tit h3 span{
+	margin-left: 4%;
+	font-size: .8rem;
+	color: #8d8d8d;
+}
+.indexDp1 .index-tit h3 strong{
+	float: right;
+	font-family: icon;
+	font-weight: 500;
+}
+.indexDp1 div.DP1-SP{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    　	-webkit-flex-wrap:wrap;
+    -webkit-box-lines:multiple;
+    -moz-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+	width: 100%;
+	padding: 0 5%;
+}
+.indexDp1 div.DP1-SP a{
+	display: block;
+	width: 46%;
+}
+.indexDp1 div.DP1-SP a img{
+	width: 100%;
+}
+.indexDp1 div.DP1-SP a div{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+}
+.indexDp1 div.DP1-SP a div h5{
+	color: #ff4498;
+	font-size: 1.4rem;
+}
+.indexDp1 div.DP1-SP a div h5 span{ font-size: 1rem;}
+.indexDp1 div.DP1-SP a div i{
+	margin-right: 50%;
+	font-style: normal;
+	color: #c3c3c3;
+	font-size: .8rem;
+	text-decoration: line-through;
+}
+.indexDp1 div.DP1-SP a p{
+	font-size: .8rem;
+	color: #c3c3c3c;
+}
+.indexDp1 .DP-renQi{
+	padding: 1rem 0 1rem .6rem;
+	margin: 0 auto;
+	width: 90%;
+	border-top: 1px solid #e3e3e3;
+}
+.indexDp1 .DP-renQi a{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+.indexDp1 .DP-renQi a div{
+	width: 7.2rem;
+	float: left;
+}
+.indexDp1 .DP-renQi a div img{
+	margin-left: -.6rem;
+	width: 1.8rem;
+}
+.indexDp1 .DP-renQi a p{
+	float: left;
+	margin-bottom: 0;
+}

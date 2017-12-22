@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link href="css/My/My.css" rel="stylesheet"/>
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+	</head>
+	<body>
+		<div class="mui-content">
+		    <div class="My-bj">
+		    	<div class="top">
+		    		<span id="sheZhi">&#xe61d;</span>
+		    		<span id="keFu">&#xe622;</span>
+		    	</div>
+		    	<img src="img/My/logo.png" alt="" class="My-logo" id="head"/>
+		    	<h3>我的昵称</h3>
+		    	<div class="bom">
+		    		<strong id="dengLu">请登录</strong>
+		    		<strong id="zhuCe">请注册</strong>
+		    	</div>
+		    </div>
+		    <div class="dingDan-box">
+		    	 <div class="dingDan" id="all">
+			    	<strong>我的订单</strong>
+			    	<strong>查看全部订单<span>&#xe6d7;</span></strong>
+			    </div>
+			    <ul class="daiFu">
+			    	<li id="pay">
+			    		<img src="img/My/dingDan1.jpg" alt="" />
+			    		<span>待付款</span>
+			    	</li>
+			    	<li id="send">
+			    		<img src="img/My/dingDan2.jpg" alt="" />
+			    		<span>待发货</span>
+			    	</li>
+			    	<li id="get">
+			    		<img src="img/My/dingDan3.jpg" alt="" />
+			    		<span>待收货</span>
+			    	</li>
+			    	<li id="say">
+			    		<img src="img/My/dingDan4.jpg" alt="" />
+			    		<span>待评价</span>
+			    	</li>
+			    	<li>
+			    		<img src="img/My/dingDan5.jpg" alt="" />
+			    		<span>退货/退款</span>
+			    	</li>
+			    </ul>
+		    </div>
+		   <div class="zhangHu">
+		   		<h3>我的账户</h3>
+		   		<ul>
+		   			<li id="youHuiQuan">
+		   				<img src="img/My/icon1.png" alt="" />
+		   				<span>优惠券</span>
+		   			</li>
+		   			<li id="qianBao">
+		   				<img src="img/My/icon2.png" alt="" />
+		   				<span>余额</span>
+		   			</li>
+		   			<li id="hongBao">
+		   				<img src="img/My/icon3.png" alt="" />
+		   				<span>红包</span>
+		   			</li>
+		   			<li id="huiYuan">
+		   				<img src="img/My/icon4.png" alt="" />
+		   				<span>会员</span>
+		   			</li>
+		   			<li id="pinTuan">
+		   				<img src="img/My/icon5.png" alt="" />
+		   				<span>拼团</span>
+		   			</li>
+		   			<li id="shouCang">
+		   				<img src="img/My/icon6.png" alt="" />
+		   				<span>收藏</span>
+		   			</li>
+		   			<li id="jiLu">
+		   				<img src="img/My/icon7.png" alt="" />
+		   				<span>记录</span>
+		   			</li>
+		   			<li id="keFu3">
+		   				<img src="img/My/icon8.png" alt="" />
+		   				<span>客服</span>
+		   			</li>
+		   		</ul>
+		   </div>
+		   <div class="reXiao" id="reXiao">
+		   		<h3>今日热销</h3>
+		   		<ul>
+		   			<li>
+		    			<img src="img/fenLei/icon1.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<span>59</span></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		   			<li>
+		    			<img src="img/fenLei/icon2.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<span>59</span></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/fenLei/icon3.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<span>59</span></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<img src="img/fenLei/icon7.jpg" alt="" />
+		    			<p class="shangPin-tit">Merriea/花王  纸尿裤S54 （4-8KG）......</p>
+		    			<div>
+		    				<p>￥<span>59</span></p>
+		    				<p><span>1.3万</span>人已团</p>
+		    			</div>
+		    		</li>
+		   		</ul>
+		   </div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".My-bj .bom strong").click(function(){
+					$(this).addClass("cur").siblings().removeClass("cur");
+				})
+			});
+			
+			
+			
+			
+			window.onload=function(){
+				var tuanBox=document.getElementById("reXiao");
+				var ul=tuanBox.getElementsByTagName("li");
+//						var liA=ul.getElementsByTagName("li");
+				for(var b=0;b<ul.length;b++){
+					ul[b].addEventListener('tap',tap_right);
+					
+				}
+			}
+			function tap_right(){
+				mui.openWindow({
+					url:"shangPinXiangQing.html",
+					id:"SPXQ",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已注册请登录..."
+					}
+				});
+			}
+			
+			
+			
+			document.getElementById("keFu3").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"liaotian.html",
+					id:"lianXi2", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+			
+			document.getElementById("keFu").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"liaotian.html",
+					id:"lianXi2", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+			document.getElementById("youHuiQuan").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"YouHuiQuan.html",
+					id:"YHQ", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+			document.getElementById("hongBao").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"red-packet.html",
+					id:"red", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+			document.getElementById("shouCang").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"shouCang.html",
+					id:"shouCang2", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+			document.getElementById("pinTuan").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"pinTu.html",
+					id:"pinTuan2", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+			document.getElementById("jiLu").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"liuLanJiLu.html",
+					id:"liuLanJiLu2", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+//			document.getElementById("daiFuKuan").addEventListener("tap",function(){
+//				mui.openWindow({
+//					url:"dingDanQuanBu.html",
+//					id:"dingDanQuanBu", 
+////						createNew:true,
+//					show:{
+//						aniShow:"slide-in-right",
+//						daration:200
+//					},
+//					waiting:{
+//						title:"正在加载..."
+//					}
+//				});
+//			}); 
+			document.getElementById("huiYuan").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"huiYuan.html",
+					id:"huiYuan2", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+			document.getElementById("qianBao").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"qianBao.html",
+					id:"qianBao2", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			}); 
+//			document.getElementById("daiFaHuo").addEventListener("tap",function(){
+//				mui.openWindow({
+//					url:"dingDanQuanBu.html",
+//					id:"dingDanQuanBu", 
+////						createNew:true,
+//					show:{
+//						aniShow:"slide-in-right",
+//						daration:200
+//					},
+//					waiting:{
+//						title:"正在加载..."
+//					}
+//				});
+//			});
+//			document.getElementById("daiShouHuo").addEventListener("tap",function(){
+//				mui.openWindow({
+//					url:"dingDanQuanBu.html",
+//					id:"dingDanQuanBu", 
+////						createNew:true,
+//					show:{
+//						aniShow:"slide-in-right",
+//						daration:200
+//					},
+//					waiting:{
+//						title:"正在加载..."
+//					}
+//				});
+//			});
+//			document.getElementById("dingDan").addEventListener("tap",function(){
+//				mui.openWindow({
+//					url:"dingDanQuanBu.html",
+//					id:"dingDanQuanBu", 
+////						createNew:true,
+//					show:{
+//						aniShow:"slide-in-right",
+//						daration:200
+//					},
+//					waiting:{
+//						title:"正在加载..."
+//					}
+//				});
+//			});
+//			document.getElementById("daiPingJia").addEventListener("tap",function(){
+//				mui.openWindow({
+//					url:"dingDanQuanBu.html",
+//					id:"dingDanQuanBu", 
+////						createNew:true,
+//					show:{
+//						aniShow:"slide-in-right",
+//						daration:200
+//					},
+//					waiting:{
+//						title:"正在加载..."
+//					}
+//				});
+//			});
+			document.getElementById("sheZhi").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"setting.html",
+					id:"mui-fullscreen", 
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			});
+			document.getElementById("dengLu").addEventListener("tap",function(){
+					mui.openWindow({
+						url:"login.html",
+						id:"dengLu",
+//						createNew:true,
+						show:{
+							aniShow:"slide-in-right",
+							daration:200
+						},
+						waiting:{
+							title:"正在加载..."
+						}
+					});
+				});
+			document.getElementById("zhuCe").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"zhuCe.html",
+					id:"zhuCe2",
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			});
+			
+			
+			
+			
+			//以下是订单js
+			document.getElementById("all").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"dingDanQuanBu.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goAll');
+			});
+			document.getElementById("pay").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"dingDanQuanBu.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goPay');
+			});
+			
+			document.getElementById("send").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"dingDanQuanBu.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goDfh');
+			});
+			
+			document.getElementById("get").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"dingDanQuanBu.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goDsh');
+			});
+			
+			document.getElementById("say").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"dingDanQuanBu.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goDpj');
+			});
+			
+			
+			
+			
+			/*点击头像触发*/
+			document.getElementById('head').addEventListener('tap', function() {
+				    if(mui.os.plus) {
+				        var a = [{
+				            title: "拍照"
+				    }, {
+				        title: "从手机相册选择"
+				    }];
+				    plus.nativeUI.actionSheet({
+				        title: "修改用户头像",
+				        cancel: "取消",
+				        buttons: a
+				    }, function(b) { /*actionSheet 按钮点击事件*/
+				        switch(b.index) {
+				        case 0:
+				            break;
+				        case 1:
+	            			getImage(); /*拍照*/
+	            			break;
+	        			case 2:
+	           				galleryImg(); /*打开相册*/
+	           				break;
+	        			default:
+	           				break;
+	        			}
+	    			})
+	    		}
+			}, false);
+			
+			//拍照
+			function getImage() {
+			    var cmr = plus.camera.getCamera();
+			    var res = cmr.supportedImageResolutions[0];
+			    var fmt = cmr.supportedImageFormats[0];
+			    cmr.captureImage(function(path) {
+			        //plus.io.resolveLocalFileSystemURL(path, function(entry) {  
+			    plus.io.resolveLocalFileSystemURL(path, function(entry) {
+			        var localUrl = entry.toLocalURL();
+			        uploadHead(localUrl + "?version=" + new Date().getTime());
+			    }, function(err) {
+			        console.error("拍照失败：" + err.message);
+			    }, {
+			        index: 1
+			    });
+			    });
+			} 
+			
+			//本地相册选择
+			function galleryImg() {
+			    plus.gallery.pick(function(a) {
+			    plus.io.resolveLocalFileSystemURL(a, function(entry) {
+			        plus.io.resolveLocalFileSystemURL("_doc/", function(root) {
+			        root.getFile("head.png", {}, function(file) {
+			            //文件已存在
+			            file.remove(function() {
+			            console.log("file remove success");
+			            entry.copyTo(root, 'head.png', function(e) {
+			                var e = e.fullPath + "?version=" + new Date().getTime();
+			                uploadHead(e); /*上传图片*/
+			                //变更大图预览的src
+			                //目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+			                },function(e) {
+			                            console.log('copy image fail:' + e.message);
+			            });
+			            }, function() {
+			            console.log("delete image fail:" + e.message);
+			            });
+			        }, function() {
+			            //文件不存在
+			            entry.copyTo(root, 'head.png', function(e) {
+			            var path = e.fullPath + "?version=" + new Date().getTime();
+			            uploadHead(path); /*上传图片*/
+			            },function(e) {
+			            console.log('copy image fail:' + e.message);
+			            });
+			        });
+			        }, function(e) {
+			        console.log("get _www folder fail");
+			        })
+			    }, function(e) {
+			        console.log("读取拍照文件错误：" + e.message);
+			    });
+			    }, function(a) {}, {
+			    filter: "image"
+			    })
+			};
+			
+			//上传头像图片
+			function uploadHead(imgPath) {
+			    var image = new Image();
+			    image.src = imgPath;
+			    image.onload = function() {
+			    var imgData = getBase64Image(image);
+			    console.log(imgData);
+			    /*在这里调用上传接口*/
+			    mui.ajax("图片上传接口", {
+			        data: {
+			        img: imgData
+			        },
+			        dataType: 'json',
+			        type: 'post',
+			        timeout: 10000,
+			        success: function(data) {
+			        mui.toast('上传成功',{
+			            duration:'long',
+			            type:'div'
+			        });
+			                document.getElementById('head-img').src = imgPath;
+			        document.getElementById('head-img1').src = imgPath;
+			        document.getElementById('head-img2').src=imgPath;
+			        }, 
+			            error: function(xhr, type, errorThrown) {
+			        mui.toast('网络异常，请稍后再试！');
+			        }
+			    });
+			    }
+			}
+			//将图片压缩转成base64
+			function getBase64Image(img) {
+			    var canvas = document.createElement("canvas");
+			    var width = img.width;
+			    var height = img.height;
+			    // calculate the width and height, constraining the proportions
+			    if(width > height) {
+			    if(width > 100) {
+			        height = Math.round(height *= 100 / width);
+			        width = 100;
+			    }
+			    } else {
+			    if(height > 100) {
+			        width = Math.round(width *= 100 / height);
+			        height = 100;
+			    }
+			    }
+			    canvas.width = width; /*设置新的图片的宽度*/
+			    canvas.height = height; /*设置新的图片的长度*/
+			    var ctx = canvas.getContext("2d");
+			    ctx.drawImage(img, 0, 0, width, height); /*绘图*/
+			    var dataURL = canvas.toDataURL("image/png", 0.8);
+			    return dataURL.replace("data:image/png;base64,", "");
+			}
+		</script>
+	</body>
+</html>

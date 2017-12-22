@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+	    <link rel="stylesheet" href="css/index/index.css" />
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="sear-bj">
+				<form class="sear-kuang">
+					<input type="submit" value="&#xe683;" class="tijiao"/>
+					<input type="text" name="" id="search" value="纸尿裤" class="sear"/>
+					<button>&#xe682;</button>
+				</form>
+				<span id="LT">&#xe622;</span>
+			</div>
+		    <div id="slider" class="mui-slider" >
+		      <div class="mui-slider-group mui-slider-loop">
+		        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="img/index/index_banner.png">
+		          </a>
+		        </div>
+		        <!-- 第一张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="img/index/index_banner.png">
+		          </a>
+		        </div>
+		        <!-- 第二张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="img/index/index_banner.png">
+		          </a>
+		        </div>
+		        <!-- 第三张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="img/index/index_banner.png">
+		          </a>
+		        </div>
+		        <!-- 第四张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="img/index/index_banner.png">
+		          </a>
+		        </div>
+		        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="img/index/index_banner.png">
+		          </a>
+		        </div>
+		      </div>
+		      <div class="mui-slider-indicator">
+		        <div class="mui-indicator mui-active"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		      </div>
+		    </div>
+			<div class="index-icon">
+				<div id="pinTuanIcon"><img src="img/index/index_pingtuan.png">拼团</div>
+				<div id="zhiBo"><img src="img/index/index_zhibo.png">直播</div>
+				<div id="youXuan"><img src="img/index/index_youxuan.png">优选</div>
+				<div id="qianDao3"><img src="img/index/index_qiandao.png">签到</div>
+			</div>
+			<div class="index-XSMS">
+				<a id="xlms" class="left">
+					<h3>限时秒杀</h3>
+					<p>月末底价9.9秒杀</p>
+					<div class="time" id="time">
+						<span id="shi">12</span>
+						:
+						<span id="fen">59</span>
+						:
+						<span id="miao">59</span>
+					</div>
+					<img src="img/index/index-XSG.jpg">
+				</a>
+				<div class="right"> 
+					<a class="rig-top" id="rig-top">
+						<div class="rig-top-left">
+							<h3>天天拼团</h3>
+							<span>已成14.4万拼团</span>
+							<img src="img/index/index_ttpt1.png" class="xiaoYa">
+						</div>
+						<div class="rig-top-right">
+							<img src="img/index/index_floor7.png">
+						</div>
+					</a>
+					<div class="rig-bom">
+						<a id="quanQiuGou">
+							<h3>全球购</h3>
+							<span>海淘爆款</span>
+							<div>
+								<img src="img/index/qqg.jpg" alt="" />
+							</div>
+						</a>
+						<a id="qingCang">
+							<h3>清仓</h3>
+							<span>9.5元秒杀</span>
+							<div>
+								<img src="img/index/ms.jpg" alt="" />
+							</div>
+						</a>
+						<a href="#">
+							<h3>爱吃</h3>
+							<span>1元试吃</span>
+							<div>
+								<img src="img/index/sc.jpg" alt="" />
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="index-yhq">
+				<a class="index-xinRen" id="xinRen"><img src="img/index/index_xinrenzhuanxiang.png" alt="" /></a>
+				<div class="index-yYx" id="index-yYx"> 
+					<a><img src="img/index/yYG.jpg"></a>
+				</div>
+				<div class="index-LX">
+					<p>流行风尚·用超底价说话</p>
+					<div class="LX-main" id="LX-main">
+						<a>
+							<h3>萌娃新衣</h3>
+							<img src="img/index/index_floor2.jpg" alt="" />
+							<span>9.9元限时秒杀</span>
+						</a>
+						<a>
+							<h3>时尚童装</h3>
+							<img src="img/index/index_floor2.png" alt="" />
+							<span>9元抢新品套装</span>
+						</a>
+						<a>
+							<h3>内衣配饰</h3>
+							<img src="img/index/index_floor3.png" alt="" />
+							<span>内衣上新9块9</span>
+						</a>
+						<a>
+							<h3>超值女装</h3>
+							<img src="img/index/index_floor4.png" alt="" />
+							<span>全场9.9元起</span>
+						</a>
+						<a>
+							<h3>女神鞋包</h3>
+							<img src="img/index/index_floor5.png" alt="" />
+							<span>秋新品低至19</span>
+						</a>
+						<a>
+							<h3>品质童鞋</h3>
+							<img src="img/index/index_floor6.png" alt="" />
+							<span>五折抢品质童鞋</span>
+						</a>
+						<a>
+							<h3>全球爆款</h3>
+							<img src="img/index/index_floor7.png" alt="" />
+							<span>安尔乐9.9元起</span>
+						</a>
+						<a>
+							<h3>食品生鲜</h3>
+							<img src="img/index/index_floor8.png" alt="" />
+							<span>1元尝鲜</span>
+						</a>
+					</div>
+					<div class="LX-bom">
+						<a>
+							<img src="img/index/index_ad1.png" alt="" />
+							<h3>进口奶粉尿裤</h3>
+							<span>花王低至39元/包</span>
+						</a>
+						<a>
+							<img src="img/index/index_ad2.png" alt="" />
+							<h3>行货奶粉尿裤</h3>
+							<span>抢199减100神券</span>
+						</a>
+						<a>
+							<img src="img/index/index_ad3.png" alt="" />
+							<h3>自营辅食营养</h3>
+							<span>亨氏低至9.9/罐</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<a id="yunYu" class="index-xinXi clear">
+				<img src="img/index/baby.png" alt="" />
+				<p>宝宝姓名<br>年龄</p>
+				<h3>完善信息，让酷爱更懂你<span>&#xe6d7;</span></h3>
+			</a>
+			<div class="index_zhibo">
+		    	<div class="zhibo_box">
+	   				<h2 class="zhibo_title">直播购物·萌娃辣妈穿什么</h2>
+	   				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+	   				    <ul class="mui-scroll" id="zhiBo2">
+	   				        <li class="mui-control-item">
+	   				        	<div><img src="img/index/live/live_user1.png" alt="" /></div>
+	   				        	<h2>秋装亲子潮秋装亲子潮</h2>
+	   				        	<p><img src="img/index/ds-pl1.png" alt="" /><span>宝妈安安</span></p>
+	   				        </li>
+	   				        <li class="mui-control-item">
+	   				        	<div><img src="img/index/live/live_user2.png" alt="" /></div>
+	   				        	<h2>宝妈最爱裝宝妈最爱裝…</h2>
+	   				        	<p><img src="img/index/ds-pl2.png" alt="" /><span>安尼宝贝</span></p>
+	   				        </li>
+	   				        <li class="mui-control-item">
+	   				        	<div><img src="img/index/live/live_user3.png" alt="" /></div>
+	   				        	<h2>秋装亲子潮秋装亲子潮…</h2>
+	   				        	<p><img src="img/index/ds-pl3.png" alt="" /><span>女神新装</span></p>
+	   				        </li>
+	   				         <li class="mui-control-item">
+	   				        	<div><img src="img/index/live/live_user1.png" alt="" /></div>
+	   				        	<h2>秋装亲子潮秋装亲子潮…</h2>
+	   				        	<p><img src="img/index/ds-pl4.png" alt="" /><span>宝妈安安</span></p>
+	   				        </li>
+	   				         <li class="mui-control-item">
+	   				        	<div><img src="img/index/live/live_user2.png" alt="" /></div>
+	   				        	<h2>宝妈最爱裝宝妈最爱裝…</h2>
+	   				        	<p><img src="img/index/ds-pl5.png" alt="" /><span>安尼宝贝</span></p>
+	   				        </li>
+	   				         <li class="mui-control-item">
+	   				        	<div><img src="img/index/live/live_user3.png" alt="" /></div>
+	   				        	<h2>秋装亲子潮秋装亲子潮…</h2>
+	   				        	<p><img src="img/index/ds-pl3.png" alt="" /><span>女神新装</span></p>
+	   				        </li>
+	   				    </ul>
+	   				</div>
+	   				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted zhibo_ask">
+	   				    <div class="mui-scroll">
+	   				    	<a class="mui-control-item">
+	   				    		今天穿什么
+	   				    	</a>
+	   				    	<a class="mui-control-item">
+	   				    		经典百搭T恤
+	   				    	</a>
+	   				    	<a class="mui-control-item">
+	   				    		夏日美白防晒
+	   				    	</a>
+	   				    	<a class="mui-control-item">
+	   				    		限时抢购
+	   				    	</a>
+	   				    	<a class="mui-control-item">
+	   				    		经典百搭T恤
+	   				    	</a>
+	   				    	<a class="mui-control-item">
+	   				    		今天穿什么
+	   				    	</a>
+				    	</div>
+				    </div>
+			   	</div>
+		    </div>
+			<div class="indexDp1">
+				<a class="index-tit">
+					<img src="img/index/disha.png" alt="" />
+					<h3>笛莎<span>笛莎秋季新风尚专场</span><strong>&#xe6d7;</strong></h3>
+				</a>
+				<div class="DP1-SP shangPin">
+					<a>
+						<img src="img/index/disha1.png" alt="" />
+						<div>
+							<h5><span>￥</span><strong>44</strong></h5>
+							<i>￥199</i>
+						</div>
+						<p>女童宝宝外套2017秋</p>
+						
+					</a>
+					<a>
+						<img src="img/index/disha2.png" alt=""/>
+						<div>
+							<h5><span>￥</span><strong>62</strong></h5>
+							<i>￥244</i>
+						</div>
+						<p>女童宝宝波点控最爱</p>
+					</a>
+				</div>
+				<div class="DP-renQi clear">
+					<a>
+						<div>
+							<img src="img/index/ds-pl1.png" alt="" />
+							<img src="img/index/ds-pl2.png" alt="" />
+							<img src="img/index/ds-pl3.png" alt="" />
+							<img src="img/index/ds-pl4.png" alt="" />
+						</div>
+						<p><span>2.3万</span>人团</p>
+					</a>
+				</div>
+			</div>
+			<div class="indexDp1 shangPin">
+				<a class="index-tit">
+					<img src="img/index/fqyy.png" alt="" />
+					<h3>福气洋洋<span>诚信经营品质保证</span><strong>&#xe6d7;</strong></h3>
+				</a>
+				<div class="DP1-SP" id="shangPin">
+					<a>
+						<img src="img/index/fqyy1.png" alt="" />
+						<div>
+							<h5><span>￥</span><strong>24</strong></h5>
+							<i>￥199</i>
+						</div>
+						<p>2016春秋季新款儿童</p>
+						
+					</a>
+					<a>
+						<img src="img/index/fqyy2.png" alt=""/>
+						<div>
+							<h5><span>￥</span><strong>19</strong></h5>
+							<i>￥109</i>
+						</div>
+						<p>2016男女款儿童秋衣</p>
+					</a>
+				</div>
+				<div class="DP-renQi clear">
+					<a>
+						<div>
+							<img src="img/index/ds-pl1.png" alt="" />
+							<img src="img/index/ds-pl2.png" alt="" />
+							<img src="img/index/ds-pl3.png" alt="" />
+							<img src="img/index/ds-pl4.png" alt="" />
+						</div>
+						<p><span>2.3万</span>人团</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			
+			document.getElementById("sliderSegmentedControl").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"live.html",
+					id:"live",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("search").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"index-search.html",
+					id:"index-search",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			
+			document.getElementById("LX-main").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"fashion.html",
+					id:"fashion",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("LT").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"liaotian.html",
+					id:"lianXi2",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("yunYu").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"yunyu.html",
+					id:"yunyu",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("index-yYx").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"vipUse.html",
+					id:"vipUse",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("quanQiuGou").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"quanqiugou.html",
+					id:"quanqiugou",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("qingCang").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"qingcang.html",
+					id:"qingcang",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("qianDao3").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"qiandao.html",
+					id:"qiandao",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("xinRen").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"new_user.html",
+					id:"newUser",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("pinTuanIcon").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"index-group.html",
+					id:"index-group",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("rig-top").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"index-group.html",
+					id:"index-group",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("zhiBo").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"live.html",
+					id:"live",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("xlms").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"xlms.html",
+					id:"xlms2",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			document.getElementById("youXuan").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"youxuan.html",
+					id:"youxuan",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			});
+			var slider = mui("#slider");
+					slider.slider({
+							interval: 4000
+					});
+				
+			var shi=document.getElementById("shi");
+	        var fen=document.getElementById("fen");
+	        var miao=document.getElementById("miao");
+	        var num1=Number(shi.innerHTML);
+	        var num2=Number(fen.innerHTML);
+	        var num3=Number(miao.innerHTML);
+	        var time2;
+//	        alert(num3);
+			function time(){
+	        	num3--;
+	        	miao.innerHTML=num3;
+//	        	alert(num3);
+				var num4=Number(miao.innerHTML);
+				if(num4==0){
+					num3=59;
+					num2--;
+	        		fen.innerHTML=num2;
+	        		var num5=Number(fen.innerHTML);
+	        		if(num5==0){
+	        			num2=59;
+	        			num1--;
+	        			shi.innerHTML=num1;
+	        			var num6=Number(shi.innerHTML);
+	        			if(num6==0){
+	        				miao.innerHTML=0;
+	        				fen.innerHTML=0;
+	        				shi.innerHTML=0;
+	        				clearInterval(time2);
+	        			}
+	        		}
+				}
+	    	}
+			time2=setInterval(time,1000);
+			
+//			function shi(){
+//				s--;
+//				shi.innerHTML=(s);
+//			}
+//			setInterval(shi,36000000);
+//			function fen(){
+//				f--;
+//				fen.innerHTML=(f);
+//			}
+//			setInterval(shi,60000);
+//			function miao(){
+//				m--;
+//				miao.innerHTML=(m);
+//			}
+//			setInterval(miao,1000);
+			
+			
+			
+			//	//以下是循环进入详情页js
+			window.onload=function(){
+				var tuanBox=document.getElementById("slider");
+				var liA=tuanBox.getElementsByTagName("img");
+				for(var b=0;b<liA.length;b++){
+					liA[b].addEventListener('tap',tap_right);
+					
+				}
+				
+				var tuanBox2=document.getElementsByClassName("shangPin");
+				for(var s=0;s<tuanBox2.length;s++){
+					var liA3=tuanBox2[s].getElementsByTagName("a");
+					for(var c=0;c<liA3.length;c++){
+						liA3[c].getElementsByTagName("img")[0].addEventListener('tap',shangPinXiangQing);
+						
+					}
+				}
+				
+				var indexTit=document.getElementsByClassName("index-tit");
+				for(var t=0;t<indexTit.length;t++){
+					indexTit[t].addEventListener('tap',dianPu);
+				}
+				
+				var DPrenQi=document.getElementsByClassName("DP-renQi");
+				for(var r=0;r<DPrenQi.length;r++){
+					DPrenQi[r].addEventListener('tap',shangPinXiangQing);
+				}
+				
+				
+			}
+			
+			function tap_right(){
+				mui.openWindow({
+					url:"yongpintuan.html",
+					id:"yongpintuan2",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			}
+			function shangPinXiangQing(){
+				mui.openWindow({
+					url:"shangPinXiangQing.html",
+					id:"SPXQ",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			}
+			function dianPu(){
+				mui.openWindow({
+					url:"shop.html",
+					id:"shangDian2",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

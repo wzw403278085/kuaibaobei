@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/index/xlms.css" />
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body id="xlms">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">限量秒杀</h1>
+		    <p id="myRemind" class="header_button"><img src="img/index/xianliangmiaosha/xlms_clock.png" alt="" /></p>
+		</header>
+		<div class="mui-content">
+		   	<div class="xlms_time">
+		   		<a>
+		   			<h2>21:00</h2>
+		   			<p>已开抢</p>
+		   		</a>
+		   		<a>
+		   			<h2>9:00</h2>
+		   			<p>已开抢</p>
+		   		</a>
+		   		<a class="cur">
+		   			<h2>15:00</h2>
+		   			<p>正在开抢</p>
+		   		</a>
+		   		<a>
+		   			<h2>9:00</h2>
+		   			<p>即将开抢</p>
+		   		</a>
+		   		<a>
+		   			<h2>21:00</h2>
+		   			<p>即将开抢</p>
+		   		</a>
+		   	</div>
+			<div class="time_content">
+				<div class="content_box">
+				    <a class="box_list mui-active">全部</a>
+				    <a class="box_list">童装</a>
+				    <a class="box_list">美妆</a>
+				    <a class="box_list">女装</a>
+				    <a class="box_list">玩具</a>
+				    <a class="box_list">育婴</a>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>1</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>2</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>3</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="time_content">
+				<div class="content_box">
+				    <a class="box_list mui-active">11</a>
+				    <a class="box_list">2</a>
+				    <a class="box_list">美妆</a>
+				    <a class="box_list">女装</a>
+				    <a class="box_list">玩具</a>
+				    <a class="box_list">育婴</a>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>11</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>22</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>33</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="time_content cur">
+				<div class="content_box">
+				    <a class="box_list cur">全部</a>
+				    <a class="box_list">童装</a>
+				    <a class="box_list">美妆</a>
+				    <a class="box_list">女装</a>
+				    <a class="box_list">玩具</a>
+				    <a class="box_list">育婴</a>
+				</div>
+				<div class="nav_content cur">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="time_content">
+				<div class="content_box">
+				    <a class="box_list mui-active">3</a>
+				    <a class="box_list">童装</a>
+				    <a class="box_list">美妆</a>
+				    <a class="box_list">女装</a>
+				    <a class="box_list">玩具</a>
+				    <a class="box_list">育婴</a>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>1111</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>2222</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>3333</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="time_content">
+				<div class="content_box">
+				    <a class="box_list mui-active">全部</a>
+				    <a class="box_list">童装</a>
+				    <a class="box_list">美妆</a>
+				    <a class="box_list">女装</a>
+				    <a class="box_list">玩具</a>
+				    <a class="box_list">育婴</a>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>11111</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>22222</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>33333</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_content">
+					<ul>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>混合谷物米粉罐装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥28<span>￥36</span></p>
+								<div class="content_line"><p></p><h2><span>28</span>%</h2></div>
+								<p class="content_num">已抢<span>228</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img1.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥9.9<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>35</span>%</h2></div>
+								<p class="content_num">已抢<span>203</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img3.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+						<li>
+							<a class="clear" href="">
+								<div class="content_img">
+									<img src="img/index/xianliangmiaosha/xlms_img2.png" alt="" />
+								</div>
+								<h2>小麦秸秆卡通米奇碗盘套装</h2>
+								<p class="content_title">限时限量秒杀</p>
+								<p class="content_price">￥15<span>￥18</span></p>
+								<div class="content_line"><p></p><h2><span>64</span>%</h2></div>
+								<p class="content_num">已抢<span>147</span>件</p>
+								<button>马上抢</button>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById("myRemind").addEventListener("tap",function(){
+				mui.openWindow({
+					url: "myRemind.html",
+					id: "myRemind",
+					show:{
+						aniShow: "slide-in-right",
+						duration: 200
+					},
+					waiting:{title:"正在加载..."}
+				});
+			});
+			$(document).ready(function(){
+				$(".xlms_time a").click(function(e){
+					var i=$(this).index();
+					$(this).addClass("cur").siblings().removeClass("cur");
+					$(this).parent(".xlms_time").siblings(".time_content").eq(i).addClass("cur").siblings(".time_content").removeClass("cur");
+					$(this).parent(".xlms_time").siblings(".time_content").eq(i).find(".nav_content").eq(0).addClass("cur").siblings(".nav_content").removeClass("cur");
+					$(this).parent(".xlms_time").siblings(".time_content").eq(i).find(".box_list").eq(0).addClass("cur").siblings(".box_list").removeClass("cur");
+					$(this).parent().siblings(".time_content").eq(i).find(".box_list").click(function(){
+						var j=$(this).index();
+						$(this).addClass("cur").siblings().removeClass("cur");
+						$(this).parent(".content_box").siblings(".nav_content").eq(j).addClass("cur").siblings(".nav_content").removeClass("cur");
+					});
+				});
+				$(".time_content .content_box a").click(function(){
+					
+						var j=$(this).index();
+						$(this).addClass("cur").siblings().removeClass("cur");
+						$(this).parent().siblings(".nav_content").eq(j).css("display","block").siblings(".nav_content").css("display","none");
+					});
+			});
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

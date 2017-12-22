@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			.clear:after{
+				display: block;
+				content: "";
+				clear: both;
+			}
+			.mui-bar~.mui-content .mui-fullscreen {
+				top: 44px;
+				height: auto;
+			}
+			.mui-pull-top-tips {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				margin-left: -25px;
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				z-index: 1;
+			}
+			.mui-bar~.mui-pull-top-tips {
+				top: 24px;
+			}
+			.mui-pull-top-wrapper {
+				width: 42px;
+				height: 42px;
+				display: block;
+				text-align: center;
+				background-color: #efeff4;
+				border: 1px solid #ddd;
+				border-radius: 25px;
+				background-clip: padding-box;
+				box-shadow: 0 4px 10px #bbb;
+				overflow: hidden;
+			}
+			.mui-pull-top-tips.mui-transitioning {
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+			}
+			.mui-pull-top-tips .mui-pull-loading {
+				/*-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 400ms;
+				transition-duration: 400ms;*/
+				
+				margin: 0;
+			}
+			.mui-pull-top-wrapper .mui-icon,
+			.mui-pull-top-wrapper .mui-spinner {
+				margin-top: 7px;
+			}
+			.mui-pull-top-wrapper .mui-icon.mui-reverse {
+				/*-webkit-transform: rotate(180deg) translateZ(0);*/
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-pull-top-canvas {
+				overflow: hidden;
+				background-color: #fafafa;
+				border-radius: 40px;
+				box-shadow: 0 4px 10px #bbb;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+			}
+			.mui-pull-top-canvas canvas {
+				width: 40px;
+			}
+			.mui-slider-indicator.mui-segmented-control {
+				height: 41px;
+				background-color: #fff;
+			}
+			.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+			    -webkit-justify-content: space-between;
+			    -moz-justify-content: space-between;
+			    -ms-justify-content: space-between;
+			    -o-justify-content: space-between;
+			    justify-content: space-between;
+			    padding: 0 15%;
+				width: 100%;
+			}
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				border-bottom: 2px solid #FF4498;
+				color: inherit;
+			}
+			.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
+				border-bottom: 2px solid transparent;
+			}
+			.mui-table-view{
+				margin-top: 1px;
+				padding: 0 5%;
+				top: 1px;
+			}
+			.mui-bar-nav~.mui-content .mui-slider.mui-fullscreen{
+				top: 51px;
+			}
+			.mui-table-view li{
+				padding: 4% 0;
+				display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+			    -webkit-justify-content: center;
+			    -moz-justify-content: center;
+			    -ms-justify-content: center;
+			    -o-justify-content: center;
+			    justify-content: center;
+			}
+			.mui-table-view li div:first-of-type{
+				width: 5rem;
+				height: 5rem;
+				border: 1px solid #dedede;
+			}
+			.mui-table-view li div:first-of-type img{
+				width: 100%;
+				height: 100%;
+			}
+			.mui-table-view li div:nth-of-type(2){
+				padding-left: 1rem;
+				width: 70%;
+				height: 100%;
+			}
+			.mui-table-view li div:nth-of-type(2) h3{
+				font-size: .9rem;
+				line-height: 1.2rem;
+			}
+			.mui-bar.mui-bar-nav span{
+				position: absolute;
+				right: 5%;
+				z-index: 10;
+				display: block;
+				width: 5rem;
+    			text-align: right;
+				float: right;
+				line-height: 53px;
+			}
+			.LLJL-zheZhao{
+				display: none;
+				position: fixed;
+				z-index: 55;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,.4);
+			}
+			.LLJL-zheZhao div{
+				position: relative;
+				top: 50%;
+				left: 50%;
+				margin: -5rem 0 0 -30%;
+				padding-top: 2.6rem;
+				width: 60%;
+				height: 10rem;
+				text-align: center;
+				border-radius: 1rem;
+				background: #fff;
+			}
+			.LLJL-zheZhao div p{
+				font-size: 1rem;
+				color: #333333;
+			}
+			.LLJL-zheZhao div button{
+				margin: 1rem .6rem;
+				width: 5rem;
+				border-radius: .8rem;
+			}
+			.LLJL-zheZhao div button.cur{
+				color: #fff;
+				border: 1px solid #FF4498;
+				background: #FF4498;
+			}
+		</style>
+	</head>
+
+	<body id="liuLanJiLu2">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">浏览记录</h1>
+			<span>清空</span>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li>
+										<div><img src="img/fenLei/icon2.jpg" alt="" /></div>
+										<div>
+											<h3>红色小象 婴儿洗发沐浴露99ml+爽身粉120g</h3>
+											<p>2017-11-13 18:27</p>
+										</div>
+									</li>
+								</ul>
+								<ul class="mui-table-view">
+									<li>
+										<div><img src="img/fenLei/icon2.jpg" alt="" /></div>
+										<div>
+											<h3>红色小象 婴儿洗发沐浴露99ml+爽身粉120g</h3>
+											<p>2017-11-13 18:27</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="LLJL-zheZhao">
+								<div>
+									<p>您确定要清空么？</p>
+									<button id="queDing">确定</button>
+									<button id="quXiao">取消</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script>
+			mui.init();
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+			})(mui);
+//			console.log(document.getElementById("shouCangMy").innerHTML);
+			$(document).ready(function(){
+				$(".mui-bar.mui-bar-nav span").click(function(){
+//					alert("123");
+					$(".LLJL-zheZhao").css("display","block");
+				});
+				$("#queDing").click(function(){
+					$(this).addClass("cur").siblings("#quXiao").removeClass("cur");
+					$(this).parents(".LLJL-zheZhao").siblings(".mui-scroll").children("ul").css("display","none");
+					$(".LLJL-zheZhao").css("display","none");
+				});
+				$("#quXiao").click(function(){
+					$(this).addClass("cur").siblings("#queDing").removeClass("cur");
+					$(".LLJL-zheZhao").css("display","none");
+				})
+			})
+		</script>
+	</body>
+
+</html>

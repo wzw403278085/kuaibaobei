@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>家居</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	    <style>
+	    	.img{background-color: red; height: 200px; display: flex; justify-content: center; align-items: center;}
+	    	.mui-table-view {
+				margin-top: 20px;
+			}
+			.pagNav{position:relative;display: flex;justify-content: space-between;}
+        	.pagNav a{ display: block; width: 20%; height: 3rem;font-size: 1rem;color: #333; background-color: #fff;border-bottom: 1px solid #999;line-height: 3rem;text-align: center;}
+        /*.banner .pagNav a:hover{background-color: #efe96f;}*/
+       		/*.pagNav a.cur{ background-color: #4dad10;color: #fff;}*/
+	    </style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    
+		    <h1 class="mui-title">个人中心</h1>
+		</header>
+		<div class="mui-content">
+			<div class="img" >
+				<img src="images/logo.png" width="100" height="100" id="head"> 
+			</div>
+		    <ul class="mui-table-view mui-table-view-chevron">
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                    Item 1
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                     Item 2
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                     Item 3
+	                </a>
+	            </li>
+	        </ul>
+	        <ul class="mui-table-view mui-table-view-chevron">
+	                <li class="mui-table-view-cell">
+	                    <a class="mui-navigate-right" href="show.html">
+	                        Item 1
+	                    </a>
+	                </li>
+	                <li class="mui-table-view-cell">
+	                    <a class="mui-navigate-right" id="ss">
+	                         Item 2
+	                    </a>
+	                </li>
+	                <li class="mui-table-view-cell">
+	                    <a class="mui-navigate-right">
+	                         Item 3
+	                    </a>
+	                </li>
+	        </ul>
+	        <div class="pagNav" id="pagNav">
+		        <a id="all">全部</a>
+		        <a id="pay">待付款</a>
+		        <a id="send">待发货</a>
+		        <a id="get">待收货</a>
+		        <a id="say">评价</a>
+		    </div>
+		</div>
+		<script>
+			
+			document.getElementById("ss").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"ss.html",
+					id:"ss",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			});
+			
+			document.getElementById("all").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"new_file.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goAll');
+			});
+			document.getElementById("pay").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"new_file.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goPay');
+			});
+			
+			document.getElementById("send").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"new_file.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goDfh');
+			});
+			
+			document.getElementById("get").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"new_file.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goDsh');
+			});
+			
+			document.getElementById("say").addEventListener("tap",function(){
+				var main=mui.openWindow({
+					url:"new_file.html",
+					id:"list",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+				mui.fire(main,'goDpj');
+			});
+			
+			
+			
+			/*点击头像触发*/
+			document.getElementById('head').addEventListener('tap', function() {
+			    if(mui.os.plus) {
+			        var a = [{
+			            title: "拍照5"
+			    }, {
+			        title: "从手机相册选择"
+			    }];
+			    plus.nativeUI.actionSheet({
+			        title: "修改用户头像",
+			        cancel: "取消",
+			        buttons: a
+			    }, function(b) { /*actionSheet 按钮点击事件*/
+			        switch(b.index) {
+			        case 0:
+			            break;
+			        case 1:
+			            getImage(); /*拍照*/
+			            break;
+			        case 2:
+			            galleryImg(); /*打开相册*/
+			            break;
+			        default:
+			            break;
+			        }
+			    })
+			    }
+			}, false);
+			//拍照
+			function getImage() {
+			    var cmr = plus.camera.getCamera();
+			    var res = cmr.supportedImageResolutions[0];
+			    var fmt = cmr.supportedImageFormats[0];
+			    cmr.captureImage(function(path) {
+			        //plus.io.resolveLocalFileSystemURL(path, function(entry) {  
+			    plus.io.resolveLocalFileSystemURL(path, function(entry) {
+			        var localUrl = entry.toLocalURL();
+			        uploadHead(localUrl + "?version=" + new Date().getTime());
+			    }, function(err) {
+			        console.error("拍照失败：" + err.message);
+			    }, {
+			        index: 1
+			    });
+			    });
+			} 
+			//本地相册选择
+			function galleryImg() {
+			    plus.gallery.pick(function(a) {
+			    plus.io.resolveLocalFileSystemURL(a, function(entry) {
+			        plus.io.resolveLocalFileSystemURL("_doc/", function(root) {
+			        root.getFile("logo.png", {}, function(file) {
+			            //文件已存在
+			            file.remove(function() {
+			            console.log("file remove success");
+			            entry.copyTo(root, 'logo.png', function(e) {
+			                var e = e.fullPath + "?version=" + new Date().getTime();
+			                uploadHead(e); /*上传图片*/
+			                //变更大图预览的src
+			                //目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+			                },function(e) {
+			                            console.log('copy image fail:' + e.message);
+			            });
+			            }, function() {
+			            console.log("delete image fail:" + e.message);
+			            });
+			        }, function() {
+			            //文件不存在
+			            entry.copyTo(root, 'logo.png', function(e) {
+			            var path = e.fullPath + "?version=" + new Date().getTime();
+			            uploadHead(path); /*上传图片*/
+			            },function(e) {
+			            console.log('copy image fail:' + e.message);
+			            });
+			        });
+			        }, function(e) {
+			        console.log("get _www folder fail");
+			        })
+			    }, function(e) {
+			        console.log("读取拍照文件错误：" + e.message);
+			    });
+			    }, function(a) {}, {
+			    filter: "image"
+			    })
+			};
+			
+			//上传头像图片
+			function uploadHead(imgPath) {
+			    var image = new Image();
+			    image.src = imgPath;
+			    image.onload = function() {
+			    var imgData = getBase64Image(image);
+			    console.log(imgData);
+			    /*在这里调用上传接口*/
+//			    mui.ajax("图片上传接口", {
+//			        data: {
+//			        img: imgData
+//			        },
+//			        dataType: 'json',
+//			        type: 'post',
+//			        timeout: 10000,
+//			        success: function(data) {
+//			        mui.toast('上传成功',{
+//			            duration:'long',
+//			            type:'div'
+//			        });
+//			                document.getElementById('head-img').src = imgPath;
+//			        document.getElementById('head-img1').src = imgPath;
+//			        document.getElementById('head-img2').src=imgPath;
+//			        }, 
+//			            error: function(xhr, type, errorThrown) {
+//			        mui.toast('网络异常，请稍后再试！');
+//			        }
+//			    });
+			    }
+			}
+			//将图片压缩转成base64
+			function getBase64Image(img) {
+			    var canvas = document.createElement("canvas");
+			    var width = img.width;
+			    var height = img.height;
+			    // calculate the width and height, constraining the proportions
+			    if(width > height) {
+			    if(width > 100) {
+			        height = Math.round(height *= 100 / width);
+			        width = 100;
+			    }
+			    } else {
+			    if(height > 100) {
+			        width = Math.round(width *= 100 / height);
+			        height = 100;
+			    }
+			    }
+			    canvas.width = width; /*设置新的图片的宽度*/
+			    canvas.height = height; /*设置新的图片的长度*/
+			    var ctx = canvas.getContext("2d");
+			    ctx.drawImage(img, 0, 0, width, height); /*绘图*/
+			    var dataURL = canvas.toDataURL("image/png", 0.8);
+			    return dataURL.replace("data:image/png;base64,", "");
+			}                
+		</script>
+	</body>
+</html>

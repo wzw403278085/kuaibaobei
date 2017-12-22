@@ -1,0 +1,24 @@
+.mui-bar{background-color: white;}
+.mui-bar .header_button{position: absolute;right: 15px;font-size: 1.2rem;color: #888888;font-family: icon;line-height: 44px;margin: 0;padding: 0 0.25rem;}
+.pinpai{width: 100%;background-color: white;padding: 1rem;}
+.pinpai .pinpai_left{float: left;width: 80%;}
+.pinpai .pinpai_left .pinpai_logo{float: left;width: 25%;}
+.pinpai .pinpai_left .pinpai_logo img{width: 100%;}
+.pinpai .pinpai_left h2{float: left;width: 75%;font-size: 1rem;color: #404040;font-weight: normal;padding: 0.5rem 0 0 1rem;}
+.pinpai .pinpai_left .pinpai_country{float: left;width: 75%;font-size: 0.9rem;color: #888888; padding-left: 1rem;margin-top: 1rem;}
+.pinpai .pinpai_left .pinpai_country img{float: left;width: 10%;margin-right: 0.5rem;}
+.pinpai .pinpai_left .pinpai_youhui{float: left;width: 100%;font-size: 1rem;color: #000000;margin: 0.5rem 0 0 0;}
+.pinpai .pinpai_right{float:right;font-size: 1.5rem;color: #4D4D4D;font-family: icon;text-align: center;padding: 2rem 0.5rem 0 1rem;}
+.pinpai .pinpai_right span{font-size: 1rem;}
+
+.bituan{width: 100%;}
+.bituan .bituan_title{font-size: 1.2rem;text-align: center;font-weight: normal;padding: 0.7rem 0 0.5rem 0;}
+.bituan ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
+.bituan ul li{width: 49.5%;background-color: white;padding: 1rem;margin-top: 0.2rem;}
+.bituan ul li a{display: block;}
+.bituan ul li a .biqiang_img{width: 100%;height: 10rem;overflow: hidden;}
+.bituan ul li a .biqiang_img img{width: 100%;}
+.bituan ul li a h2{font-size: 1rem;color: black;font-weight: normal;line-height: 1.3rem;}
+.bituan ul li a .biqiang_price{display: flex;justify-content: space-between;margin-top: 1rem;}
+.bituan ul li a .biqiang_price h3{font-size: 1.1rem;color: #FF4498;font-weight: normal;}
+.bituan ul li a .biqiang_price p{font-size: 1rem;}

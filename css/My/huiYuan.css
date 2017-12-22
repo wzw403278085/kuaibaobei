@@ -1,0 +1,138 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*以下是主题样式*/
+.huiYuanTop{
+	margin-top: .4rem;
+	padding: 5% 0 0;
+	background: #fff;
+}
+.huiYuanTop div{
+	padding: 0 5%;
+	margin: 0 auto;
+	width: 90%;
+}
+.huiYuanTop div img{
+	width: 100%;
+}
+.huiYuanTop p.taoCan{ 
+	padding: 0 5%;
+	font-size: 1rem;
+}
+.huiYuanTop ul li{
+	padding: 0 5%;
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	border-bottom: 1px solid #eeeeee;
+}
+.huiYuanTop ul li p{ margin-bottom: 0;}
+.huiYuanTop ul li p:first-of-type{
+	float: left;
+	width: 10rem;
+	font-size: 1rem;
+	color: #484848;	
+}
+.huiYuanTop ul li p:nth-of-type(3){
+	/*margin-left: 26%;*/
+	float: right;
+	text-align: right;
+	width: 2.8rem;
+	text-decoration: line-through;
+}
+.huiYuanTop ul li p:nth-of-type(2){
+	margin-right: .4rem;
+	float: right;
+	width: 2.8rem;
+	color: #FF4498;
+	font-size: 1rem;
+	text-align: right;
+}
+.huiYuanTop ul li strong{
+	position: relative;
+	float: right;
+	margin-top: 1.4rem;
+	display: block;
+	width: 19px;
+	height: 19px;
+	border: 1px solid #c3c3c3;
+	border-radius: 50%;
+}
+.huiYuanTop ul li strong.cur:before{
+	position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    content: "\e6a7";
+    width: 19px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #FF4498;
+	border-radius: 50%;
+    font-size: .9rem;
+    font-family: icon;
+    background: #FF4498;
+}
+.mui-content button{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	font-size: 1rem;
+	line-height: 2.8rem;
+	background: #FF4498;
+	border: none;
+	border-radius: 0;
+}
+.huiYuanBom{
+	padding: 2% 5%;
+	margin-top: .6rem;
+	background: #fff;
+}
+.huiYuanBom p.tit{
+	font-size: 1rem;
+}
+.huiYuanBom ul{ padding-bottom: 2.8rem;}
+.huiYuanBom ul li{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    margin: 6% 0;
+}
+.huiYuanBom ul li img{
+	width: 12%;
+}
+.huiYuanBom ul li div{
+	width: 84%;
+}
+.huiYuanBom ul li div h3{
+	font-size: 1rem;
+	color: #333333;
+}
+.huiYuanBom ul li div p{
+	font-size: .9rem;
+	color: #333333;
+}

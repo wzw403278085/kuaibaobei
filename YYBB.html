@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+	    <style type="text/css">
+	    	ul{ 
+	    		display: -webkit-box;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-flex;
+			    display: flex;
+			    -webkit-flex-wrap:wrap;
+			    -webkit-box-lines:multiple;
+			    -moz-flex-wrap:wrap;
+			    flex-wrap:wrap;
+			    -webkit-justify-content: space-between;
+			    -moz-justify-content: space-between;
+			    -ms-justify-content: space-between;
+			    -o-justify-content: space-between;
+			    justify-content: space-between;
+			    -webkit-align-items: center;
+			    -moz-align-items: center;
+			    -ms-align-items: center;
+			    -o-align-items: center;
+			    align-items: center;
+	    		list-style: none;
+	    		padding: 0 12%;
+	    		position: absolute;
+	    		bottom: 3rem;
+    		}
+    		ul li{
+    			margin: 4% 0;
+    			width: 22%;
+    		}
+    		ul li img{
+    			width: 100%;
+    		}
+	    	body{
+	    		background: #fff;
+	    	}
+	    	.mui-content{
+	    		background: #fff;
+	    	}
+	    	.clear:after{
+	    		display: block;
+	    		content: "";
+	    		clear: both;
+	    	}
+	    	.tiaoGuo span{
+	    		float: right;
+	    		margin-right: 5%;
+	    		line-height: 3rem;
+	    	}
+	    	.main-top img{
+	    		display: block;
+	    		margin: 0 auto;
+	    		width: 34%;
+	    	}
+	    	.main-top p{
+	    		margin: 8% 0 4%;
+	    		font-size: 1.1rem;
+	    		text-align: center;
+	    		color: #000000;
+	    	}
+	    	form.mui-content{
+	    		 position: relative;
+	    		 height: 100%;
+    		 }
+	    	form.mui-content input.baoCun{
+	    		position: absolute;
+	    		bottom: 0;
+	    		left: 0;
+	    		width: 100%;
+	    		font-size: 1rem;
+	    		color: #fff;
+	    		line-height: 2.4rem;
+	    		border: none;
+	    		border-radius: 0;
+	    		background: #FF4498;
+	    	}
+	    	/*.mian{position: relative;}*/
+	    	.mian img{
+	    		position: relative;
+	    		top: 0;
+	    		left: 50%;
+	    		z-index: 1;
+	    		margin-left: -3rem;
+	    		width: 6rem;
+	    	}
+	    	.mian div{
+	    		padding-top: 1.6rem;
+	    		position: relative;
+	    		top: -1.6rem;
+	    		left: 50%;
+	    		margin-left: -25%;
+	    		width: 50%;
+	    		box-shadow: 0 -1px 4px #e2e2e2;;
+	    	}
+	    	.mian div input{
+	    		display: block;
+	    		margin: 0 auto;
+	    		text-align: center;
+	    		padding: 0;
+	    		width: 80%;
+	    		font-size: .8rem;
+	    		color: #888888;
+	    		border: none;
+	    		border-radius: 0;
+	    	}
+	    	.mian div input.cur{
+	    		border-bottom: 1px solid #eeeeee;
+	    		border-top: 1px solid #eeeeee;
+	    		font-size: 1rem;
+	    		color: #333333;
+	    	}
+	    </style>
+	</head>
+	<body id="YYBB2">
+		<form class="mui-content">
+		    <p class="tiaoGuo clear"><span id="tiaoGuo">跳过</span></p>
+		    <div class="main-top">
+		    	<img src="img/My/dengLu/logo1.png" alt="" id="touXiang"/>
+		    	<p>填写信息，享受专属好物推荐</p>
+		    </div>
+		    <div class="mian">
+		    	<img src="img/My/dengLu/xinXi1.png" alt="" />
+		    	<div id="cur-box">
+		    		<input type="text" name="" id="" value="宝宝性别" />
+		    		<input type="text" name="" id="" value="宝宝出生日期" class="cur"/>
+		    		<input type="text" name="" id="" value="宝宝小名" />
+		    	</div>
+		    </div>
+		    <ul>
+		    	<li><img src="img/My/dengLu/xinXi2.png" id="hyz"></li>
+		    	<li><img src="img/My/dengLu/xinXi3.png" id="byz"></li>
+		    	<li><img src="img/My/dengLu/xinXi4.png" id="hmds"></li>
+		    </ul>
+		    <input type="button" value="保存" class="baoCun" id="baoCun"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var h=$(window).height()+"px";
+			$("form.mui-content").css("height",h);
+			$("#cur-box input").click(function(){
+				$(this).addClass("cur").siblings().removeClass("cur");
+			})
+		});
+		document.getElementById("tiaoGuo").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"login.html",
+				id:"dengLu",
+						createNew:true, 
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"已注册请登录..."
+				}
+			});
+		});
+		document.getElementById("baoCun").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"login.html",
+				id:"dengLu",
+						createNew:true, 
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"已注册请登录..."
+				}
+			});
+		});
+		document.getElementById("hyz").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"HYZ.html",
+					id:"HYZ2",
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			});
+		document.getElementById("byz").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"BYZ.html",
+				id:"BYZ2",
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		});
+		document.getElementById("hmds").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"HMDS.html",
+					id:"HMDS2",
+//						createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"正在加载..."
+					}
+				});
+			});
+		/*点击头像触发*/
+			document.getElementById('touXiang').addEventListener('tap', function() {
+			    if(mui.os.plus) {
+			        var a = [{
+			            title: "拍照"
+			    }, {
+			        title: "从手机相册选择"
+			    }];
+			    plus.nativeUI.actionSheet({
+			        title: "修改用户头像",
+			        cancel: "取消",
+			        buttons: a
+			    }, function(b) { /*actionSheet 按钮点击事件*/
+			        switch(b.index) {
+			        case 0:
+			            break;
+			        case 1:
+            			getImage(); /*拍照*/
+            			break;
+        			case 2:
+           				galleryImg(); /*打开相册*/
+           				break;
+        			default:
+           				break;
+        			}
+    			})
+    		}
+		}, false);
+		
+		//拍照
+		function getImage() {
+		    var cmr = plus.camera.getCamera();
+		    var res = cmr.supportedImageResolutions[0];
+		    var fmt = cmr.supportedImageFormats[0];
+		    cmr.captureImage(function(path) {
+		        //plus.io.resolveLocalFileSystemURL(path, function(entry) {  
+		    plus.io.resolveLocalFileSystemURL(path, function(entry) {
+		        var localUrl = entry.toLocalURL();
+		        uploadHead(localUrl + "?version=" + new Date().getTime());
+		    }, function(err) {
+		        console.error("拍照失败：" + err.message);
+		    }, {
+		        index: 1
+		    });
+		    });
+		} 
+		
+		//本地相册选择
+		function galleryImg() {
+		    plus.gallery.pick(function(a) {
+		    plus.io.resolveLocalFileSystemURL(a, function(entry) {
+		        plus.io.resolveLocalFileSystemURL("_doc/", function(root) {
+		        root.getFile("head.png", {}, function(file) {
+		            //文件已存在
+		            file.remove(function() {
+		            console.log("file remove success");
+		            entry.copyTo(root, 'head.png', function(e) {
+		                var e = e.fullPath + "?version=" + new Date().getTime();
+		                uploadHead(e); /*上传图片*/
+		                //变更大图预览的src
+		                //目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
+		                },function(e) {
+		                            console.log('copy image fail:' + e.message);
+		            });
+		            }, function() {
+		            console.log("delete image fail:" + e.message);
+		            });
+		        }, function() {
+		            //文件不存在
+		            entry.copyTo(root, 'head.png', function(e) {
+		            var path = e.fullPath + "?version=" + new Date().getTime();
+		            uploadHead(path); /*上传图片*/
+		            },function(e) {
+		            console.log('copy image fail:' + e.message);
+		            });
+		        });
+		        }, function(e) {
+		        console.log("get _www folder fail");
+		        })
+		    }, function(e) {
+		        console.log("读取拍照文件错误：" + e.message);
+		    });
+		    }, function(a) {}, {
+		    filter: "image"
+		    })
+		};
+		
+		//上传头像图片
+		function uploadHead(imgPath) {
+		    var image = new Image();
+		    image.src = imgPath;
+		    image.onload = function() {
+		    var imgData = getBase64Image(image);
+		    console.log(imgData);
+		    /*在这里调用上传接口*/
+		    mui.ajax("图片上传接口", {
+		        data: {
+		        img: imgData
+		        },
+		        dataType: 'json',
+		        type: 'post',
+		        timeout: 10000,
+		        success: function(data) {
+		        mui.toast('上传成功',{
+		            duration:'long',
+		            type:'div'
+		        });
+		                document.getElementById('head-img').src = imgPath;
+		        document.getElementById('head-img1').src = imgPath;
+		        document.getElementById('head-img2').src=imgPath;
+		        }, 
+		            error: function(xhr, type, errorThrown) {
+		        mui.toast('网络异常，请稍后再试！');
+		        }
+		    });
+		    }
+		}
+		//将图片压缩转成base64
+		function getBase64Image(img) {
+		    var canvas = document.createElement("canvas");
+		    var width = img.width;
+		    var height = img.height;
+		    // calculate the width and height, constraining the proportions
+		    if(width > height) {
+		    if(width > 100) {
+		        height = Math.round(height *= 100 / width);
+		        width = 100;
+		    }
+		    } else {
+		    if(height > 100) {
+		        width = Math.round(width *= 100 / height);
+		        height = 100;
+		    }
+		    }
+		    canvas.width = width; /*设置新的图片的宽度*/
+		    canvas.height = height; /*设置新的图片的长度*/
+		    var ctx = canvas.getContext("2d");
+		    ctx.drawImage(img, 0, 0, width, height); /*绘图*/
+		    var dataURL = canvas.toDataURL("image/png", 0.8);
+		    return dataURL.replace("data:image/png;base64,", "");
+		}
+	</script>
+</html>

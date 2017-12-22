@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <title></title>
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/mui.picker.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="css/yunyu.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+	</head>
+	<body id="yunyu">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">孕育状态</h1>
+		    <button>保存</button>
+		</header>
+		<div class="mui-content">
+		    <div class="nav">
+		    	<div class="cur">
+		    		<p><img src="img/yunyu_wangzi.png" alt="" /></p>
+		    		<h2>小王子</h2>
+		    	</div>
+		    	<div>
+		    		<p><img src="img/yunyu_gongzhu.png" alt="" /></p>
+		    		<h2>小公主</h2>
+		    	</div>
+		    	<div>
+		    		<p><img src="img/yunyu_yunyu.png" alt="" /></p>
+		    		<h2>孕育中</h2>
+		    	</div>
+		    	<div>
+		    		<p><img src="img/yunyu_beiyun.png" alt="" /></p>
+		    		<h2>备孕中</h2>
+		    	</div>
+		    </div>
+		    <div class="babys">
+		    	<div class="baby_messages clear">
+					<div class="baby_name clear">
+						<h2>宝宝小名：</h2>
+						<input type="text" name="babyName" placeholder="点击输入"/>
+						<p>&#xe6a6;</p>
+					</div>
+				</div>
+				<div class="baby_birthday clear">
+					<div class="baby_name clear">
+						<h2>宝宝生日：</h2>
+						<p id='result' class="ui-alert"></p>
+						<button id='demo4' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">点击选择</button>
+					</div>
+				</div>
+		    </div>
+			<div class="add_baby">
+				<div class="baby_name clear">
+					<p>+</p>
+					<h2>添加宝宝</h2>
+					<button>点击选择</button>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			(function($) {
+				$.init();
+				var result = $('#result')[0];
+				var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var _self = this;
+						if(_self.picker) {
+							_self.picker.show(function (rs) {
+								console.log(rs.text);
+								result.innerText = rs.text;
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						} else {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							/*
+							 * 首次显示时实例化组件
+							 * 示例为了简洁，将 options 放在了按钮的 dom 上
+							 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+							 */
+							_self.picker = new $.DtPicker(options);
+							_self.picker.show(function(rs) {
+								/*
+								 * rs.value 拼合后的 value
+								 * rs.text 拼合后的 text
+								 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+								 * rs.m 月，用法同年
+								 * rs.d 日，用法同年
+								 * rs.h 时，用法同年
+								 * rs.i 分（minutes 的第二个字母），用法同年
+								 */
+								result.innerText = rs.text;
+								/* 
+								 * 返回 false 可以阻止选择框的关闭
+								 * return false;
+								 */
+								/*
+								 * 释放组件资源，释放后将将不能再操作组件
+								 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+								 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+								 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+								 */
+								_self.picker.dispose();
+								_self.picker = null;
+							});
+						}
+						
+					}, false);
+				});
+			})(mui);
+			$(document).ready(function(){
+				$(".nav div").click(function(){
+					$(this).addClass("cur").siblings().removeClass("cur");
+				});
+				$(".baby_name p").click(function(){
+					$(this).siblings("input").val("");
+				})
+			});
+		</script>
+	</body>
+</html>

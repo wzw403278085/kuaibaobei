@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link href="css/My/huiYuan.css" rel="stylesheet"/>
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+	</head>
+	<body id="huiYuan2">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的会员卡</h1>
+		</header>
+		<div class="mui-content">
+		   <div class="huiYuanTop">
+	   			<div><img src="img/My/jinKa.jpg" alt="" /></div>
+	   			<p class="taoCan">请选择会员卡套餐</p>
+	   			<ul>
+	   				<li>
+	   					<p>金卡(购物享<span>95</span>折)</p>
+	   					<strong></strong>
+	   					<p>￥<span>99</span></p>
+	   					<p>￥<span>169</span></p>
+	   				</li>
+	   				<li>
+	   					<p>铂金卡(购物享<span>9</span>折)</p>
+	   					<strong></strong>
+	   					<p>￥<span>179</span></p>
+	   					<p>￥<span>199</span></p>
+	   				</li>
+	   			</ul>
+		   </div>
+		   <div class="huiYuanBom">
+		   		<p class="tit">金卡权利</p>
+		   		<ul>
+		   			<li>
+		   				<img src="img/My/huiYuanIcon1.png" alt="" />
+		   				<div>
+		   					<h3>可享受购物优惠折上折</h3>
+		   					<p>持金卡在酷爱宝贝消费，可在商品其它优惠都使用过后再打95折，奶粉纸尿裤等品类不适用。</p>
+		   				</div>
+		   			</li>
+		   			<li>
+		   				<img src="img/My/huiYuanIcon1.png" alt="" />
+		   				<div>
+		   					<h3>可享受会员专属优惠券减免</h3>
+		   					<p>持金卡在酷爱宝贝消费，可在商品其它优惠都使用过后再打95折，奶粉纸尿裤等品类不适用。</p>
+		   				</div>
+		   			</li>
+		   		</ul>
+		   </div>
+		   <button>开通金卡</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".huiYuanTop ul li strong").click(function(){
+			$(this).toggleClass("cur");
+			$(this).parents("li").siblings("li").children("strong").removeClass("cur");
+		})
+//		document.getElementById("liShiTiXian").addEventListener("tap",function(){
+//			mui.openWindow({
+//				url:"liShiTiXian.html",
+//				id:"liShiTiXian2", 
+////						createNew:true,
+//				show:{
+//					aniShow:"slide-in-right",
+//					daration:200
+//				},
+//				waiting:{
+//					title:"正在加载..."
+//				}
+//			});
+//		}); 
+	</script>
+</html>

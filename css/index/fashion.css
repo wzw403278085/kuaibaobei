@@ -1,0 +1,44 @@
+p{margin: 0;}
+.mui-bar-nav{background-color: white;}
+.mui-bar-nav button{position: absolute;top: 0.35rem;right: 1rem;font-size: 1.5rem;color: #888888;font-family: icon;border: none;padding: 0;margin: 0;}
+.mui-content{background-color: #FFB0C3;}
+.banner img{width: 100%;}
+.nav{width: 100%;display: flex;justify-content: space-between;background-color: white;padding: 0 1rem;}
+.nav a{font-size: 1rem;color: #000000;padding: 0.5rem 0;border-bottom: 2px solid #FFFFFF;}
+.nav a.cur{color: #FF4397;border-bottom: 2px solid #FF4397;}
+.content{display: none;}
+.content.cur{display: block;}
+.content .like{width: 90%;background-color: white;border-radius: 15px;margin: 1rem 5%;}
+.content .like .like_title{font-size: 1.3rem;text-align: center;padding: 1rem 0;}
+.content .like .like_content{width: 100%;display: flex;justify-content: space-around;padding: 0.5rem;}
+.content .like .like_content .like_main{width: 32%;}
+.content .like .like_content .like_main .main_img{position: relative;width: 100%;}
+.content .like .like_content .like_main .main_img img{width: 100%;}
+.content .like .like_content .like_main .main_img p{position: absolute;bottom: 0rem;left: 0;width: 100%;font-size: 0.8rem;color: white;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;background-color: rgba(0,0,0,.6);padding: 0.2rem 0.3rem;}
+.content .like .like_content .like_main .main_price{width: 100%;padding: 0.3rem 0.2rem;}
+.content .like .like_content .like_main .main_price h2{float: left;font-size: 1.2rem;color: #FF4498;}
+.content .like .like_content .like_main .main_price p{float: left;font-size: 0.9rem;color: #878787;text-decoration: line-through;padding-left: 0.3rem;}
+.dapai{margin-top: 1rem;padding: 1rem;}
+.dapai .dapai_title{font-size: 1.3rem;color: white;text-align: center;padding-bottom: 1rem;}
+.dapai ul{display: flex;justify-content: space-around;flex-wrap: wrap;}
+.dapai ul li{width: 48%;background-color: white;margin: 0.3rem 0;}
+.dapai ul li .dapai_img{padding: 1rem;}
+.dapai ul li .dapai_img img{width: 100%;}
+.dapai ul li h2{font-size: 0.9rem;color: black;text-align: center;font-weight: normal;}
+.dapai ul li h3{font-size: 1.1rem;color: #F044FF;text-align: center;margin-top: 0.5rem;}
+.dapai ul li button{width: 90%;color: white;background-color: #FF4397;border: none;margin: 0.5rem 5% 1rem;}
+.share{background: #fff;padding: 2rem 0 1rem 0;display: none;position: fixed;bottom: 0;width: 100%;}
+.share h3{font-size: 1.2rem;color: #5D5D5D;float: left;font-weight: lighter;}
+.share h3:before{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float: left;margin: .5rem .6rem 1rem 5rem;}
+.share h3:after{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float:right;margin: .5rem .6rem 2rem .8rem;}
+.share ul{width: 100%;list-style: none;padding:2rem 0 3rem 0;}
+.share ul li{width: 25%;float: left;}
+.share ul li div{font-family: icon;font-size: 3rem;margin: 0 auto;text-align: center;}
+.share ul li p{color: #797979;text-align: center;margin-top: 1rem;}
+.share ul li:first-child div{color: #A6CA66;}
+.share ul li:nth-child(2) div{color: #35DA35;}
+.share ul li:nth-child(3) div{color: #58B7E3;}
+.share ul li:nth-child(4) div{color: #F5503C;}
+.share ul li:nth-child(5) div{color: #ccc;margin-top: 1rem;}
+.share .cancle{width: 80%;height: 3rem;line-height: 3rem;text-align: center;color: #fff;background: #E3E3E3;margin: 0 auto;border-radius: 1rem;font-size: 1.2rem;}
+.share-bj{height: 100%;width: 100%;z-index: 99;background:rgba(0,0,0,0.5);position: fixed;top: 0;display: none;}

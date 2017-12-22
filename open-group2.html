@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>去开团</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index/index-group.css" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+      		mui.init();
+    	</script>
+	</head>
+	<body id="open-group">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">商品详情</h1>
+		    <div class="dian">...</div>
+		    <div class="open-icon" id="open-icon">&#xe673;</div>		    
+		</header>
+		<div class="mui-content">
+		    <div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="img/index/xiangQingYe/open-banner.png">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/index/xiangQingYe/2rentuan-banner.png">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/index/xiangQingYe/open-banner.png">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/index/xiangQingYe/2rentuan-banner.png">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="img/index/xiangQingYe/open-banner.png">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="img/index/xiangQingYe/2rentuan-banner.png">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		</div>
+		<div class="open-tejia">
+			<img src="img/index/xiangQingYe/tejia.png" alt="" />
+		</div>
+		<div class="open-con">
+			<div class="open-head open-head2">
+				<strong>￥15</strong>
+				<em>￥18</em>
+				<a>评团价</a>
+				<small>包邮</small>
+				<span>107025人已团</span>
+			</div>
+			<div class="open-center clear">
+				<div class="open-left">
+					<h2>小麦秸秆卡通米奇碗盘套装</h2>
+					<span>酷爱宝贝自营</span>
+				</div>
+				<div class="open-right">
+					<div class="open-icon open-icon2">&#xe649;</div>
+					<div class="open-iconB">收藏</div>
+				</div>
+			</div>
+			<p class="content">米奇小麦碗采用食用麦秸秆+环保pp塑料制作而成！环保，无毒，无刺激，易清洗，防摔耐高温是我们产品受广大消费者青睐的主要原因！</p>
+		</div>
+		<div class="open-footer">
+			<div class="open-kf">
+				<div class="kf-icon">&#xe6d0;</div>客服
+			</div>
+			<div class="open-gwc"><div class="gwc-iocn">&#xe673;</div>加购物车</div>
+			<div class="open-four">￥89<br>4人团</div>
+			<div class="open-dd">￥1<br>单独购买</div>
+		</div>
+		
+	</body>
+	<script src="js/castapp.js"></script>
+	<script>
+		var slider = mui("#slider");
+					slider.slider({
+						interval: 3000
+					});
+		document.getElementById("open-icon").addEventListener("tap",function(){
+				mui.openWindow({
+					url:"GouWuChe.html",
+					id:"GouWuChe5",
+					createNew:true,
+					show:{
+						aniShow:"slide-in-right",
+						duration:300
+					}
+				});
+			});	
+	</script>
+</html>

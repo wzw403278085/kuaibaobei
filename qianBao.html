@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link href="css/My/qianBao.css" rel="stylesheet"/>
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+	</head>
+	<body id="qianBao2">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的钱包</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="qianBao-top">
+		    	<h3>我的余额<a id="liShiTiXian">历史提现&#xe6d7;</a></h3>
+		    	<div><span>0.00</span>元</div>
+		    </div>
+		    <div class="qianBao-center">
+		    	<h3>我的酷币<a>查看酷币明细&#xe6d7;</a></h3>
+		    	<div><span>0</span>个</div>
+		    	<p>100酷币=1元，购物可抵现金</p>
+		    </div>
+		    <ul>
+		    	<li>
+		    		<img src="img/My/qianBaoIcon1.png" alt="" />
+		    		<div>
+		    			<strong>亲子送酷币</strong>
+		    			<span>写商户点评每条得20酷币</span>
+		    		</div>
+		    		<p>+60酷币</p>
+		    	</li>
+		    	<li>
+		    		<img src="img/My/qianBaoIcon2.png" alt="" />
+		    		<div>
+		    			<strong>闲置首发商品</strong>
+		    			<span>首次“发布商品”立得20酷币</span>
+		    		</div>
+		    		<p>+10酷币</p>
+		    	</li>
+		    	<li>
+		    		<img src="img/My/qianBaoIcon3.png" alt="" />
+		    		<div>
+		    			<strong>推荐好货赚酷币</strong>
+		    			<span>成功推荐立赚10酷币</span>
+		    		</div>
+		    		<p>+5酷币</p>
+		    	</li>
+		    	<li>
+		    		<img src="img/My/qianBaoIcon4.png" alt="" />
+		    		<div>
+		    			<strong>买啥首次提问</strong>
+		    			<span>首次“发布想要”立得酷币</span>
+		    		</div>
+		    		<p>+20酷币</p>
+		    	</li>
+		    </ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		document.getElementById("liShiTiXian").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"liShiTiXian.html",
+				id:"liShiTiXian2", 
+//						createNew:true,
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"正在加载..."
+				}
+			});
+		}); 
+	</script>
+</html>

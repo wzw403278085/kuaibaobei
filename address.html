@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>宝宝最爱用品团</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/gouWuChe/gwc.css" />
+	    <script src="js/mui.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body id="address">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">地址管理</h1>
+		    <span id="edit-address">编辑</span>
+		</header>
+		<div class="mui-content">
+		    <ul class="mui-table-view mui-table-view-radio address-con">
+	    		<li class="clear mui-table-view-cell mui-selected">
+	    			<div class="clear">
+		    			<h3 class="cur">*虹</h3>
+		    			<span>188*****358</span>
+	    			</div>
+	    			<p class="mui-navigate-right">
+	    				河北省-邯郸市-邯山区 光明南大街199号
+	    			</p>
+	    		</li>
+	    		<li class="clear mui-table-view-cell">
+	    			<div class="clear">
+		    			<h3>*风</h3>
+		    			<span>159*****350</span>
+	    			</div>
+	    			<p class="mui-navigate-right">
+	    				河北省-邯郸市-邯山区 光明南大街199号
+	    			</p>
+	    		</li>
+	    		<li class="clear mui-table-view-cell">
+	    			<div class="clear">
+		    			<h3>*云</h3>
+		    			<span>181*****426</span>
+	    			</div>
+	    			<p class="mui-navigate-right">
+	    				山西省-晋中市-太谷县 山西农业大学
+	    			</p>	    			
+	    		</li>
+	    	</ul>
+	    	<div class="mui-content-padded">
+				<p id="info"></p>
+			</div>
+			<p class="address-bottom">最多保存10个有效地址。每月只能新增或修改10次。您本月已新增或修改0次。</p>
+			<div class="add-address" id="add">新增地址</div>
+		</div>
+		<script>
+			document.getElementById("edit-address").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"edit-address.html",
+				id:"edit-address",
+				createNew:true
+			});
+		});
+		document.getElementById("add").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"add-address.html",
+				id:"Add-address",
+				createNew:true
+			});
+		});
+		</script>
+	</body>
+</html>

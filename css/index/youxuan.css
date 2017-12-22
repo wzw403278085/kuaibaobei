@@ -1,0 +1,79 @@
+.mui-bar .header_button{position: absolute;right: 15px;font-size: 1.5rem;color: #888888;font-family: icon;line-height: 44px;margin: 0;padding: 0 0.25rem;}
+.youxuan_nav{width: 100%;display: flex;justify-content: space-between;background-color: white;}
+.youxuan_nav a{display: block;font-size: 0.8rem;color: black;padding: 0.5rem 1rem;}
+.youxuan_nav a.cur{color: #FF4343;border-bottom: 0.2rem solid #FF4343;}
+.youxuan_content{display: none;}
+.youxuan_content.cur{display: block;}
+.youxuan_remai .remai_banner{width: 100%;}
+.youxuan_remai .remai_banner .banner_img{width: 100%;}
+.youxuan_remai .remai_banner .banner_img img{width: 100%;}
+.youxuan_remai .remai_banner .banner_title{width: 100%;display: flex;justify-content: space-between;background-color: #EEEEEE;}
+.youxuan_remai .remai_banner .banner_title p{padding: 1rem 0.5rem;margin: 0;}
+.youxuan_remai .remai_banner .banner_title p img{float: left;width: 20%;}
+.youxuan_remai .remai_banner .banner_title p:first-child img{float: left;width: 17%;}
+.youxuan_remai .remai_banner .banner_title p span{display: block;font-size: 0.75rem;line-height: 1rem;float: right;}
+.youxuan_remai .remai_banner .banner_title p:first-child span{font-size: 0.73rem;}
+.youxuan_remai .remai_content{width: 100%;background-color: white;}
+.youxuan_remai .remai_content .content_title{display: block;width: 100%;height: 3rem;border-bottom: 1px solid #EEEEEE;padding: 0 1rem;}
+.youxuan_remai .remai_content .content_title h2{float: left;font-size: 1.2rem;color: #333333;font-weight: normal;line-height: 3rem;}
+.youxuan_remai .remai_content .content_title p{float: right;font-size: 1rem;color: #333333;line-height: 3rem;}
+.youxuan_remai .remai_content .content_title p span{font-family: icon;}
+.youxuan_remai .remai_content ul li{width: 100%;border-bottom: 1px solid #EEEEEE;padding: 0.5rem 1rem;}
+.youxuan_remai .remai_content ul li{display: flex;}
+.youxuan_remai .remai_content ul li .content_img{width: 30%;}
+.youxuan_remai .remai_content ul li .content_img img{width: 100%;}
+.youxuan_remai .remai_content ul li .content_main{width: 70%;padding: 0.5rem 0 0.5rem 0.5rem;}
+.youxuan_remai .remai_content ul li .content_main h2{font-size: 1rem;font-weight: normal;line-height: 1.5rem;}
+.youxuan_remai .remai_content ul li .content_main h2 span{font-size: 0.9rem;color: #A0A0A0;}
+.youxuan_remai .remai_content ul li .content_main h3{font-size: 1.2rem;color: #FFA84A;margin: 0.5rem 0;}
+.youxuan_remai .remai_content ul li .content_main p{position: relative;font-size: 0.9rem;color: #A0A0A0;margin: 0;}
+.youxuan_remai .remai_content ul li .content_main p button{position: absolute;top: -0.7rem;right: 1rem;width: 5rem;color: white;background-color: #FF4343;border: none;}
+
+
+.youxuan_naifen .naifen_banner{width: 100%;}
+.youxuan_naifen .naifen_banner .banner_img{width: 100%;}
+.youxuan_naifen .naifen_banner .banner_img img{width: 100%;}
+.youxuan_naifen .naifen_banner .banner_title{width: 100%;display: flex;justify-content: space-between;background-color: #EEEEEE;}
+.youxuan_naifen .naifen_banner .banner_title p{padding: 1rem 0.5rem;margin: 0;}
+.youxuan_naifen .naifen_banner .banner_title p img{float: left;width: 20%;}
+.youxuan_naifen .naifen_banner .banner_title p:first-child img{float: left;width: 17%;}
+.youxuan_naifen .naifen_banner .banner_title p span{display: block;font-size: 0.75rem;line-height: 1rem;float: right;}
+.youxuan_naifen .naifen_banner .banner_title p:first-child span{font-size: 0.73rem;}
+
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item{width: 7rem;padding: 0;margin-left: 10px;}
+.mui-segmented-control.mui-scroll-wrapper{height: 9rem;}
+.youxuan_naifen .naifen_content .ziying_znk{background-color: white;}
+.youxuan_naifen .naifen_content .ziying_znk .znk_title{font-size: 1.2rem;font-weight: normal;text-align: center;padding: 1rem 0;}
+.youxuan_naifen .naifen_content .ziying_znk a{position: relative;border: 1px solid #EDEDED;border-radius: 10px;}
+.youxuan_naifen .naifen_content .ziying_znk a:first-child:before{content: "";position: absolute;top: 0;left: 5px;width: 1.2rem;height: 1.3rem;background: url("../images/youxuan/jinpai.png") no-repeat center/100% 100%;}
+.youxuan_naifen .naifen_content .ziying_znk a:nth-child(2):before{content: "";position: absolute;top: 0;left: 5px;width: 1.2rem;height: 1.3rem;background: url("../images/youxuan/yinpai.png") no-repeat center/100% 100%;}
+.youxuan_naifen .naifen_content .ziying_znk a:nth-child(3):before{content: "";position: absolute;top: 0;left: 5px;width: 1.2rem;height: 1.3rem;background: url("../images/youxuan/tongpai.png") no-repeat center/100% 100%;}
+.youxuan_naifen .naifen_content .ziying_znk a div{width: 60%;height: 4rem;overflow: hidden;margin: 0 auto;}
+.youxuan_naifen .naifen_content .ziying_znk a div img{width: 100%;}
+.youxuan_naifen .naifen_content .ziying_znk a h2{font-size: 0.9rem;color: #333333;font-weight: normal;margin-top: 0.5rem;}
+.youxuan_naifen .naifen_content .ziying_znk a p{font-size: 0.9rem;color: #FF4444;margin: 0;}
+
+
+.naifen_content .ziying_nf{background-color: white;margin-top: 1rem;}
+.youxuan_naifen .naifen_content .ziying_nf .nf_title{font-size: 1.2rem;font-weight: normal;text-align: center;padding: 1rem 0;}
+.youxuan_naifen .naifen_content .ziying_nf a{position: relative;border: 1px solid #EDEDED;border-radius: 10px;}
+.youxuan_naifen .naifen_content .ziying_nf a:first-child:before{content: "";position: absolute;top: 0;left: 5px;width: 1.2rem;height: 1.3rem;background: url("../images/youxuan/jinpai.png") no-repeat center/100% 100%;}
+.youxuan_naifen .naifen_content .ziying_nf a:nth-child(2):before{content: "";position: absolute;top: 0;left: 5px;width: 1.2rem;height: 1.3rem;background: url("../images/youxuan/yinpai.png") no-repeat center/100% 100%;}
+.youxuan_naifen .naifen_content .ziying_nf a:nth-child(3):before{content: "";position: absolute;top: 0;left: 5px;width: 1.2rem;height: 1.3rem;background: url("../images/youxuan/tongpai.png") no-repeat center/100% 100%;}
+.youxuan_naifen .naifen_content .ziying_nf a div{width: 80%;height: 4rem;overflow: hidden;margin: 0 auto;}
+.youxuan_naifen .naifen_content .ziying_nf a div img{width: 100%;}
+.youxuan_naifen .naifen_content .ziying_nf a h2{font-size: 0.9rem;color: #333333;font-weight: normal;margin-top: 0.5rem}
+.youxuan_naifen .naifen_content .ziying_nf a p{font-size: 0.9rem;color: #FF4444;margin: 0;}
+
+
+.youxuan_naifen .naifen_content .biqiang{width: 100%;}
+.youxuan_naifen .naifen_content .biqiang .biqiang_title{font-size: 1.2rem;text-align: center;font-weight: normal;padding: 1.2rem 0 1rem 0;}
+.youxuan_naifen .naifen_content .biqiang ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
+.youxuan_naifen .naifen_content .biqiang ul li{width: 49.5%;background-color: white;padding: 1rem;margin-top: 0.2rem;}
+.youxuan_naifen .naifen_content .biqiang ul li a{display: block;}
+.youxuan_naifen .naifen_content .biqiang ul li a .biqiang_img{width: 100%;height: 10rem;overflow: hidden;}
+.youxuan_naifen .naifen_content .biqiang ul li a .biqiang_img img{width: 100%;}
+.youxuan_naifen .naifen_content .biqiang ul li a h2{font-size: 1rem;color: black;font-weight: normal;line-height: 1.3rem;}
+.youxuan_naifen .naifen_content .biqiang ul li a .biqiang_price{display: flex;justify-content: space-between;margin-top: 1rem;}
+.youxuan_naifen .naifen_content .biqiang ul li a .biqiang_price h3{font-size: 1.1rem;color: #FF4498;font-weight: normal;}
+.youxuan_naifen .naifen_content .biqiang ul li a .biqiang_price p{font-size: 1rem;}

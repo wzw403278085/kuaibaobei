@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="js/mui.min.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <link href="css/My/dingDanQuanBu.css" rel="stylesheet"/>
+	    <script type="text/javascript">
+	    	
+	   		document.addEventListener('plusready', function(){
+	   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+	   			
+	   		});
+	   		
+	    </script>
+	</head>
+	<body id="pingJia3">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">评价</h1>
+		</header>
+		<div class="mui-content">
+			<div class="pingJia-top">
+				<div class="pingJia-top-tit"><img src="img/gouWuChe/shangPin1.jpg" alt="" /><h3>纸尿裤 M64（6-11KG）【4包装】</h3></div>
+				<textarea name="" rows="5" cols="" placeholder="酷爱宝贝建议您多说说使用后的效果感受，会对其他小伙伴帮助很大哦~"></textarea>
+				<p>0/500</p>
+				<div class="zhaoXiang">
+					<span>&#xe6c2;</span>
+					<span>发照片</span>
+				</div>
+			</div>
+			<div class="pingJia">
+				<p><span class="icon-hua">&#xe63e;</span>好评</p>
+				<p><span class="icon-hua">&#xe63e;</span>中评</p>
+			</div>
+			<div class="pingJia-bom">
+				<h3>整体评分<span>满意请给五星哦</span></h3>
+				<div class="score clear">
+				    <span>描述相符</span>
+				    <ul class="clearfix">
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				    </ul>
+				    <p><strong></strong></p>
+				</div>
+				<div class="score clear">
+				    <span>物流服务</span>
+				    <ul class="clearfix">
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				    </ul>
+				    <p><strong></strong></p>
+				</div>
+				<div class="score clear">
+				    <span>服务态度</span>
+				    <ul class="clearfix">
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				        <li></li>
+				    </ul>
+				    <p><strong></strong></p>
+				</div>
+			</div>
+		    <button class="tiJiaoPingLun" id="tiJiao">提交评论</button>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("div.pingJia p").click(function(){
+				$(this).addClass("cur").siblings().removeClass("cur");
+				$(this).children("span").addClass("cur").parent().siblings().children("span").removeClass("cur");
+			});
+		})
+		
+		document.getElementById("tiJiao").addEventListener("tap",function(){
+			mui.openWindow({
+				url:"index.html",
+				id:"index",
+						createNew:true, 
+				show:{
+					aniShow:"slide-in-right",
+					daration:200
+				},
+				waiting:{
+					title:"已评价..."
+				}
+			});
+		});
+		var oScore = document.getElementsByClassName("score")[0];
+	    var oLi    =   oScore.getElementsByTagName('li');
+	    var oStrong=   oScore.getElementsByTagName('strong');
+	    var oSpan  =   oScore.getElementsByTagName('span')[0];
+	    var iScore = iPoint = 0;
+	    var msg=['1星','2星','3星','4星','5星'];
+	    for(var i=0;i<oLi.length;i++){
+	        oLi[i].index=i;
+	        oLi[i].onclick = function(){
+	            iScore = this.index+1;
+//	            console.log(this.index)
+	            oStrong[0].innerHTML = msg[this.index]; //右上角评价结果显示
+	            iPoint = this.index+1;
+	            fnPoint(iPoint);
+				console.log("123");
+	        };
+	    }
+	    function fnPoint(arg){
+	        iScore = arg? arg:iScore;        //接收一个参数，如果没传进参数就用iScore
+	        for(var i=0;i<oLi.length;i++){   //遍历oLi,对点击的和之前的都亮起来，之后的不亮
+	            oLi[i].className = i<iScore? 'current':'';
+	        };
+	    }
+	    
+	    var oScore1 = document.getElementsByClassName("score")[1];
+	    var oLi1    =   oScore1.getElementsByTagName('li');
+	    var oStrong1=   oScore1.getElementsByTagName('strong');
+	    var oSpan1  =   oScore1.getElementsByTagName('span')[0];
+	    var iScore1 = iPoint1 = 0;
+	    for(var i=0;i<oLi1.length;i++){
+	        oLi1[i].index=i;
+	        oLi1[i].onclick = function(){
+	            iScore1 = this.index+1;
+	            oStrong1[0].innerHTML = msg[this.index]; //右上角评价结果显示
+	            iPoint1 = this.index+1;
+	            fnPoint1(iPoint1);
+//	            console.log(this.index);
+				console.log("456");
+	        };
+	    }
+	    function fnPoint1(arg1){
+	        iScore1 = arg1? arg1:iScore1;        //接收一个参数，如果没传进参数就用iScore
+	        for(var i=0;i<oLi1.length;i++){   //遍历oLi,对点击的和之前的都亮起来，之后的不亮
+	            oLi1[i].className = i<iScore1? 'current':'';
+	        }
+	    }
+	    
+	    var oScore2 = document.getElementsByClassName("score")[2];
+	    var oLi2    =   oScore2.getElementsByTagName('li');
+	    var oStrong2=   oScore2.getElementsByTagName('strong');
+	    var oSpan2  =   oScore2.getElementsByTagName('span')[0];
+	    var iScore2 = iPoint2 = 0;
+	    for(var i=0;i<oLi2.length;i++){
+	        oLi2[i].index=i;
+	        oLi2[i].onclick = function(){
+	            iScore2 = this.index+1;
+	            oStrong2[0].innerHTML = msg[this.index]; //右上角评价结果显示
+	            iPoint2 = this.index+1;
+	            fnPoint2(iPoint2);
+	            console.log(this.index)
+	        };
+	    }
+	    function fnPoint2(arg2){
+	        iScore2 = arg2? arg2:iScore2;        //接收一个参数，如果没传进参数就用iScore
+	        for(var i=0;i<oLi2.length;i++){   //遍历oLi,对点击的和之前的都亮起来，之后的不亮
+	            oLi2[i].className = i<iScore2? 'current':'';
+	        }
+	    }
+	</script>
+</html>

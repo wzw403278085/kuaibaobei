@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.init({
+      		keyEventBind:{
+      			backbutton:true
+      		}
+      	});
+      	
+		mui.old_back=mui.back;
+      	var clickNum=0;
+      	mui.back=function(){
+      		clickNum++;
+      		if(clickNum>1){
+      			plus.runtime.quit();
+      		}else{
+      			mui.toast("再按一次退出应用");
+      		}
+      		setTimeout(function(){
+      			clickNum=0
+      		},1000);
+      		return false;
+      	}
+    </script>
+</head>
+<body id="index">
+	
+	<nav class="mui-bar mui-bar-tab">
+	    <a href="home.html" class="mui-tab-item mui-active">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a href="fenLei.html" class="mui-tab-item">
+	        <span class="mui-icon mui-icon-phone"></span>
+	        <span class="mui-tab-label">分类</span>
+	    </a>
+	    <a href="GouWuChe.html" class="mui-tab-item">
+	        <span class="mui-icon mui-icon-email"></span>
+	        <span class="mui-tab-label">购物车</span>
+	    </a>
+	    <a href="My.html" class="mui-tab-item">
+	        <span class="mui-icon mui-icon-gear"></span>
+	        <span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+	<script src="js/castapp.js"></script>
+	<script>
+		ca.init();
+		var pathArray=["home.html","fenLei.html","GouWuChe.html","My.html"];
+		castapp.tabBar(pathArray);
+			function setStatusbarRed(){
+		
+				// 设置系统状态栏背景色为红色
+				
+						plus.navigator.setStatusBarBackground("#ff8dc0");
+					}
+				
+					document.addEventListener('plusready',function(){
+					
+							setStatusbarRed();
+						
+						},false);
+				
+			document.addEventListener('gohome',function(){
+				var defaultTab = document.getElementById("defaultTab");
+				mui.trigger(defaultTab,'tap');
+				var current = document.querySelector(".mui-bar-tab>.mui-tab-item.mui-active");
+				if(defaultTab!==current){
+						current.classList.remove("mui-active");
+						defaultTab.classList.add("mui-active");
+					}
+			});
+	</script>
+</body>
+</html>

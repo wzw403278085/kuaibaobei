@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>宝宝最爱用品团</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />		
+	    <script src="js/mui.js"></script>
+	    <script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	    <style>
+	    	*{margin: 0;padding: 0;}
+	    	.clear:after{display: block;content: "";clear: both;}
+	    	@font-face {
+		    font-family: icon;
+		    src: url("fonts/iconfont.ttf"),url("fonts/iconfont.woff"),url("fonts/iconfont.svg"),url("fonts/iconfont.eot");
+		}
+			header span{font-family: icon;float: right;font-size: 1.5rem;margin-right: .6rem;color: #B6B6B6;line-height: 3rem;}
+			.ypt-banner{width: 100%;}
+			.ypt-banner img{display: block;width:100%}
+			.ypt-head{width: 100%;display: flex;justify-content: space-between;flex-wrap: wrap;list-style: none;height: 4.1rem;align-content: space-between;margin-top: 1rem;}
+			.ypt-head li{width: 33.2%;background: #fff;color: #FFC263;text-align: center;font-size: .8rem;height: 2rem;line-height: 2rem;}
+			.ypt-head li.cur{width: 33.2%;background: #FFC263;color: #fff;}
+			.ypt-head li:nth-child(2){width: 33.2%;}
+			.ypt-head li:nth-child(3){width: 33.2%;}
+			.ypt-head li:nth-child(4){width: 24.8%;}
+			.ypt-head li:nth-child(5){width: 24.8%;}
+			.ypt-head li:nth-child(6){width: 24.8%;}
+			.ypt-head li:nth-child(7){width: 24.8%;}
+			.ypt-head li a{
+				color: #FFC263;
+			}
+			.ypt-header{width: 100%;padding: 1rem 0 .5rem 0;position: relative;}
+			.ypt-header h3{text-align: center;font-size: 1.2rem;font-weight: 700;background: #EFEFF4;z-index: 10;font-weight: 400;}
+			.ypt-header .line1,.ypt-header .line2{width: 25%;height: 1px;background: #CCCCCC;position: absolute;top: 1.85rem;left: 50%;margin-left: -40%;}
+			.ypt-header .line2{position: absolute;top: 1.85rem;left: 50%;margin-left: 14%;}
+			.ypt-con{width: 100%;list-style: none;}
+			.ypt-con li{float: left;width: 50%;background: #fff;}
+			.ypt-con li img{width: 85%;display: block;margin: 0 auto;}
+			.ypt-con li h3{width: 85%;background: #333333;height: 1.5rem;color: #fff;text-align: center;line-height: 1.5rem;font-size: .9rem;font-weight: 600;margin: 0 auto;opacity: .8;}
+			.ypt-con li p{padding: .8rem .5rem .8rem 1.4rem;color: #555555;}
+			.ypt-con li span{border: 1px solid #FF4498;color: #FF4498;padding:0 .4rem;margin:0 .6rem 0 1.4rem;font-size: .8rem;}
+			.ypt-con li strong{color:#FF4498;}
+			.ypt-con li small{margin-left: .6rem;text-decoration: line-through;color: #888888;}
+			.ypt-con li h4{width: 80%;height: 2rem;line-height: 2rem;border-radius: .5rem;background: #FF4498;color: #fff;text-align: center;font-weight: 600;margin: 1rem auto;}
+			
+			.share{background: #fff;padding: 2rem 0 1rem 0;display: none;position: fixed;bottom: 0;width: 100%;}
+			.share h3{font-size: 1.2rem;color: #5D5D5D;float: left;font-weight: lighter;}
+			.share h3:before{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float: left;margin: .5rem .6rem 1rem 5rem;}
+			.share h3:after{width: 5rem;height: 1px;background:#5D5D5D;content: "";display: block;float:right;margin: .5rem .6rem 2rem .8rem;}
+			.share ul{width: 100%;list-style: none;padding:2rem 0 3rem 0;}
+			.share ul li{width: 25%;float: left;}
+			.share ul li div{font-family: icon;font-size: 3rem;margin: 0 auto;text-align: center;}
+			.share ul li p{color: #797979;text-align: center;margin-top: 1rem;}
+			.share ul li:first-child div{color: #A6CA66;}
+			.share ul li:nth-child(2) div{color: #35DA35;}
+			.share ul li:nth-child(3) div{color: #58B7E3;}
+			.share ul li:nth-child(4) div{color: #F5503C;}
+			.share ul li:nth-child(5) div{color: #ccc;margin-top: 1rem;}
+			.share .cancle{width: 80%;height: 3rem;line-height: 3rem;text-align: center;color: #fff;background: #E3E3E3;margin: 0 auto;border-radius: 1rem;font-size: 1.2rem;}
+			.share-bj{height: 100%;width: 100%;z-index: 99;background:rgba(0,0,0,0.5);position: fixed;top: 0;display: none;}
+			.main{
+				display: none;
+			}
+			.main.cur{
+				display: block;
+			}
+	    </style>
+	</head>
+	<body id="yongpintuan2">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">宝宝最爱用拼团</h1>
+		    <span>&#xe6aa;</span>
+		</header>
+		<div class="mui-content">
+		    <div class="ypt-banner">
+		    	<img src="images/kuaibaobei.png" alt="" />
+		    </div>
+		    <ul class="ypt-head">
+		    	<li class="cur">爆款区</li>
+		    	<li>帮宝适</li>
+		    	<li>安尔乐</li>
+		    	<li>好奇</li>
+		    	<li>妈咪宝贝</li>
+		    	<li>雀氏</li>
+		    	<li><a href="index-group.html">更多专区</a></li>
+		    </ul>
+		    <div class="main cur">
+		    	<div class="ypt-header">
+			    	<h3>爆款推荐</h3>
+			    	<div class="line1"></div>
+			    	<div class="line2"></div>
+			    </div>
+			    <ul class="ypt-con clear" id="shangPinXiangQing">
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥329</strong>
+			    		<small>389</small>
+			    		<h4>立即抢购</h4>
+			    	</li>
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤L54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥69</strong>
+			    		<small>120</small>
+			    		<h4>立即抢购</h4>
+			    	</li>
+			    </ul>
+		    </div>
+		    <div class="main">
+		    	<div class="ypt-header">
+			    	<h3>帮宝适</h3>
+			    	<div class="line1"></div>
+			    	<div class="line2"></div>
+			    </div>
+			    <ul class="ypt-con clear" id="shangPinXiangQing">
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥329</strong>
+			    		<small>389</small>
+			    		<h4>1立即抢购</h4>
+			    	</li>
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤L54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥69</strong>
+			    		<small>120</small>
+			    		<h4>2立即抢购</h4>
+			    	</li>
+			    </ul>
+		    </div>
+		    <div class="main">
+		    	<div class="ypt-header">
+			    	<h3>安尔乐</h3>
+			    	<div class="line1"></div>
+			    	<div class="line2"></div>
+			    </div>
+			    <ul class="ypt-con clear" id="shangPinXiangQing">
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥329</strong>
+			    		<small>389</small>
+			    		<h4>1立即抢购</h4>
+			    	</li>
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤L54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥69</strong>
+			    		<small>120</small>
+			    		<h4>2立即抢购</h4>
+			    	</li>
+			    </ul>
+		    </div>
+		    <div class="main">
+		    	<div class="ypt-header">
+			    	<h3>好奇</h3>
+			    	<div class="line1"></div>
+			    	<div class="line2"></div>
+			    </div>
+			    <ul class="ypt-con clear" id="shangPinXiangQing">
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥329</strong>
+			    		<small>389</small>
+			    		<h4>1立即抢购</h4>
+			    	</li>
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤L54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥69</strong>
+			    		<small>120</small>
+			    		<h4>2立即抢购</h4>
+			    	</li>
+			    </ul>
+		    </div>
+		    <div class="main">
+		    	<div class="ypt-header">
+			    	<h3>妈咪宝贝</h3>
+			    	<div class="line1"></div>
+			    	<div class="line2"></div>
+			    </div>
+			    <ul class="ypt-con clear" id="shangPinXiangQing">
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥329</strong>
+			    		<small>389</small>
+			    		<h4>1立即抢购</h4>
+			    	</li>
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤L54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥69</strong>
+			    		<small>120</small>
+			    		<h4>2立即抢购</h4>
+			    	</li>
+			    </ul>
+		    </div>
+		    <div class="main">
+		    	<div class="ypt-header">
+			    	<h3>雀氏</h3>
+			    	<div class="line1"></div>
+			    	<div class="line2"></div>
+			    </div>
+			    <ul class="ypt-con clear" id="shangPinXiangQing">
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin1.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤S54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥329</strong>
+			    		<small>389</small>
+			    		<h4>1立即抢购</h4>
+			    	</li>
+			    	<li>
+			    		<img src="img/gouWuChe/shangPin2.jpg" alt="" />
+			    		<h3>领券立减5元</h3>
+			    		<p>Merriea/花王  纸尿裤L54 （6-11KG）......</p>
+			    		<span>价格</span>
+			    		<strong>￥69</strong>
+			    		<small>120</small>
+			    		<h4>2立即抢购</h4>
+			    	</li>
+			    </ul>
+		    </div>
+		</div>
+		<div class="share-bj">
+			<div class="share">
+		    	<h3>分享</h3>
+			    <ul class="clear">
+			    	<li>
+			    		<div>&#xe693;</div>
+			    		<p>朋友圈</p>
+			    	</li>
+			    	<li>
+			    		<div>&#xe694;</div>
+			    		<p>微信</p>
+			    	</li>
+			    	<li>
+			    		<div>&#xe67b;</div>
+			    		<p>QQ</p>
+			    	</li>
+			    	<li>
+			    		<div>&#xe6da;</div>
+			    		<p>微博</p>
+			    	</li>
+			    	<li>
+			    		<div>&#xe6d8;</div>
+			    		<p>人人网</p>
+			    	</li>
+			    </ul>
+			    <div class="cancle">取消</div>
+		    </div>
+		</div>    
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("header span").click(function(){
+					$(".share-bj").css("display","block");
+					$(".share").css("display","block");
+				});
+				$(".cancle").click(function(){
+					$(".share-bj").css("display","none");
+					$(".share").css("display","none");
+				});
+				
+				$(".ypt-head li").click(function(){
+					$(this).addClass("cur").siblings("li").removeClass("cur");
+					var index=$(this).index();
+//					alert(index)
+					$(this).parent("ul").siblings(".main").eq(index).addClass("cur").siblings(".main").removeClass("cur");
+//					$(".main").eq(index).addClass("cur").siblings("main").removeClass("cur");
+				})
+			})
+			//	//以下是循环进入详情页js
+			window.onload=function(){
+				var tuanBox=document.getElementById("shangPinXiangQing");
+//				var ul=tuanBox.getElementsByTagName("ul")[0];
+				var liA=tuanBox.getElementsByTagName("li");
+				for(var b=0;b<liA.length;b++){
+					var but=liA[b].getElementsByTagName("h4");
+//					alert(but.innerHTML);
+					but[0].addEventListener('tap',tap_right);
+					
+				}
+			}
+			function tap_right(){
+				mui.openWindow({
+					url:"shangPinXiangQing.html",
+					id:"SPXQ",
+							createNew:true, 
+					show:{
+						aniShow:"slide-in-right",
+						daration:200
+					},
+					waiting:{
+						title:"已加载请稍后..."
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

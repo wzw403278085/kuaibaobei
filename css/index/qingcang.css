@@ -1,0 +1,18 @@
+p{margin: 0;}
+.mui-bar-nav{background-color: white;}
+#slider{background-color: white;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item{color: black;border-bottom: 2px solid transparent;}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{border-bottom: 2px solid #9B73DD;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{color: #9B73DD;border-bottom: 2px solid #9B73DD;}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted ~ .mui-slider-group .mui-slider-item{border: none;}
+.content_list{padding: 1rem 1rem 1rem 0;height: 11rem;border-top: 1px solid #EFEFEF;}
+.list_img{float: left;width: 35%;height: 100%;overflow: hidden;}
+.list_img img{width: 100%;} 
+.list_content{float: left;width: 65%;height: 100%;}
+.list_content h2{height: 2.6rem;font-size: 1rem;color: black;line-height: 1.3rem;}
+.list_content .zhekou{width: 6rem;height: 1.5rem;font-size: 0.8rem;color: white;line-height: 1.5rem;text-align: center;background-color: #9B73DD;border-radius: 15px;margin-top: 0.5rem;}
+.list_content .zhekou span{display: inline-block;float: right;width: 3rem;padding: 0 0.5rem;background-color: #CDB9EE;border-radius: 0 15px 15px 0;}
+.list_content h3{float: left; margin-bottom: 0; width: 50%;font-size: 1.2rem;color: #9C74DD;text-align: left;margin-top: 0.5rem;padding-top: 0.5rem;}
+.list_content .person{float: right;width: 50%;font-size: 0.9rem;text-align: right;margin-top: 1rem;padding-right: 0.5rem;}
+.list_content .yuanjia{float: left;font-size: 0.8rem;color: #888888;text-decoration: line-through;margin-top: 0.8rem;}
+.list_content button{float: right;width: 35%;height: 2rem;color: white;background-color: #9B73DD;border: none;}
